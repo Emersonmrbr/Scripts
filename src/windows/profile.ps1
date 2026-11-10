@@ -18,24 +18,28 @@ function Write-Status {
     }
 }
 
-
-# Check if GitHub is reachable and fetch available Oh My Posh themes
-if (Test-Connection "api.github.com" -Count 1 -Quiet) {
-    # Fetch the list of available Oh My Posh themes from GitHub
-    $url = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/contents/themes"
-    # Set the User-Agent header to avoid GitHub API rate limiting
-    $themes = Invoke-RestMethod -Uri $url
-    # Extract the theme file names from the GitHub response
-    $themeFiles = $themes | Where-Object { $_.name -like "*.omp.json" } | Select-Object -ExpandProperty download_url
+try {
+    # Check if GitHub is reachable and fetch available Oh My Posh themes
+    if (Test-Connection "api.github.com" -Count 1 -Quiet) {
+        # Fetch the list of available Oh My Posh themes from GitHub
+        $url = "https://api.github.com/repos/JanDeDobbeleer/oh-my-posh/contents/themes"
+        # Set the User-Agent header to avoid GitHub API rate limiting
+        $themes = Invoke-RestMethod -Uri $url
+        # Extract the theme file names from the GitHub response
+        $themeFiles = $themes | Where-Object { $_.name -like "*.omp.json" } | Select-Object -ExpandProperty download_url
+    }
+    Else {
+        # Initialize a random Oh My Posh theme for the PowerShell session
+        $themeFiles = Get-ChildItem -Path "C:\Users\emers\.config\oh-my-posh" | Select-Object -ExpandProperty FullName
+    }
+    # Get a random index for the available Oh My Posh themes
+    $randomThemeIndex = Get-Random -Minimum 0 -Maximum $themeFiles.Count
+    # Initialize Oh My Posh with the randomly selected theme
+    oh-my-posh init pwsh --config $themeFiles[$randomThemeIndex] | Invoke-Expression
 }
-Else {
-    # Initialize a random Oh My Posh theme for the PowerShell session
-    $themeFiles = Get-ChildItem -Path "C:\Users\emers\.config\oh-my-posh" | Select-Object -ExpandProperty FullName
+catch {
+    Write-Status "Error initializing Oh My Posh: $($_.Exception.Message)" -Type "ERROR"
 }
-# Get a random index for the available Oh My Posh themes
-$randomThemeIndex = Get-Random -Minimum 0 -Maximum $themeFiles.Count
-# Initialize Oh My Posh with the randomly selected theme
-oh-my-posh init pwsh --config $themeFiles[$randomThemeIndex] | Invoke-Expression
 
 
 #f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
@@ -65,17 +69,16 @@ function vmc {
                     ForEach-Object {
                         $n = if ($_.Name -match '\s') { "'$($_.Name)'" } else { $_.Name }
                         [System.Management.Automation.CompletionResult]::new($n, $_.Name, 'ParameterValue', $_.State.ToString())
-                        Write-Status "Completing $($_.Name)..." -Type "INFO"
                     }
                 }
                 catch {
                     Write-Status "Error completing VM name: $($_.Exception.Message)" -Type "ERROR"
                 }
             })]
-        [string[]]$Nome
+        [string[]]$Name
     )
-    if ($Nome) {
-        foreach ($n in $Nome) {
+    if ($Name) {
+        foreach ($n in $Name) {
             Start-Process vmconnect.exe -ArgumentList "localhost `"$n`"" -Verb RunAs
             Write-Status "Connecting to $n..." -Type "INFO"
         }
@@ -104,9 +107,9 @@ function vms {
                     Write-Status "Error completing VM name: $($_.Exception.Message)" -Type "ERROR"
                 }
             })]
-        [string[]]$Nome
+        [string[]]$Name
     )
-    foreach ($n in $Nome) {
+    foreach ($n in $Name) {
         try {
             $vm = Get-VM -Name $n -ErrorAction Stop
             if ($vm.State -ne 'Running') {
@@ -142,25 +145,25 @@ function vmstop {
                     Write-Status "Error completing VM name: $($_.Exception.Message)" -Type "ERROR"
                 }
             })]
-        [string[]]$Nome,
-        [switch]$Forcar,
-        [switch]$Todas
+        [string[]]$Name,
+        [switch]$Force,
+        [switch]$All
     )
-    if ($Todas) {
-        $Nome = (Get-VM | Where-Object State -ne 'Off').Name
-        if (-not $Nome) { Write-Host 'Nenhuma VM ligada.' -ForegroundColor DarkGray; return }
+    if ($All) {
+        $Name = (Get-VM | Where-Object State -ne 'Off').Name
+        if (-not $Name) { Write-Host 'No VMs are running.' -ForegroundColor DarkGray; return }
     }
-    elseif (-not $Nome) {
-        Write-Warning 'Informe o nome da(s) VM(s) ou use -Todas.'; return
+    elseif (-not $Name) {
+        Write-Warning 'Provide the name of the VM(s) or use -All.'; return
     }
-    foreach ($n in $Nome) {
+    foreach ($n in $Name) {
         try {
             $vm = Get-VM -Name $n -ErrorAction Stop
             if ($vm.State -eq 'Off') {
                 Write-Status "$($vm.Name) is already off." -Type "OK"
                 continue
             }
-            if ($Forcar) {
+            if ($Force) {
                 Write-Status "Cutting power to $($vm.Name)..." -Type "WARNING"
                 Stop-VM -VM $vm -TurnOff -Force -ErrorAction Stop
             }
@@ -171,6 +174,105 @@ function vmstop {
         }
         catch {
             Write-Warning "${n}: $($_.Exception.Message)"
+        }
+    }
+}
+
+function vmcadapter {
+    <#
+    .SYNOPSIS
+    Connects a Hyper-V VM network adapter to a virtual switch.
+    .EXAMPLE
+    vmcadapter <Tab> <Tab> <Tab>      # VM -> adapter of that VM -> switch
+    #>
+    [CmdletBinding()]
+    param(
+        # VM name(s) - tab completes all Hyper-V VMs
+        [Parameter(Mandatory, Position = 0)]
+        [ArgumentCompleter({
+            param($cmd, $param, $word, $ast, $bound)
+            $w = $word.Trim('"', "'")
+            Get-VM -ErrorAction SilentlyContinue |
+                Where-Object Name -like "$w*" |
+                ForEach-Object {
+                    $n = if ($_.Name -match '\s') { "'$($_.Name)'" } else { $_.Name }
+                    [System.Management.Automation.CompletionResult]::new($n, $_.Name, 'ParameterValue', "$($_.Name) [$($_.State)]")
+                }
+        })]
+        [string[]]$Name,
+
+        # Adapter name - tab completes adapters of the VM(s) already typed in -Name
+        [Parameter(Mandatory, Position = 1)]
+        [ArgumentCompleter({
+            param($cmd, $param, $word, $ast, $bound)
+            if (-not $bound.ContainsKey('Name')) { return }
+            $w = $word.Trim('"', "'")
+            @($bound['Name']) | ForEach-Object {
+                Get-VMNetworkAdapter -VMName $_ -ErrorAction SilentlyContinue
+            } | Where-Object Name -like "$w*" |
+                Group-Object Name |
+                ForEach-Object {
+                    $a = $_.Group[0]
+                    $n = if ($a.Name -match '\s') { "'$($a.Name)'" } else { $a.Name }
+                    $sw = if ($a.SwitchName) { $a.SwitchName } else { '<disconnected>' }
+                    [System.Management.Automation.CompletionResult]::new($n, $a.Name, 'ParameterValue', "$($a.Name) -> $sw ($($a.MacAddress))")
+                }
+        })]
+        [string]$AdapterName,
+
+        # Switch name - tab completes all virtual switches
+        [Parameter(Mandatory, Position = 2)]
+        [ArgumentCompleter({
+            param($cmd, $param, $word, $ast, $bound)
+            $w = $word.Trim('"', "'")
+            Get-VMSwitch -ErrorAction SilentlyContinue |
+                Where-Object Name -like "$w*" |
+                ForEach-Object {
+                    $n = if ($_.Name -match '\s') { "'$($_.Name)'" } else { $_.Name }
+                    [System.Management.Automation.CompletionResult]::new($n, $_.Name, 'ParameterValue', "$($_.Name) [$($_.SwitchType)]")
+                }
+        })]
+        [string]$SwitchName,
+
+        # Open vmconnect after connecting the adapter
+        [switch]$ConnectConsole
+    )
+
+    if (-not (Get-VMSwitch -Name $SwitchName -ErrorAction SilentlyContinue)) {
+        Write-Status "Switch '$SwitchName' not found." -Type "ERROR"
+        return
+    }
+
+    foreach ($vmName in $Name) {
+        try {
+            $vm = Get-VM -Name $vmName -ErrorAction Stop
+            $adapters = @(Get-VMNetworkAdapter -VM $vm -Name $AdapterName -ErrorAction Stop)
+            if ($adapters.Count -gt 1) {
+                Write-Warning "[$($vm.Name)] $($adapters.Count) adapters named '$AdapterName' - all will be connected. Rename them with Rename-VMNetworkAdapter to target one."
+            }
+            foreach ($adapter in $adapters) {
+                if ($adapter.SwitchName -eq $SwitchName) {
+                    Write-Status "[$($vm.Name)] '$AdapterName' already connected to '$SwitchName'." -Type "OK"
+                    continue
+                }
+                $from = if ($adapter.SwitchName) { $adapter.SwitchName } else { '<disconnected>' }
+                Write-Status "[$($vm.Name)] '$AdapterName': $from -> $SwitchName" -Type "INFO"
+                $adapter | Connect-VMNetworkAdapter -SwitchName $SwitchName -ErrorAction Stop
+                Write-Status "[$($vm.Name)] Connected successfully." -Type "OK"
+            }
+            if ($ConnectConsole) {
+                Write-Status "[$($vm.Name)] Launching VM console..." -Type "INFO"
+                vmc $vm.Name
+            }
+        }
+        catch {
+            $msg = $_.Exception.Message
+            if ($msg -like "*access denied*" -or $msg -like "*permission*") {
+                Write-Status "[$vmName] Access denied - run PowerShell as Administrator." -Type "ERROR"
+            }
+            else {
+                Write-Warning "[$vmName] $msg"
+            }
         }
     }
 }
