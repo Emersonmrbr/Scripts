@@ -59,6 +59,12 @@ $handler = {
 Set-PSReadLineOption -AddToHistoryHandler $handler
 
 function vmc {
+    <#
+    .SYNOPSIS
+    Connects a Hyper-V VM using vmconnect.
+    .EXAMPLE
+    vmc <Tab>, <Tab>, <Tab>, ...      # VM -> connect to the VM using vmconnect
+    #>
     param(
         [Parameter(Position = 0, ValueFromRemainingArguments)]
         [ArgumentCompleter({
@@ -91,6 +97,12 @@ function vmc {
 
 # Start a VM (vms) and connect to it using vmconnect
 function vms {
+    <#
+    .SYNOPSIS
+    Starts a Hyper-V VM and connects to it using vmconnect.
+    .EXAMPLE
+    vms <Tab>, <Tab>, <Tab>, ....      # VM -> start the VM and connect to it
+    #>
     param(
         [Parameter(Mandatory, Position = 0, ValueFromRemainingArguments)]
         [ArgumentCompleter({
@@ -129,6 +141,12 @@ function vms {
 
 # Turn off a VM (vmstop) with options to force or stop all running VMs
 function vmstop {
+    <#
+    .SYNOPSIS
+    Stops a running Hyper-V VM.
+    .EXAMPLE
+    vmstop <Tab>      # VM -> stop the VM
+    #>
     param(
         [Parameter(Position = 0, ValueFromRemainingArguments)]
         [ArgumentCompleter({
@@ -190,26 +208,26 @@ function vmcadapter {
         # VM name(s) - tab completes all Hyper-V VMs
         [Parameter(Mandatory, Position = 0)]
         [ArgumentCompleter({
-            param($cmd, $param, $word, $ast, $bound)
-            $w = $word.Trim('"', "'")
-            Get-VM -ErrorAction SilentlyContinue |
+                param($cmd, $param, $word, $ast, $bound)
+                $w = $word.Trim('"', "'")
+                Get-VM -ErrorAction SilentlyContinue |
                 Where-Object Name -like "$w*" |
                 ForEach-Object {
                     $n = if ($_.Name -match '\s') { "'$($_.Name)'" } else { $_.Name }
                     [System.Management.Automation.CompletionResult]::new($n, $_.Name, 'ParameterValue', "$($_.Name) [$($_.State)]")
                 }
-        })]
+            })]
         [string[]]$Name,
 
         # Adapter name - tab completes adapters of the VM(s) already typed in -Name
         [Parameter(Mandatory, Position = 1)]
         [ArgumentCompleter({
-            param($cmd, $param, $word, $ast, $bound)
-            if (-not $bound.ContainsKey('Name')) { return }
-            $w = $word.Trim('"', "'")
-            @($bound['Name']) | ForEach-Object {
-                Get-VMNetworkAdapter -VMName $_ -ErrorAction SilentlyContinue
-            } | Where-Object Name -like "$w*" |
+                param($cmd, $param, $word, $ast, $bound)
+                if (-not $bound.ContainsKey('Name')) { return }
+                $w = $word.Trim('"', "'")
+                @($bound['Name']) | ForEach-Object {
+                    Get-VMNetworkAdapter -VMName $_ -ErrorAction SilentlyContinue
+                } | Where-Object Name -like "$w*" |
                 Group-Object Name |
                 ForEach-Object {
                     $a = $_.Group[0]
@@ -217,21 +235,21 @@ function vmcadapter {
                     $sw = if ($a.SwitchName) { $a.SwitchName } else { '<disconnected>' }
                     [System.Management.Automation.CompletionResult]::new($n, $a.Name, 'ParameterValue', "$($a.Name) -> $sw ($($a.MacAddress))")
                 }
-        })]
+            })]
         [string]$AdapterName,
 
         # Switch name - tab completes all virtual switches
         [Parameter(Mandatory, Position = 2)]
         [ArgumentCompleter({
-            param($cmd, $param, $word, $ast, $bound)
-            $w = $word.Trim('"', "'")
-            Get-VMSwitch -ErrorAction SilentlyContinue |
+                param($cmd, $param, $word, $ast, $bound)
+                $w = $word.Trim('"', "'")
+                Get-VMSwitch -ErrorAction SilentlyContinue |
                 Where-Object Name -like "$w*" |
                 ForEach-Object {
                     $n = if ($_.Name -match '\s') { "'$($_.Name)'" } else { $_.Name }
                     [System.Management.Automation.CompletionResult]::new($n, $_.Name, 'ParameterValue', "$($_.Name) [$($_.SwitchType)]")
                 }
-        })]
+            })]
         [string]$SwitchName,
 
         # Open vmconnect after connecting the adapter
