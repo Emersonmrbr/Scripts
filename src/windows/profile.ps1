@@ -58,6 +58,70 @@ $handler = {
 }
 Set-PSReadLineOption -AddToHistoryHandler $handler
 
+function upall {
+    <#
+    .SYNOPSIS
+    Updates all system components including winget packages, Microsoft Store apps, and Windows updates.
+    .EXAMPLE
+    upall                            # Update all system components
+    #>
+    param(
+        [switch]$autoreboot = $false,
+        [switch]$verbose
+    )
+    try {
+        winget source update --verbose-logs:$verbose | Out-Null
+        Write-Status "Updating winget packages..." -Type "INFO"
+        winget upgrade --all --accept-package-agreements  --accept-source-agreements --include-unknown --verbose-logs:$verbose | Out-Null
+        Write-Status "Winget packages updated successfully. " -Type "INFO"
+    }
+    catch {
+        Write-Status "Error updating winget packages: $($_.Exception.Message)" -Type "ERROR"
+    }
+    try {
+        microsoftstore updates --apply
+        Write-Status "Microsoft Store apps updated successfully." -Type "INFO" | Out-Null
+    }
+    catch {
+        Write-Status "Error updating Microsoft Store apps: $($_.Exception.Message)" -Type "ERROR"
+    }
+    try {
+        Get-WindowsUpdate -ComputerName localhost -Install -AcceptAll -ForceInstall -AutoReboot:$autoreboot -Verbose:$verbose | Out-Null
+        Write-Status "Windows updates installed successfully." -Type "INFO"
+    }
+    catch {
+        Write-Status "Error updating Windows updates: $($_.Exception.Message)" -Type "ERROR"
+    }
+}
+
+function vmohdd {
+    <#
+    .SYNOPSIS
+    Compacts the virtual hard disks (VHDs) of all turned-off Hyper-V VMs.
+    .EXAMPLE
+    vmohdd                            # Compact VHDs of all turned-off Hyper-V VMs
+    #>
+    Get-VM | 
+    Where-Object State -eq 'Off' |
+    ForEach-Object {
+        Get-VMHardDiskDrive -VMName $_.Name |
+        ForEach-Object {
+            try {
+                $vhdBefore = Get-VHD -Path $_.Path | Select-Object Path, FileSize, Size
+                Write-Status "Before: $($vhdBefore.FileSize) bytes" -Type "INFO"
+                Write-Status "Compacting $($_.Path)" -Type "INFO"
+                Optimize-VHD -Path $_.Path -Mode Full
+                $vhdAfter = Get-VHD -Path $_.Path | Select-Object Path, FileSize, Size
+                Write-Status "After: $($vhdAfter.FileSize) bytes" -Type "INFO"
+                Write-Status "Saved: $($vhdBefore.FileSize - $vhdAfter.FileSize) bytes" -Type "INFO"
+            }
+            catch {
+                Write-Status "Error compacting VHD $($_.Path): $($_.Exception.Message)" -Type "ERROR"
+            }
+        }
+    }
+}
+
 function vmc {
     <#
     .SYNOPSIS
@@ -96,12 +160,12 @@ function vmc {
 }
 
 # Start a VM (vms) and connect to it using vmconnect
-function vms {
+function vmst {
     <#
     .SYNOPSIS
     Starts a Hyper-V VM and connects to it using vmconnect.
     .EXAMPLE
-    vms <Tab>, <Tab>, <Tab>, ....      # VM -> start the VM and connect to it
+    vmst <Tab>, <Tab>, <Tab>, ....      # VM -> start the VM and connect to it
     #>
     param(
         [Parameter(Mandatory, Position = 0, ValueFromRemainingArguments)]
@@ -140,12 +204,12 @@ function vms {
 }
 
 # Turn off a VM (vmstop) with options to force or stop all running VMs
-function vmstop {
+function vmsp {
     <#
     .SYNOPSIS
     Stops a running Hyper-V VM.
     .EXAMPLE
-    vmstop <Tab>      # VM -> stop the VM
+    vmsp <Tab>  # VM -> stop the VM
     #>
     param(
         [Parameter(Position = 0, ValueFromRemainingArguments)]
@@ -196,12 +260,12 @@ function vmstop {
     }
 }
 
-function vmcadapter {
+function vmca {
     <#
     .SYNOPSIS
     Connects a Hyper-V VM network adapter to a virtual switch.
     .EXAMPLE
-    vmcadapter <Tab> <Tab> <Tab>      # VM -> adapter of that VM -> switch
+    vmca <Tab> <Tab> <Tab>      # VM -> adapter of that VM -> switch
     #>
     [CmdletBinding()]
     param(
