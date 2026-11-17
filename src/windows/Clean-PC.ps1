@@ -63,7 +63,7 @@ if (-not (Test-Path $toolsPath\sdelete64.exe -PathType Leaf -ErrorAction Stop)) 
   exit 1
 }
 
-Remove-Item "$env:TEMP\*" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item "$env:TEMP\" -Recurse -Force -ErrorAction SilentlyContinue
 if ($?) {
   Write-Status "[OK] Successfully cleared temporary files in $env:TEMP" -Type "OK"
   $lpgFault += @( [PSObject]@{ status = $true; exitCode = 0; message = "Successfully cleared temporary files in $env:TEMP" } )
