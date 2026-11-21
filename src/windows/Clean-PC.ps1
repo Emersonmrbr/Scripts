@@ -1,14 +1,7 @@
-$startTime = Get-Date
 $toolsPath = "$env:USERPROFILE\Documents\Tools\SDelete"
 $uri = "https://download.sysinternals.com/files/SDelete.zip"
 $zipPath = "$env:TEMP\SDelete.zip"
 $scriptPath = $PSCommandPath
-$driveCBefore = Get-Volume -DriveLetter C
-$driveCTotalBefore = [math]::Round($driveCBefore.Size / 1GB, 2)
-$driveCFreeBefore = [math]::Round($driveCBefore.SizeRemaining / 1GB, 2)
-$driveDBefore = Get-Volume -DriveLetter D
-$driveDTotalBefore = [math]::Round($driveDBefore.Size / 1GB, 2)
-$driveDFreeBefore = [math]::Round($driveDBefore.SizeRemaining / 1GB, 2)
 [PSObject[]]$lpgFault = @( [PSObject]@{ status = $true; exitCode = 0; message = "" } )
 
 function Write-Status {
@@ -31,12 +24,51 @@ function Write-Status {
   }
 }
 
+# ---------- timing (start, end and duration of every command) ----------
+
+function Start-Timer([string] $Title) {
+  $start = Get-Date
+  Write-Status -Message "=" -Type "=" -RepeatCount 100
+  Write-Status "$Title" -Type 'INFO'
+  Write-Status "Início: $($start.ToString('dd/MM/yyyy HH:mm:ss'))" -Type 'INFO'
+  Write-Status -Message "=" -Type "=" -RepeatCount 100
+  $start
+}
+
+function Stop-Timer([datetime] $Start, [int] $ExitCode = 0) {
+  $end = Get-Date
+  $duration = $end - $Start
+  Write-Status -Message "=" -Type "=" -RepeatCount 100
+  Write-Status "Início:  $($Start.ToString('dd/MM/yyyy HH:mm:ss'))" -Type 'INFO'
+  Write-Status "Fim:     $($end.ToString('dd/MM/yyyy HH:mm:ss'))" -Type 'INFO'
+  Write-Status ("Duração: {0:00}:{1:mm\:ss} (hh:mm:ss)" -f [math]::Floor($duration.TotalHours), $duration) -Type $(if ($ExitCode -eq 0) { 'OK' } else { 'WARNING' })
+  if ($ExitCode -ne 0) { Write-Status "Terminou com código $ExitCode." -Type 'ERROR' }
+  Write-Status -Message "=" -Type "=" -RepeatCount 100
+}
+
+function Start-DriveInfo {
+  $volumes = Get-Volume | Where-Object DriveLetter -ne $null
+  foreach ($volume in $volumes) {
+    Write-Status -Message "[INFO] Disk $($volume.DriveLetter) : Total = $([math]::Round($volume.Size / 1GB, 2)) GB Free = $([math]::Round($volume.SizeRemaining / 1GB, 2)) GB" -Type "INFO"
+  }
+  $volumes
+}
+
+function Stop-DriveInfo ([PSObject]$DriveInfo) {
+  $volumes = Get-Volume | Where-Object DriveLetter -ne $null
+  foreach ($volume in $volumes) {
+    $sizeBefore = ($DriveInfo | Where-Object { $_.DriveLetter -eq $volume.DriveLetter }).SizeRemaining
+    Write-Status -Message "[INFO] Disk $($volume.DriveLetter) : Total = $([math]::Round($volume.Size / 1GB, 2)) GB Free = $([math]::Round($volume.SizeRemaining / 1GB, 2)) GB Difference = $([math]::Round(($volume.SizeRemaining - $sizeBefore) / 1GB, 2)) GB" -Type "INFO"
+  }
+}
+
+$startedAt = Start-Timer "Cleaning PC $Direction"
+$driveInfo = Start-DriveInfo
+
 Write-Status -Message "=" -Type "=" -RepeatCount 100
 Write-Status -Message "[INFO] Preparing to clean temporary files" -Type "INFO"
 Write-Status -Message "=" -Type "=" -RepeatCount 100
 
-Write-Status -Message "[INFO] Disk C: Total = $driveCTotalBefore GB Free = $driveCFreeBefore GB" -Type "INFO"
-Write-Status -Message "[INFO] Disk D: Total = $driveDTotalBefore GB Free = $driveDFreeBefore GB" -Type "INFO"
 
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
   Write-Status "[ERROR] This script must be run as an administrator." -Type "ERROR"
@@ -45,7 +77,8 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 
-Remove-Item "$env:TEMP\" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item "$env:TEMP\*" -Recurse -Force -ErrorAction SilentlyContinue
+
 if ($?) {
   Write-Status "[OK] Successfully cleared temporary files in $env:TEMP" -Type "OK"
   $lpgFault += @( [PSObject]@{ status = $true; exitCode = 0; message = "Successfully cleared temporary files in $env:TEMP" } )
@@ -99,20 +132,19 @@ else {
   $lpgFault += @( [PSObject]@{ status = $true; exitCode = 0; message = "Recycle Bin cleared" } )
 }
 
-If (-Not (Test-Path $toolsPath)) {
-  New-Item -ItemType Directory -Path $toolsPath -Force | Out-Null
-}
-# Download and extract SDelete for secure file deletion
-Write-Status "[INFO] Downloading in $env:TEMP and extracting SDelete to $toolsPath for secure file deletion" -Type "INFO"
-try {
-  Invoke-WebRequest -Uri $uri -OutFile $zipPath -ErrorAction Stop
-}
-catch {
-  Write-Status "[ERROR] Failed to download or extract SDelete: $_" -Type "ERROR"
-  exit 1
-}
-
 if (-not (Test-Path $toolsPath\sdelete64.exe -PathType Leaf -ErrorAction Stop)) {
+  If (-Not (Test-Path $toolsPath)) {
+    New-Item -ItemType Directory -Path $toolsPath -Force
+  }
+  # Download and extract SDelete for secure file deletion
+  Write-Status "[INFO] Downloading in $env:TEMP and extracting SDelete to $toolsPath for secure file deletion" -Type "INFO"
+  try {
+    Invoke-WebRequest -Uri $uri -OutFile $zipPath -ErrorAction Stop
+  }
+  catch {
+    Write-Status "[ERROR] Failed to download SDelete: $_" -Type "ERROR"
+    exit 1
+  }
   try {
     Expand-Archive -Path $zipPath -DestinationPath $toolsPath -ErrorAction Stop
   }
@@ -122,10 +154,6 @@ if (-not (Test-Path $toolsPath\sdelete64.exe -PathType Leaf -ErrorAction Stop)) 
   }
 }
 
-if (-not (Test-Path $toolsPath\sdelete64.exe -PathType Leaf -ErrorAction Stop)) {
-  Write-Status "[ERROR] SDelete tools executable not found: $toolsPath\sdelete64.exe" -Type "ERROR"
-  exit 1
-}
 
 # Securely delete free space on the drives using SDelete
 & "$toolsPath\sdelete64.exe" -z C:
@@ -151,22 +179,7 @@ else {
   Write-Status "[INFO] Script finished, check reported errors." -Type "Info"
 }
 
-$driveCAfter = Get-Volume -DriveLetter C
-$driveCTotalAfter = [math]::Round($driveCAfter.Size / 1GB, 2)
-$driveCFreeAfter = [math]::Round($driveCAfter.SizeRemaining / 1GB, 2)
-$driveDAfter = Get-Volume -DriveLetter D
-$driveDTotalAfter = [math]::Round($driveDAfter.Size / 1GB, 2)
-$driveDFreeAfter = [math]::Round($driveDAfter.SizeRemaining / 1GB, 2)
-$driveCTotalDiff = $driveCTotalAfter - $driveCTotalBefore
-$driveCFreeDiff = $driveCFreeAfter - $driveCFreeBefore
-$driveDTotalDiff = $driveDTotalAfter - $driveDTotalBefore
-$driveDFreeDiff = $driveDFreeAfter - $driveDFreeBefore
+Stop-DriveInfo $driveInfo
 
-Write-Status -Message "[INFO] Disk C: Total: $driveCTotalAfter GB, Free: $driveCFreeAfter GB, Diff: $driveCTotalDiff GB / $driveCFreeDiff GB" -Type "Info"
-Write-Status -Message "[INFO] Disk D: Total: $driveDTotalAfter GB, Free: $driveDFreeAfter GB, Diff: $driveDTotalDiff GB / $driveDFreeDiff GB" -Type "Info"
-
-$endTime = Get-Date
-Write-Status -Message "[INFO] Script started at: $startTime" -Type "INFO"
-Write-Status -Message "[INFO] Script ended at: $endTime" -Type "INFO"
-Write-Status -Message "[INFO] Total duration: $($endTime - $startTime)" -Type "INFO"
+Stop-Timer $startedAt -ExitCode $LASTEXITCODE -Message "Data Sync $Direction"
 Write-Status -Message "=" -Type "=" -RepeatCount 100
