@@ -156,21 +156,15 @@ if (-not (Test-Path $toolsPath\sdelete64.exe -PathType Leaf -ErrorAction Stop)) 
 
 
 # Securely delete free space on the drives using SDelete
-& "$toolsPath\sdelete64.exe" -z C:
-if ($LASTEXITCODE -ne 0) {
-  Write-Status "[ERROR] Failed to securely delete free space on the C: drive using SDelete" -Type "Error"
-  exit 1
-}
-Write-Status "[OK] Securely deleting free space on the C: drive using SDelete" -Type "OK"
-if (Test-Path "D:\") {
-  # Securely delete free space on the D: drive using SDelete only if it exists
-  & "$toolsPath\sdelete64.exe" -z D:
+$volumes = Get-Volume | Where-Object DriveLetter -ne $null
+foreach ($volume in $volumes) {
+  & "$toolsPath\sdelete64.exe" -z $volume.DriveLetter + ":"
   if ($LASTEXITCODE -ne 0) {
-    Write-Status "[ERROR] Failed to securely delete free space on the D: drive using SDelete" -Type "Error"
+    Write-Status "[ERROR] Failed to securely delete free space on the $($volume.DriveLetter): drive using SDelete" -Type "Error"
     exit 1
   }
-  Write-Status "[OK] Securely deleting free space on the D: drive using SDelete" -Type "OK"
 }
+Write-Status "[OK] Securely deleting free space on the $($volume.DriveLetter): drive using SDelete" -Type "OK"
 
 if ($lpgFault | Where-Object { $_.status -eq $false }) {
   Write-Status "[WARNING] Failed to execute one or more cleanup operations" -Type "Warning"
