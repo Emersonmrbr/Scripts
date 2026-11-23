@@ -1,14 +1,35 @@
 $LogPath = "C:\Windows\Temp\SystemInstall.log"
+
+function Write-Status {
+  param(
+    [string]$Message,
+    [string]$Type = "INFO",
+    [bool]$NoNewLine = $false,
+    [int]$RepeatCount = 70
+  )
+
+  $TimeStamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+
+  switch ($Type.ToUpper()) {
+    "INFO" { Write-Host "[$TimeStamp] $Message" -ForegroundColor Cyan -NoNewLine:$NoNewLine }
+    "OK" { Write-Host "[$TimeStamp] $Message" -ForegroundColor Green -NoNewLine:$NoNewLine }
+    "ERROR" { Write-Host "[$TimeStamp] $Message" -ForegroundColor Red -NoNewLine:$NoNewLine }
+    "WARNING" { Write-Host "[$TimeStamp] $Message" -ForegroundColor Yellow -NoNewLine:$NoNewLine }
+    "=" { Write-Host ( "$Message" * $RepeatCount) -ForegroundColor Cyan -NoNewLine:$NoNewLine }
+    default { Write-Host "[$TimeStamp] $Message" -NoNewLine:$NoNewLine }
+  }
+}
+
 Start-Transcript -Path $LogPath -Append
 
-Write-Host "--- [SYSTEM] Starting Infrastructure Installation Sequence ---"
+Write-Status -Message "[INFO] [SYSTEM] Starting Infrastructure Installation Sequence" -Type "INFO"
 
 # ==============================================================================
 # 1. CONTEXT MENU INSTALLATION
 
 # ==============================================================================
 
-Write-Host " -> [1/1] Stage 1: Basic context menu..."
+Write-Status -Message "[INFO] Basic context menu" -Type "INFO"
 
 # ================================
 #  Add Network Tools to Context Menu
@@ -60,5 +81,5 @@ Add-ContextMenuItem `
 Write-Host "Shortcuts successfully added!" -ForegroundColor Green
 
 
-Write-Host "--- System Installation Sequence Completed ---"
+Write-Status -Message "[OK] System Installation Sequence Completed" -Type "OK"
 Stop-Transcript
