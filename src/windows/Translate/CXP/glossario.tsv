@@ -1,0 +1,1342 @@
+運転準備ON	Pronto p/ operar ON
+ﾏｽﾀｰ圧ON	Pressão master ON
+電源正常	Alimentação normal
+運転準備可 ﾘﾚｰOFF中	Pronto p/ operar permitido - relé OFF
+AVR«0» 低電圧検知	AVR«0» detecção de subtensão
+ｴﾘｱｾﾝｻｰ«0» ON (遮断無し)	Sensor de área«0» ON (sem bloqueio)
+ｴﾘｱｾﾝｻｰ«0»無効 ﾘﾚｰOFF中	Sensor de área«0» inválido - relé OFF
+(FRAME «0»×«1»)	(QUADRO «0»×«1»)
+操作画面(枠«0»×«1»)	Tela de operação (quadro «0»×«1»)
+ﾃﾞﾊﾞｲｽﾈｯﾄｽﾚｰﾌﾞ異常	DeviceNet falha de escravo
+ﾃﾞﾊﾞｲｽﾈｯﾄﾒﾓﾘ異常	DeviceNet falha de memória
+ﾃﾞﾊﾞｲｽﾈｯﾄﾊﾞｽｵﾌ異常	DeviceNet falha bus-off
+ﾃﾞﾊﾞｲｽﾈｯﾄﾉｰﾄﾞｱﾄﾞﾚｽ重複	DeviceNet endereço de nó duplicado
+ﾃﾞﾊﾞｲｽﾈｯﾄ電源異常	DeviceNet falha de alimentação
+ﾃﾞﾊﾞｲｽﾈｯﾄ送信ﾀｲﾑｱｯﾌﾟ	DeviceNet timeout de transmissão
+ﾃﾞﾊﾞｲｽﾈｯﾄﾃｰﾌﾞﾙ異常	DeviceNet falha de tabela
+ﾃﾞﾊﾞｲｽﾈｯﾄﾘｽﾄﾃﾞｰﾀ異常	DeviceNet falha de dados da lista
+ﾌﾟﾛﾄｺﾙﾃﾞｰﾀ異常 (ﾎﾟｰﾄ«0»)	Falha de dados de protocolo (porta«0»)
+ｼﾘｱﾙﾕﾆｯﾄ 伝送異常 (ﾎﾟｰﾄ«0»)	Unidade serial - falha de transmissão (porta«0»)
+ｼﾘｱﾙﾕﾆｯﾄ«0» Abort終了ﾌﾗｸﾞ (ﾎﾟｰﾄ«1»)	Unidade serial«0» flag fim por Abort (porta«1»)
+ｼﾘｱﾙﾕﾆｯﾄ«0» End終了ﾌﾗｸﾞ (ﾎﾟｰﾄ«1»)	Unidade serial«0» flag fim por End (porta«1»)
+ｼﾘｱﾙﾕﾆｯﾄ«0»ﾎﾟｰﾄ«1» END終了ﾌﾗｸﾞ	Unidade serial«0» porta«1» flag fim por END
+ｼﾘｱﾙﾕﾆｯﾄ«0» ﾌﾟﾛﾄｺﾙﾏｸﾛ 実行中ﾌﾗｸﾞ (ﾎﾟｰﾄ«1»)	Unidade serial«0» macro de protocolo em execução (porta«1»)
+ST«0» 后檢知	ST«0» detecção traseira
+客先指定予備	Reserva definida pelo cliente
+急停«0» C/V	Emergência«0» C/V
+«0»工位工件檢知	Detecção de peça na estação «0»
+斜板 機種検知«0»	Placa oscilante detecção de modelo«0»
+自動SS (操作盤)	Chave seletora automático (painel)
+各個SS (操作盤)	Chave seletora individual (painel)
+非常停止PB (操作盤)	Botão de emergência (painel)
+運転準備PB (操作盤)	Botão pronto p/ operar (painel)
+実行PB (操作盤)	Botão executar (painel)
+ﾘｾｯﾄPB (操作盤)	Botão reset (painel)
+連続入PB (操作盤)	Botão auto liga (painel)
+連続切PB (操作盤)	Botão auto desliga (painel)
+呼出PB (操作盤)	Botão chamada (painel)
+ﾓｰﾄﾞ許可 無効/有効	Permissão de modo inválido/válido
+ST«0» 下降端	ST«0» fim de curso inferior
+ST«0» 前檢知	ST«0» detecção dianteira
+stopper«0» 下降端	Stopper«0» fim de curso inferior
+ﾊﾞｯﾃﾘｰ異常 確認PB	Botão confirmação falha de bateria
+«0»×«1» ﾋﾟｯｷﾝｸﾞ(PL)	«0»×«1» picking (lâmpada)
+«0»×«1» ｼｭｰ取出ﾗﾝﾌﾟ	«0»×«1» lâmpada retirada de sapata
+OKﾗﾝﾌﾟ (斜板)	Lâmpada OK (placa oscilante)
+NGﾗﾝﾌﾟ (斜板)	Lâmpada NG (placa oscilante)
+斜板 機種検知«0» (ﾊﾞﾝｸA 切替)	Placa oscilante detecção de modelo«0» (troca banco A)
+斜板 機種検知«0» (ﾊﾞﾝｸB 切替)	Placa oscilante detecção de modelo«0» (troca banco B)
+密封圈拿取提示	Aviso de retirada do anel de vedação
+ST«0»下降	ST«0» descida
+斜板ｾｯﾄ位置 OKﾗﾝﾌﾟ	Placa oscilante posição OK - lâmpada
+S/P 放置位置OK	S/P posição de colocação OK
+SIZE SELECT BCD ｻｲｽﾞ選択BCD	SIZE SELECT BCD seleção de tamanho BCD
+ﾊﾟﾙｺﾑ 測定No.«0» 判定開始指令	PULCOM medição nº«0» comando início de julgamento
+ﾊﾟﾙｺﾑ 測定No.«0» 判定ﾘｾｯﾄ	PULCOM medição nº«0» reset de julgamento
+ﾊﾟﾙｺﾑ 判定No.«0» ｵｰﾄﾏｽﾀ指令	PULCOM julgamento nº«0» comando auto master
+ﾊﾟﾙｺﾑ 表示ﾃﾞｰﾀ種別指定	PULCOM seleção do tipo de dado exibido
+ﾊﾟﾙｺﾑ ﾃﾞｰﾀﾘｸｴｽﾄ	PULCOM requisição de dados
+ﾊﾟﾙｺﾑ ﾃﾞｰﾀｱｾﾌﾟﾄ	PULCOM aceite de dados
+ﾊﾟﾙｺﾑ ｻｲｽﾞ選択(BCD«0»)	PULCOM seleção de tamanho (BCD«0»)
+OKﾗﾝﾌﾟ (ﾋﾟｽﾄﾝ)	Lâmpada OK (pistão)
+NGﾗﾝﾌﾟ (ﾋﾟｽﾄﾝ)	Lâmpada NG (pistão)
+x«0».«1»μm(bcd) ﾊﾟﾙｺﾑ測定ﾃﾞｰﾀ(BCD)	x«0».«1»µm(bcd) dados de medição PULCOM (BCD)
+x«0».«1»μm	x«0».«1»µm
+ｵｲﾙ塗布 ﾊﾞﾙﾌﾞON	Aplicação de óleo - válvula ON
+ｵｲﾙ供給 ﾊﾞﾙﾌﾞON	Alimentação de óleo - válvula ON
+斜板測定子 閉	Apalpador placa oscilante fechar
+球間測定子 前進	Apalpador entre esferas avançar
+斜板測定子 前進	Apalpador placa oscilante avançar
+斜板測定子 後退	Apalpador placa oscilante recuar
+ﾋﾟｽﾄﾝ«0» 下降	Pistão«0» descer
+ﾋﾟｽﾄﾝ«0» 上昇	Pistão«0» subir
+球間測定子«0» 開	Apalpador entre esferas«0» abrir
+球間測定子«0» 閉	Apalpador entre esferas«0» fechar
+ﾋﾟｽﾄﾝ«0» ｵｲﾙ塗布ﾕﾆｯﾄ 前進	Pistão«0» unidade de óleo avançar
+ﾋﾟｽﾄﾝ«0» ｵｲﾙ塗布ﾕﾆｯﾄ 後退	Pistão«0» unidade de óleo recuar
+起動ｽﾄﾗｲｶｰSW«0» (斜板用)	Chave de partida (striker) SW«0» (placa oscilante)
+NGｼｭｰﾄ ﾊﾟﾚｯﾄ有り	Calha NG - palete presente
+斜板有り	Placa oscilante presente
+斜板 機種検知«0» (High)	Placa oscilante detecção de modelo«0» (High)
+斜板 機種検知«0» (Go)	Placa oscilante detecção de modelo«0» (Go)
+斜板 姿勢検知«0»	Placa oscilante detecção de posição«0»
+斜板 治具確認 (A型)	Placa oscilante confirmação de gabarito (tipo A)
+斜板 治具確認 (B型)	Placa oscilante confirmação de gabarito (tipo B)
+斜板 治具確認 (C型)	Placa oscilante confirmação de gabarito (tipo C)
+斜板 小範ﾏｽﾀｰ(確認)：小範(OFF) 大範(ON)	Placa oscilante master faixa pequena (conf.): pequena(OFF) grande(ON)
+斜板ﾏｽﾀｰ有り	Master de placa oscilante presente
+斜板測定子 後退端	Apalpador placa oscilante fim de curso recuado
+斜板測定子 前進端	Apalpador placa oscilante fim de curso avançado
+ﾋﾟｽﾄﾝ«0» ｵｲﾙ塗布ﾕﾆｯﾄ 後退端	Pistão«0» unidade de óleo fim de curso recuado
+ﾋﾟｽﾄﾝ«0» ｵｲﾙ塗布ﾕﾆｯﾄ 前進端	Pistão«0» unidade de óleo fim de curso avançado
+ﾋﾟｽﾄﾝ«0»用 ｵｲﾙ塗布確認	Confirmação de aplicação de óleo p/ pistão«0»
+ﾋﾟｽﾄﾝ治具«0» 上昇端	Gabarito de pistão«0» fim de curso superior
+ﾋﾟｽﾄﾝ治具«0» 下降端	Gabarito de pistão«0» fim de curso inferior
+球間測定子«0» 閉端	Apalpador entre esferas«0» fim de curso fechado
+球間測定子«0» 開端	Apalpador entre esferas«0» fim de curso aberto
+起動ｽﾄﾗｲｶｰSW«0» (ﾋﾟｽﾄﾝ用)	Chave de partida (striker) SW«0» (pistão)
+ｵｲﾙﾀﾝｸ上限 (満時：ON)	Tanque de óleo nível máx. (cheio: ON)
+ｵｲﾙﾀﾝｸ下限 (空時：ON)	Tanque de óleo nível mín. (vazio: ON)
+ﾋﾟｽﾄﾝ«0» 有り	Pistão«0» presente
+ﾋﾟｽﾄﾝ«0» 浮き確認	Pistão«0» confirmação de flutuação
+ﾋﾟｽﾄﾝ«0» 治具判別«1»	Pistão«0» identificação de gabarito«1»
+ﾋﾟｯｷﾝｸﾞｾﾝｻｰ(«0»～«1»)	Sensor de picking («0»~«1»)
+ﾗﾝｸ«0» ﾋﾟｯｷﾝｸﾞ(ON)	Rank«0» picking (ON)
+密封圈拿取檢知	Detecção de retirada do anel de vedação
+STOP«0» 前檢知	STOP«0» detecção dianteira
+STOPPER«0»后檢知	STOPPER«0» detecção traseira
+STOPPER«0» 回端	STOPPER«0» fim de curso de retorno
+DS«0»斜板 機種検知«1»	DS«0» placa oscilante detecção de modelo«1»
+DS«0»斜板 機種検知«1» ON(High)	DS«0» placa oscilante detecção de modelo«1» ON(High)
+DS«0»斜板 機種検知«1» ON(Middle)	DS«0» placa oscilante detecção de modelo«1» ON(Middle)
+DS«0»斜板 機種検知«1» ON(Lowwer)	DS«0» placa oscilante detecção de modelo«1» ON(Lower)
+ﾊﾟﾙｺﾑ -NG	PULCOM -NG
+ﾊﾟﾙｺﾑ OK«0»	PULCOM OK«0»
+ﾊﾟﾙｺﾑ +NG	PULCOM +NG
+ﾊﾟﾙｺﾑ 総合OK	PULCOM OK geral
+ﾊﾟﾙｺﾑ 総合NG	PULCOM NG geral
+ﾊﾟﾙｺﾑ ｵｰﾄﾏｽﾀ完了	PULCOM auto master concluído
+ﾊﾟﾙｺﾑ ｵｰﾄﾏｽﾀＮＧ	PULCOM auto master NG
+ﾊﾟﾙｺﾑ 測定準備完了	PULCOM pronto p/ medição
+ﾊﾟﾙｺﾑ ﾘﾄﾗｸﾄOK	PULCOM retração OK
+ﾊﾟﾙｺﾑ 全判定完了	PULCOM todos os julgamentos concluídos
+ﾊﾟﾙｺﾑ 判定完了	PULCOM julgamento concluído
+ﾊﾟﾙｺﾑ CPU RUN	PULCOM CPU RUN
+ﾊﾟﾙｺﾑ 全ｵｰﾄﾏｽﾀ完了	PULCOM todos os auto master concluídos
+ﾊﾟﾙｺﾑ 測定ﾃﾞｰﾀV(BCD)	PULCOM dados de medição V(BCD)
+×«0».«1»μm	×«0».«1»µm
+ﾊﾟﾙｺﾑ «0»	PULCOM «0»
+ﾊﾟﾙｺﾑ ｵｰﾊﾞｰ	PULCOM excesso (over)
+ﾊﾟﾙｺﾑ 極性（－）	PULCOM polaridade (-)
+ﾊﾟﾙｺﾑ ﾃﾞｰﾀ有効	PULCOM dados válidos
+運転準備可	Pronto p/ operar permitido
+ｴﾘｱｾﾝｻｰ«0» 無効	Sensor de área«0» inválido
+原点位置PL (操作盤)	Lâmpada posição de origem (painel)
+総合異常PL (操作盤)	Lâmpada falha geral (painel)
+運転準備PL (操作盤)	Lâmpada pronto p/ operar (painel)
+自動運転PL (操作盤)	Lâmpada operação automática (painel)
+警報ﾌﾞｻﾞｰ (操作盤)	Buzzer de alarme (painel)
+常時ON	Sempre ON
+常時OFF	Sempre OFF
+運転準備(一時遮断) IL«0»	Pronto p/ operar (corte temporário) IL«0»
+連続・各個SS 切替確認	Confirmação de troca chave auto/individual
+異常ﾘｾｯﾄPB	Botão reset de falha
+実行PB(各個)	Botão executar (individual)
+実行ONﾊﾟﾙｽ	Pulso ON de executar
+全原位置	Todos na posição de origem
+起動可能位置	Posição que permite partida
+ﾓｼﾞｭｰﾙ«0»(ﾌﾞｻﾞｰのみ)	Módulo«0» (somente buzzer)
+NGﾜｰｸお知らせ用	Aviso de peça NG
+連続中(IL«0»)	Em automático (IL«0»)
+全連続中	Todos em automático
+各部位(連続中)	Alguma parte em automático
+ｻｲｸﾙ運転中	Em operação de ciclo
+«0»SE«1» 治具確認(OK)	«0»SE«1» confirmação de gabarito (OK)
+«0»SA«1» 治具確認(OK)	«0»SA«1» confirmação de gabarito (OK)
+«0»SRE«1» 治具確認(OK)	«0»SRE«1» confirmação de gabarito (OK)
+予備«0» 治具確認(OK)	Reserva«0» confirmação de gabarito (OK)
+装置内ﾜｰｸ無	Sem peça na máquina
+全ﾃﾞｰﾀﾘｾｯﾄ«0»	Reset de todos os dados«0»
+全ﾃﾞｰﾀﾘｾｯﾄ	Reset de todos os dados
+斜板・ﾋﾟｽﾄﾝ (ﾏｽﾀｰ選択中) 	Placa oscilante/pistão (master selecionado)
+総合異常(発生)	Falha geral (ocorrida)
+ﾌﾞｻﾞｰ停止(異常)	Parar buzzer (falha)
+ﾌﾞｻﾞｰ停止(警報)	Parar buzzer (alarme)
+共通異常 (連続切)	Falha comum (parada auto)
+共通異常 (ｻｲｸﾙ停止)	Falha comum (parada de ciclo)
+ｻｲｸﾙ停止(異常)	Parada de ciclo (falha)
+連続切(異常)	Parada auto (falha)
+運準遮断(異常)	Corte de pronto p/ operar (falha)
+安全扉ｾｰﾌﾃｨ系(異常)	Sistema de segurança da porta (falha)
+ﾊﾞｯﾃﾘｰ異常(確認)	Falha de bateria (confirmação)
+警告(発生中)：ﾌﾞｻﾞｰ有	Alarme (ativo): com buzzer
+警告(発生中)：ﾌﾞｻﾞｰ無	Alarme (ativo): sem buzzer
+«0»st 連続切(異常)	«0»st parada auto (falha)
+«0»st ｻｲｸﾙ停止(異常)	«0»st parada de ciclo (falha)
+«0»st 連続切異常	«0»st falha de parada auto
+«0»stｻｲｸﾙ停止異常	«0»st falha de parada de ciclo
+ﾌﾞｻﾞｰ再鳴動 (指令)	Buzzer tocar novamente (comando)
+ｻｲｸﾙﾀｲﾑ 計測開始 (IL«0»)	Tempo de ciclo início de medição (IL«0»)
+ｻｲｸﾙﾀｲﾑ 計測開始	Tempo de ciclo início de medição
+ｻｲｸﾙﾀｲﾑ 計測終了	Tempo de ciclo fim de medição
+ﾃﾞｰﾀ編集 有効：GP	Edição de dados habilitada: GP
+画面切替(PLS)：GP	Troca de tela (PLS): GP
+ｼｭｰﾎﾞｯｸｽ 設定ﾚｲｱｳﾄ (正常)	Layout de caixas de sapata (normal)
+補正ﾃﾞｰﾀ 転送許可 (PC→PLC)	Transferência de dados de correção permitida (PC→PLC)
+ﾎﾞｱ補正値異常 («0»以上検知)	Falha valor de correção do furo (detectado «0» ou mais)
+【耐久】自動完了	[Durabilidade] concluído automático
+«0»st 動作無し	«0»st sem movimento
+«0»st ﾜｰｸ無し	«0»st sem peça
+«0»st 原点位置	«0»st posição de origem
+«0»st 起動可能位置	«0»st posição que permite partida
+«0»st 自動運転(IL«1»)	«0»st operação automática (IL«1»)
+«0»st 自動運転(IL«1»	«0»st operação automática (IL«1»
+«0»st 自動運転(完了)	«0»st operação automática (concluída)
+«0»st 自動運転中	«0»st em operação automática
+«0»st 各個中	«0»st em individual
+«0»st 【強制】連続切	«0»st [forçado] parada auto
+«0»st ﾃﾞｰﾀﾘｾｯﾄ	«0»st reset de dados
+«0»st NGﾘｾｯﾄ (指令)	«0»st reset NG (comando)
+«0»st NGﾘｾｯﾄ (ｻｲｸﾙ・ﾏｽﾀｰ時)	«0»st reset NG (ciclo/master)
+«0»st NGﾘｾｯﾄ (取出異常時)	«0»st reset NG (falha de retirada)
+«0»st 測定完了前 (自動中断検知)	«0»st antes do fim da medição (detecção de interrupção auto)
+«0»st ﾃﾞｰﾀ無 (ﾃﾞｰﾀｼﾌﾄ領域)	«0»st sem dados (área de shift de dados)
+«0»st ﾃﾞｰﾀ有 (ﾃﾞｰﾀｼﾌﾄ領域)	«0»st com dados (área de shift de dados)
+«0»st 原点戻り(指令)	«0»st retorno à origem (comando)
+«0»st 原点戻り(指令PLS)	«0»st retorno à origem (comando PLS)
+«0»SE«1» 斜板治具確認(OK)	«0»SE«1» confirmação de gabarito placa oscilante (OK)
+«0»SA«1» 斜板治具確認(OK)	«0»SA«1» confirmação de gabarito placa oscilante (OK)
+«0»SRE«1» 斜板治具確認(OK)	«0»SRE«1» confirmação de gabarito placa oscilante (OK)
+予備«0» 斜板治具確認(OK)	Reserva«0» confirmação de gabarito placa oscilante (OK)
+«0»S«1»予備«2» 斜板治具確認(OK)	«0»S«1» reserva«2» confirmação de gabarito placa oscilante (OK)
+«0»SR«1»予備«2» 斜板治具確認(OK)	«0»SR«1» reserva«2» confirmação de gabarito placa oscilante (OK)
+«0»SRE«1»予備«2» 斜板治具確認(OK)	«0»SRE«1» reserva«2» confirmação de gabarito placa oscilante (OK)
+«0»SRRE«1»予備«2» 斜板治具確認(OK)	«0»SRRE«1» reserva«2» confirmação de gabarito placa oscilante (OK)
+«0»S«1»(L/S-VDA)予備«2» 斜板治具確認(OK)	«0»S«1»(L/S-VDA) reserva«2» confirmação de gabarito placa oscilante (OK)
+斜板 通常自動(選択中)	Placa oscilante automático normal (selecionado)
+斜板 小範・大範(ﾏｽﾀｰ選択中)	Placa oscilante faixa pequena/grande (master selecionado)
+ﾓｼﾞｭｰﾙ«0» ｽﾄｯﾊﾟｰ下降	Módulo«0» stopper descer
+(指令)	(comando)
+ﾓｼﾞｭｰﾙ«0» ｽﾄｯﾊﾟｰ上昇	Módulo«0» stopper subir
+斜板 OKﾗﾝﾌﾟ (通常)	Placa oscilante lâmpada OK (normal)
+斜板 OKﾗﾝﾌﾟ (ﾏｽﾀｰ)	Placa oscilante lâmpada OK (master)
+斜板 NGﾗﾝﾌﾟ (通常)	Placa oscilante lâmpada NG (normal)
+斜板 NGﾗﾝﾌﾟ (ﾏｽﾀｰ)	Placa oscilante lâmpada NG (master)
+斜板 機種検知(OK)	Placa oscilante detecção de modelo (OK)
+斜板測定子 開(IL«0»)	Apalpador placa oscilante abrir (IL«0»)
+斜板測定子 開(指令)	Apalpador placa oscilante abrir (comando)
+斜板測定子 閉(IL«0»)	Apalpador placa oscilante fechar (IL«0»)
+斜板測定子 閉(指令)	Apalpador placa oscilante fechar (comando)
+斜板測定子 後退(IL«0»)	Apalpador placa oscilante recuar (IL«0»)
+斜板測定子 後退(指令)	Apalpador placa oscilante recuar (comando)
+斜板測定子 前進(IL«0»)	Apalpador placa oscilante avançar (IL«0»)
+斜板測定子 前進(指令)	Apalpador placa oscilante avançar (comando)
+斜板測定 ｻｲｸﾙ開始(IL«0»)	Medição placa oscilante início de ciclo (IL«0»)
+斜板測定 ｻｲｸﾙ開始(指令)	Medição placa oscilante início de ciclo (comando)
+斜板測定(開始)	Medição placa oscilante (início)
+斜板測定 (正常完了)	Medição placa oscilante (concluída normal)
+斜板測定 (ﾃﾞｰﾀｵｰﾊﾞｰ)	Medição placa oscilante (dados fora da faixa)
+斜板測定(完了)	Medição placa oscilante (concluída)
+斜板 小範ﾏｽﾀ (選択中)	Placa oscilante master faixa pequena (selecionado)
+斜板 小範ｵｰﾄﾏｽﾀ (開始)	Placa oscilante auto master faixa pequena (início)
+斜板 小範ｵｰﾄﾏｽﾀ (動作完了)	Placa oscilante auto master faixa pequena (ação concluída)
+斜板 小範ﾏｽﾀ(正常完了)	Placa oscilante master faixa pequena (concluído normal)
+斜板 小範ﾏｽﾀ(ﾃﾞｰﾀｵｰﾊﾞ)	Placa oscilante master faixa pequena (dados fora da faixa)
+斜板 小範ﾏｽﾀｰ (結果有り)	Placa oscilante master faixa pequena (com resultado)
+斜板 小範ﾏｽﾀｰ (結果無し)	Placa oscilante master faixa pequena (sem resultado)
+斜板 大範ﾏｽﾀ (選択中)	Placa oscilante master faixa grande (selecionado)
+斜板 大範ﾏｽﾀ(正常完了)	Placa oscilante master faixa grande (concluído normal)
+斜板 大小範ﾏｽﾀ(ﾃﾞｰﾀｵｰﾊﾞ)	Placa oscilante master faixa grande/pequena (dados fora da faixa)
+斜板 大範ﾏｽﾀｰ (結果有り)	Placa oscilante master faixa grande (com resultado)
+斜板 大範ﾏｽﾀｰ (結果無し)	Placa oscilante master faixa grande (sem resultado)
+斜板 小範・大範ﾏｽﾀｰ (動作完了)	Placa oscilante master faixa pequena/grande (ação concluída)
+ﾊﾟﾙｺﾑ 判定ﾘｾｯﾄ信号(OFF確認)	PULCOM sinal reset de julgamento (confirmação OFF)
+ﾊﾟﾙｺﾑ 判定(開始)	PULCOM julgamento (início)
+ﾊﾟﾙｺﾑ 全判定(完了)	PULCOM todos os julgamentos (concluído)
+ﾊﾟﾙｺﾑ ﾃﾞｰﾀ有効(確認)	PULCOM dados válidos (confirmação)
+ﾊﾟﾙｺﾑ ﾃﾞｰﾀ正常(確認)	PULCOM dados normais (confirmação)
+ﾊﾟﾙｺﾑ ﾃﾞｰﾀｵｰﾊﾞｰ(確認)	PULCOM dados fora da faixa (confirmação)
+ﾊﾟﾙｺﾑ ﾃﾞｰﾀ有効 (OFF確認)	PULCOM dados válidos (confirmação OFF)
+ﾊﾟﾙｺﾑ ﾃﾞｰﾀ正常 (計測完了)	PULCOM dados normais (medição concluída)
+ﾊﾟﾙｺﾑ ﾃﾞｰﾀｵｰﾊﾞｰ (計測完了)	PULCOM dados fora da faixa (medição concluída)
+RBC«0» Complete Position RBC«1» 完了ﾎﾟｼﾞｼｮﾝ	RBC«0» Complete Position RBC«1» posição concluída
+ｽﾄｯｸ部 ﾃﾞｰﾀ無し	Estoque sem dados
+ｽﾄｯｸ部 ﾃﾞｰﾀ有り	Estoque com dados
+«0»st OK斜板 取出確認 (通常時) 	«0»st confirmação de retirada placa oscilante OK (normal)
+ﾃﾞｰﾀｼﾌﾄ完了 («0»st → ｽﾄｯｸ部)	Shift de dados concluído («0»st → estoque)
+«0»st ｽﾄﾗｲｶｰON (予約中)	«0»st striker ON (reservado)
+«0»SE«1» ﾋﾟｽﾄﾝ«2» 治具確認(OK)	«0»SE«1» pistão«2» confirmação de gabarito (OK)
+«0»SA«1» ﾋﾟｽﾄﾝ«2» 治具確認(OK)	«0»SA«1» pistão«2» confirmação de gabarito (OK)
+«0»SRE«1» ﾋﾟｽﾄﾝ«2» 治具確認(OK)	«0»SRE«1» pistão«2» confirmação de gabarito (OK)
+予備«0» ﾋﾟｽﾄﾝ«1» 治具確認(OK)	Reserva«0» pistão«1» confirmação de gabarito (OK)
+ﾋﾟｽﾄﾝ«0» 治具確認(全ｾﾝｻｰOFF)	Pistão«0» confirmação de gabarito (todos sensores OFF)
+ﾋﾟｽﾄﾝ«0» 治具確認(OFF)	Pistão«0» confirmação de gabarito (OFF)
+ﾋﾟｽﾄﾝ 通常自動(選択中)	Pistão automático normal (selecionado)
+ﾋﾟｽﾄﾝ 小範・大範(ﾏｽﾀｰ選択中)	Pistão faixa pequena/grande (master selecionado)
+ﾋﾟｽﾄﾝ OKﾗﾝﾌﾟ (通常)	Pistão lâmpada OK (normal)
+ﾋﾟｽﾄﾝ OKﾗﾝﾌﾟ (ﾏｽﾀｰ)	Pistão lâmpada OK (master)
+ﾋﾟｽﾄﾝ NGﾗﾝﾌﾟ (通常)	Pistão lâmpada NG (normal)
+ﾋﾟｽﾄﾝ NGﾗﾝﾌﾟ (ﾏｽﾀｰ)	Pistão lâmpada NG (master)
+ﾋﾟｽﾄﾝ«0» ｵｲﾙ塗布 前進(IL«1»)	Pistão«0» aplicação de óleo avançar (IL«1»)
+ﾋﾟｽﾄﾝ«0» ｵｲﾙ塗布 前進(指令)	Pistão«0» aplicação de óleo avançar (comando)
+ﾋﾟｽﾄﾝ«0» ｵｲﾙ塗布 後退(IL«1»)	Pistão«0» aplicação de óleo recuar (IL«1»)
+ﾋﾟｽﾄﾝ«0» ｵｲﾙ塗布 後退(指令)	Pistão«0» aplicação de óleo recuar (comando)
+ﾋﾟｽﾄﾝ«0»～«1» ｵｲﾙ塗布 吐出(IL«2»)	Pistão«0»~«1» aplicação de óleo descarga (IL«2»)
+ﾋﾟｽﾄﾝ«0»～«1» ｵｲﾙ塗布 吐出(指令)	Pistão«0»~«1» aplicação de óleo descarga (comando)
+ﾋﾟｽﾄﾝ«0» ｵｲﾙ吐出 (記憶)	Pistão«0» descarga de óleo (memória)
+ﾋﾟｽﾄﾝ«0»～«1» ｵｲﾙ吐出 (記憶)	Pistão«0»~«1» descarga de óleo (memória)
+ｵｲﾙ 自動供給(IL«0»)	Óleo alimentação automática (IL«0»)
+ｵｲﾙ 自動供給(指令)	Óleo alimentação automática (comando)
+ｵｲﾙ 自動供給停止(IL«0»)	Óleo parar alimentação automática (IL«0»)
+ｵｲﾙ 自動供給停止 (IL«0»)	Óleo parar alimentação automática (IL«0»)
+ｵｲﾙ 自動供給停止(指令)	Óleo parar alimentação automática (comando)
+«0»st ﾋﾟｽﾄﾝ«1» 治具下降 (IL«2»)	«0»st pistão«1» descer gabarito (IL«2»)
+«0»st ﾋﾟｽﾄﾝ«1» 治具下降 (指令)	«0»st pistão«1» descer gabarito (comando)
+«0»st ﾋﾟｽﾄﾝ«1» 治具上昇 (IL«2»)	«0»st pistão«1» subir gabarito (IL«2»)
+«0»st ﾋﾟｽﾄﾝ«1» 治具上昇 (指令)	«0»st pistão«1» subir gabarito (comando)
+«0»st ﾋﾟｽﾄﾝ«1» 球間測定子 閉 (IL«2»)	«0»st pistão«1» apalpador entre esferas fechar (IL«2»)
+«0»st ﾋﾟｽﾄﾝ«1» 球間測定子 閉 (指令)	«0»st pistão«1» apalpador entre esferas fechar (comando)
+«0»st ﾋﾟｽﾄﾝ«1» 球間測定子 開 (IL«2»)	«0»st pistão«1» apalpador entre esferas abrir (IL«2»)
+«0»st ﾋﾟｽﾄﾝ«1» 球間測定子 開 (指令)	«0»st pistão«1» apalpador entre esferas abrir (comando)
+«0»st 球間測定子 前進 (IL«1»)	«0»st apalpador entre esferas avançar (IL«1»)
+«0»st 球間測定子 前進 (指令)	«0»st apalpador entre esferas avançar (comando)
+«0»st 球間測定子 後退 (IL«1»)	«0»st apalpador entre esferas recuar (IL«1»)
+«0»st 球間測定子 後退 (指令)	«0»st apalpador entre esferas recuar (comando)
+ﾋﾟｽﾄﾝ«0» 小範ﾏｽﾀｰ(選択中)	Pistão«0» master faixa pequena (selecionado)
+ﾋﾟｽﾄﾝ«0» 大範ﾏｽﾀｰ(選択中)	Pistão«0» master faixa grande (selecionado)
+ﾋﾟｽﾄﾝ«0» 小範・大範ﾏｽﾀｰ(選択中)	Pistão«0» master faixa pequena/grande (selecionado)
+ﾋﾟｽﾄﾝ«0» ﾌﾟﾘｾｯﾄ(IL«1»)	Pistão«0» preset (IL«1»)
+ﾋﾟｽﾄﾝ«0» ﾌﾟﾘｾｯﾄ(指令)	Pistão«0» preset (comando)
+ﾋﾟｽﾄﾝ«0» ﾌﾟﾘｾｯﾄ (送信記憶)	Pistão«0» preset (memória de envio)
+ﾋﾟｽﾄﾝ«0» ﾌﾟﾘｾｯﾄ(正常完了)	Pistão«0» preset (concluído normal)
+ﾋﾟｽﾄﾝ«0» 現在値読出(IL«1»)	Pistão«0» leitura do valor atual (IL«1»)
+ﾋﾟｽﾄﾝ«0» 現在値読出(指令)	Pistão«0» leitura do valor atual (comando)
+ﾋﾟｽﾄﾝ«0» 現在値読出 (送信記憶)	Pistão«0» leitura do valor atual (memória de envio)
+ﾋﾟｽﾄﾝ«0» 現在値読出 (正常完了)	Pistão«0» leitura do valor atual (concluída normal)
+ﾋﾟｽﾄﾝ«0» 測定(結果有り)	Pistão«0» medição (com resultado)
+ﾋﾟｽﾄﾝ«0» 小範ﾏｽﾀｰ(結果有り)	Pistão«0» master faixa pequena (com resultado)
+ﾋﾟｽﾄﾝ«0» 大範ﾏｽﾀｰ(結果有り)	Pistão«0» master faixa grande (com resultado)
+ﾋﾟｽﾄﾝ«0» OK・NG (ﾏｽﾀ-結果有り)	Pistão«0» OK/NG (master com resultado)
+ﾋﾟｽﾄﾝ«0» OK・NG (ﾏｽﾀ-結果無し)	Pistão«0» OK/NG (master sem resultado)
+ﾋﾟｽﾄﾝ«0»～«1» 測定(結果有り)	Pistão«0»~«1» medição (com resultado)
+ﾋﾟｽﾄﾝ«0»～«1» 測定OK	Pistão«0»~«1» medição OK
+ﾋﾟｽﾄﾝ«0»～«1» ﾌﾟﾘｾｯﾄ完了	Pistão«0»~«1» preset concluído
+ﾋﾟｽﾄﾝ«0»～«1» 入替完了	Pistão«0»~«1» troca concluída
+ﾋﾟｽﾄﾝ«0» OK品 (取出確認)	Pistão«0» peça OK (confirmação de retirada)
+ﾋﾟｽﾄﾝ«0» 入替確認 (球間測定OK)	Pistão«0» confirmação de troca (medição entre esferas OK)
+ﾋﾟｽﾄﾝ«0»～«1» 小範・大範 ﾏｽﾀｰ(選択中)	Pistão«0»~«1» master faixa pequena/grande (selecionado)
+ﾋﾟｽﾄﾝ«0»～«1» 小範ﾏｽﾀｰ(OK)	Pistão«0»~«1» master faixa pequena (OK)
+ﾋﾟｽﾄﾝ«0»～«1» 大範ﾏｽﾀｰ(OK)	Pistão«0»~«1» master faixa grande (OK)
+ﾋﾟｽﾄﾝﾏｽﾀｰ (動作完了)	Master de pistão (ação concluída)
+ｼｭｰﾗﾝｸ 選定開始(IL«0»)	Rank de sapata início de seleção (IL«0»)
+ｼｭｰﾗﾝｸ 選定開始	Rank de sapata início de seleção
+ﾋﾟｽﾄﾝ«0» ｼｭｰ選択完了	Pistão«0» seleção de sapata concluída
+ｼｭｰﾗﾝｸ (全選択完了)	Rank de sapata (todas as seleções concluídas)
+ｼｭｰ選定異常	Falha na seleção de sapata
+ｼｭｰﾎﾞｯｸｽ(«0»×«1») ﾋﾟｯｷﾝｸﾞON(検知)	Caixa de sapata («0»×«1») picking ON (detectado)
+ｼｭｰ取出(開始)	Retirada de sapata (início)
+ｼｭｰ取出中	Retirando sapata
+ｼｭｰ取出 記憶ﾘｾｯﾄ (指令)	Retirada de sapata reset de memória (comando)
+ｼｭｰ取出時 (設備正常位置)	Na retirada de sapata (equipamento em posição normal)
+ﾋﾟｯｷﾝｸﾞ取出(正常位置)	Retirada por picking (posição normal)
+ﾋﾟｯｷﾝｸﾞ(誤遮断検知)	Picking (detecção de interrupção indevida)
+ﾋﾟｯｷﾝｸﾞ(再遮断検知)	Picking (detecção de nova interrupção)
+ﾋﾟｯｷﾝｸﾞ取出 (確認) ： «0»個目 	Retirada por picking (confirmação): «0»ª peça
+ｼｭｰ取出指令 («0»回目-«1»個目)	Comando de retirada de sapata («0»ª vez - «1»ª peça)
+ｼｭｰ取出完了 («0»回目-«1»個目)	Retirada de sapata concluída («0»ª vez - «1»ª peça)
+ｼｭｰ取出完了 («0»回目)	Retirada de sapata concluída («0»ª vez)
+ｼｭｰ取出未完了 («0»回目)	Retirada de sapata não concluída («0»ª vez)
+ｼｭｰ全取出(完了)	Retirada de todas as sapatas (concluída)
+ﾗﾝｸ«0» ﾗﾝﾌﾟ点灯 (指示)	Rank«0» acender lâmpada (indicação)
+ﾋﾟｯｷﾝｸﾞPL («0»×«1») 点灯指示	Lâmpada de picking («0»×«1») indicação acender
+ﾗﾝｸ«0» ｼｭｰ取出確認 (ｶｳﾝﾀ用)	Rank«0» confirmação de retirada de sapata (p/ contador)
+原点位置(ﾓｼﾞｭｰﾙ«0»)	Posição de origem (módulo«0»)
+SHOE取出工程	Processo de retirada de SHOE
+載入SHOE選擇數據	Carregar dados de seleção de SHOE
+PISTON«0» SHOE取出	PISTON«0» retirada de SHOE
+PISTON SHOE取出完成	PISTON retirada de SHOE concluída
+SHOE取出復位	Reset de retirada de SHOE
+«0»st 急停按鈕按下	«0»st botão de emergência pressionado
+SHOE取出工程再開始間隔	Intervalo p/ reiniciar processo de retirada de SHOE
+SHOE DATA 存儲中	Armazenando SHOE DATA
+SHOE 選擇data載入完成	Carga de dados de seleção de SHOE concluída
+C/V滿杯	C/V cheia
+STOPPER«0»工程 STOPPER«1»下降	Processo STOPPER«0» STOPPER«1» descer
+ST«0»工程 作業開始	Processo ST«0» início de trabalho
+密封圈組裝	Montagem do anel de vedação
+ST«0»工程 ST«1»下降	Processo ST«0» ST«1» descer
+ST«0»工程 ST«1»通過中	Processo ST«0» ST«1» passando
+ST«0»工程完成	Processo ST«0» concluído
+ST«0»通過確認	Confirmação de passagem ST«0»
+ST«0»工程開始	Início do processo ST«0»
+ST«0»通過中	ST«0» passando
+ADD«0»屏蔽用	Bloqueio p/ ADD«0»
+調試屏蔽用	Bloqueio p/ comissionamento
+ﾄﾚｲ通過確認	Confirmação de passagem de bandeja
+ﾗﾝﾌﾟﾁｪｯｸ	Teste de lâmpadas
+【ｼｸﾞﾅﾙﾀﾜｰ】 (点灯)：異常・(点滅)：各個	[Torre sinaleira] (aceso): falha / (piscando): individual
+【ｼｸﾞﾅﾙﾀﾜｰ】 (点灯)：呼出・(点滅)：NG品有り	[Torre sinaleira] (aceso): chamada / (piscando): peça NG presente
+【ｼｸﾞﾅﾙﾀﾜｰ】 (点灯)：原位置・(点滅)：機能無し	[Torre sinaleira] (aceso): posição de origem / (piscando): sem função
+【ｼｸﾞﾅﾙﾀﾜｰ】 ﾌﾞｻﾞｰ (総合異常中)	[Torre sinaleira] buzzer (falha geral ativa)
+【ｱﾝﾄﾞﾝ】：総合異常	[Andon]: falha geral
+【ｱﾝﾄﾞﾝ】：各個	[Andon]: individual
+【ｱﾝﾄﾞﾝ】：呼出	[Andon]: chamada
+【ｱﾝﾄﾞﾝ】：NGﾜｰｸ有り	[Andon]: peça NG presente
+【ｱﾝﾄﾞﾝ】：予備	[Andon]: reserva
+ST«0» 下降命令	ST«0» comando descer
+ST«0» 上升命令	ST«0» comando subir
+搬送C/V	C/V de transporte
+ﾈｯﾄﾜｰｸ命令実行可 (内部ﾎﾟｰﾄ«0»)	Comando de rede habilitado (porta interna«0»)
+«0»st ﾋﾟｽﾄﾝ«1» 測定子 ならし動作(回数)	«0»st pistão«1» apalpador movimento de amaciamento (contagem)
+異常用CNT(«0»)	CNT p/ falha («0»)
+ｻｲｸﾙﾀｲﾑ (平均値算出用) «0»値合計	Tempo de ciclo (p/ cálculo da média) soma de «0» valores
+斜板ﾏｽﾀｰ 規格設定値 «0».«1»(μm)	Master placa oscilante valor de especificação «0».«1»(µm)
+斜板規格上限 ×«0».«1»μm	Placa oscilante limite sup. de especificação ×«0».«1»µm
+斜板規格下限 ×«0».«1»μm	Placa oscilante limite inf. de especificação ×«0».«1»µm
+斜板 補正設定値 乗数:A	Placa oscilante valor de correção multiplicador: A
+斜板 補正設定値 加数:B	Placa oscilante valor de correção somador: B
+ﾋﾟｽﾄﾝ規格上限 ×«0».«1»μm	Pistão limite sup. de especificação ×«0».«1»µm
+ﾋﾟｽﾄﾝ規格下限 ×«0».«1»μm	Pistão limite inf. de especificação ×«0».«1»µm
+ｸﾘｱﾗﾝｽねらい値 (GP設定値)	Valor alvo de folga (valor ajustado no GP)
+cosθ (GP設定値)	cosθ (valor ajustado no GP)
+球間直径値 (GP設定値)	Diâmetro entre esferas (valor ajustado no GP)
+ﾋﾟｽﾄﾝ«0» 測定球間 基準値	Pistão«0» valor de referência medição entre esferas
+ﾋﾟｽﾄﾝ«0» 測定球間基準値	Pistão«0» valor de referência medição entre esferas
+ｻｲｸﾙﾀｲﾑ («0»～«1») 合計値	Tempo de ciclo («0»~«1») valor total
+ﾋﾟｽﾄﾝ«0» 補正 乗数:A	Pistão«0» correção multiplicador: A
+ﾋﾟｽﾄﾝ«0» 補正 加数:B	Pistão«0» correção somador: B
+ 斜板ﾏｽﾀ値«0».«1»(μm) 【設定値：«2»SE«3»】	 Valor master placa oscilante «0».«1»(µm) [ajuste: «2»SE«3»]
+↑	↑
+ 斜板規格上限 ×«0».«1»μm 【設定値：«2»SE«3»】	 Placa oscilante limite sup. ×«0».«1»µm [ajuste: «2»SE«3»]
+ 斜板規格下限 ×«0».«1»μm 【設定値：«2»SE«3»】	 Placa oscilante limite inf. ×«0».«1»µm [ajuste: «2»SE«3»]
+ 斜板 補正 乗数:A 【設定値：«0»SE«1»】	 Placa oscilante correção multiplicador: A [ajuste: «0»SE«1»]
+ 斜板 補正 加数:B 【設定値：«0»SE«1»】	 Placa oscilante correção somador: B [ajuste: «0»SE«1»]
+予備  【設定値：«0»SE«1»】	Reserva  [ajuste: «0»SE«1»]
+ ﾋﾟｽﾄﾝ規格上限 ×«0».«1»μm 【設定値：«2»SE«3»】	 Pistão limite sup. ×«0».«1»µm [ajuste: «2»SE«3»]
+ ﾋﾟｽﾄﾝ規格下限 ×«0».«1»μm 【設定値：«2»SE«3»】	 Pistão limite inf. ×«0».«1»µm [ajuste: «2»SE«3»]
+ ｸﾘｱﾗﾝｽ ねらい値 【設定値：«0»SE«1»】	 Folga valor alvo [ajuste: «0»SE«1»]
+ cosθ【設定値：«0»SE«1»】	 cosθ [ajuste: «0»SE«1»]
+ 球間直径 【設定値：«0»SE«1»】	 Diâmetro entre esferas [ajuste: «0»SE«1»]
+ ﾋﾟｽﾄﾝ«0»測定球間基準値 【設定値：«1»SE«2»】	 Pistão«0» valor de referência entre esferas [ajuste: «1»SE«2»]
+ ﾋﾟｽﾄﾝ«0» 補正 乗数:A 【設定値：«1»SE«2»】	 Pistão«0» correção multiplicador: A [ajuste: «1»SE«2»]
+ ﾋﾟｽﾄﾝ«0» 補正 加数:B 【設定値：«1»SE«2»】	 Pistão«0» correção somador: B [ajuste: «1»SE«2»]
+ 斜板ﾏｽﾀ値«0».«1»(μm) 【設定値：«2»SA«3»】	 Valor master placa oscilante «0».«1»(µm) [ajuste: «2»SA«3»]
+ 斜板規格上限 ×«0».«1»μm 【設定値：«2»SA«3»】	 Placa oscilante limite sup. ×«0».«1»µm [ajuste: «2»SA«3»]
+ 斜板規格下限 ×«0».«1»μm 【設定値：«2»SA«3»】	 Placa oscilante limite inf. ×«0».«1»µm [ajuste: «2»SA«3»]
+ 斜板 補正 乗数:A 【設定値：«0»SA«1»】	 Placa oscilante correção multiplicador: A [ajuste: «0»SA«1»]
+ 斜板 補正 加数:B 【設定値：«0»SA«1»】	 Placa oscilante correção somador: B [ajuste: «0»SA«1»]
+予備  【設定値：«0»SA«1»】	Reserva  [ajuste: «0»SA«1»]
+ ﾋﾟｽﾄﾝ規格上限 ×«0».«1»μm 【設定値：«2»SA«3»】	 Pistão limite sup. ×«0».«1»µm [ajuste: «2»SA«3»]
+ ﾋﾟｽﾄﾝ規格下限 ×«0».«1»μm 【設定値：«2»SA«3»】	 Pistão limite inf. ×«0».«1»µm [ajuste: «2»SA«3»]
+ ｸﾘｱﾗﾝｽ ねらい値 【設定値：«0»SA«1»】	 Folga valor alvo [ajuste: «0»SA«1»]
+ cosθ【設定値：«0»SA«1»】	 cosθ [ajuste: «0»SA«1»]
+ 球間直径 【設定値：«0»SA«1»】	 Diâmetro entre esferas [ajuste: «0»SA«1»]
+ ﾋﾟｽﾄﾝ«0»測定球間基準値 【設定値：«1»SA«2»】	 Pistão«0» valor de referência entre esferas [ajuste: «1»SA«2»]
+ ﾋﾟｽﾄﾝ«0» 補正 乗数:A 【設定値：«1»SA«2»】	 Pistão«0» correção multiplicador: A [ajuste: «1»SA«2»]
+ ﾋﾟｽﾄﾝ«0» 補正 加数:B 【設定値：«1»SA«2»】	 Pistão«0» correção somador: B [ajuste: «1»SA«2»]
+ 斜板ﾏｽﾀ値«0».«1»(μm) 【設定値：«2»SRE«3»】	 Valor master placa oscilante «0».«1»(µm) [ajuste: «2»SRE«3»]
+ 斜板規格上限 ×«0».«1»μm 【設定値：«2»SRE«3»】	 Placa oscilante limite sup. ×«0».«1»µm [ajuste: «2»SRE«3»]
+ 斜板規格下限 ×«0».«1»μm 【設定値：«2»SRE«3»】	 Placa oscilante limite inf. ×«0».«1»µm [ajuste: «2»SRE«3»]
+ 斜板 補正 乗数:A 【設定値：«0»SRE«1»】	 Placa oscilante correção multiplicador: A [ajuste: «0»SRE«1»]
+ 斜板 補正 加数:B 【設定値：«0»SRE«1»】	 Placa oscilante correção somador: B [ajuste: «0»SRE«1»]
+予備  【設定値：«0»SRE«1»】	Reserva  [ajuste: «0»SRE«1»]
+ ﾋﾟｽﾄﾝ規格上限 ×«0».«1»μm 【設定値：«2»SRE«3»】	 Pistão limite sup. ×«0».«1»µm [ajuste: «2»SRE«3»]
+ ﾋﾟｽﾄﾝ規格下限 ×«0».«1»μm 【設定値：«2»SRE«3»】	 Pistão limite inf. ×«0».«1»µm [ajuste: «2»SRE«3»]
+ ｸﾘｱﾗﾝｽ ねらい値 【設定値：«0»SRE«1»】	 Folga valor alvo [ajuste: «0»SRE«1»]
+ cosθ【設定値：«0»SRE«1»】	 cosθ [ajuste: «0»SRE«1»]
+ 球間直径 【設定値：«0»SRE«1»】	 Diâmetro entre esferas [ajuste: «0»SRE«1»]
+ ﾋﾟｽﾄﾝ«0»測定球間基準値 【設定値：«1»SRE«2»】	 Pistão«0» valor de referência entre esferas [ajuste: «1»SRE«2»]
+ ﾋﾟｽﾄﾝ«0» 補正 乗数:A 【設定値：«1»SRE«2»】	 Pistão«0» correção multiplicador: A [ajuste: «1»SRE«2»]
+ ﾋﾟｽﾄﾝ«0» 補正 加数:B 【設定値：«1»SRE«2»】	 Pistão«0» correção somador: B [ajuste: «1»SRE«2»]
+ 斜板ﾏｽﾀ値«0».«1»(μm) 【設定値：予備«2»】	 Valor master placa oscilante «0».«1»(µm) [ajuste: reserva«2»]
+ 斜板規格上限 ×«0».«1»μm 【設定値：予備«2»】	 Placa oscilante limite sup. ×«0».«1»µm [ajuste: reserva«2»]
+ 斜板規格下限 ×«0».«1»μm 【設定値：予備«2»】	 Placa oscilante limite inf. ×«0».«1»µm [ajuste: reserva«2»]
+ 斜板 補正 乗数:A 【設定値：予備«0»】	 Placa oscilante correção multiplicador: A [ajuste: reserva«0»]
+ 斜板 補正 加数:B 【設定値：予備«0»】	 Placa oscilante correção somador: B [ajuste: reserva«0»]
+予備  【設定値：予備«0»】	Reserva  [ajuste: reserva«0»]
+ ﾋﾟｽﾄﾝ規格上限 ×«0».«1»μm 【設定値：予備«2»】	 Pistão limite sup. ×«0».«1»µm [ajuste: reserva«2»]
+ ﾋﾟｽﾄﾝ規格下限 ×«0».«1»μm 【設定値：予備«2»】	 Pistão limite inf. ×«0».«1»µm [ajuste: reserva«2»]
+ ｸﾘｱﾗﾝｽ ねらい値 【設定値：予備«0»】	 Folga valor alvo [ajuste: reserva«0»]
+ cosθ【設定値：予備«0»】	 cosθ [ajuste: reserva«0»]
+ 球間直径 【設定値：予備«0»】	 Diâmetro entre esferas [ajuste: reserva«0»]
+ ﾋﾟｽﾄﾝ«0»測定球間基準値 【設定値：予備«1»】	 Pistão«0» valor de referência entre esferas [ajuste: reserva«1»]
+ ﾋﾟｽﾄﾝ«0» 補正 乗数:A 【設定値：予備«1»】	 Pistão«0» correção multiplicador: A [ajuste: reserva«1»]
+ ﾋﾟｽﾄﾝ«0» 補正 加数:B 【設定値：予備«1»】	 Pistão«0» correção somador: B [ajuste: reserva«1»]
+斜板小範ﾏｽﾀ 上限(«0»SE«1») ：GP	Placa oscilante master faixa pequena limite sup. («0»SE«1»): GP
+斜板小範ﾏｽﾀ 下限(«0»SE«1») ：GP	Placa oscilante master faixa pequena limite inf. («0»SE«1»): GP
+斜板大範ﾏｽﾀ 上限(«0»SE«1») ：GP	Placa oscilante master faixa grande limite sup. («0»SE«1»): GP
+斜板大範ﾏｽﾀ 下限(«0»SE«1») ：GP	Placa oscilante master faixa grande limite inf. («0»SE«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 上限(«0»SE«1») ：GP	Pistão master faixa pequena limite sup. («0»SE«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 下限(«0»SE«1») ：GP	Pistão master faixa pequena limite inf. («0»SE«1»): GP
+ﾋﾟｽﾄﾝ大範ﾏｽﾀ 上限(«0»SE«1») ：GP	Pistão master faixa grande limite sup. («0»SE«1»): GP
+ﾋﾟｽﾄﾝ大範ﾏｽﾀ 下限(«0»SE«1») ：GP	Pistão master faixa grande limite inf. («0»SE«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 規格値(«0»SE«1») ：GP	Pistão master faixa pequena valor de especificação («0»SE«1»): GP
+斜板小範ﾏｽﾀ 上限(«0»SA«1») ：GP	Placa oscilante master faixa pequena limite sup. («0»SA«1»): GP
+斜板小範ﾏｽﾀ 下限(«0»SA«1») ：GP	Placa oscilante master faixa pequena limite inf. («0»SA«1»): GP
+斜板大範ﾏｽﾀ 上限(«0»SA«1») ：GP	Placa oscilante master faixa grande limite sup. («0»SA«1»): GP
+斜板大範ﾏｽﾀ 下限(«0»SA«1») ：GP	Placa oscilante master faixa grande limite inf. («0»SA«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 上限(«0»SA«1») ：GP	Pistão master faixa pequena limite sup. («0»SA«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 下限(«0»SA«1») ：GP	Pistão master faixa pequena limite inf. («0»SA«1»): GP
+ﾋﾟｽﾄﾝ大範ﾏｽﾀ 上限(«0»SA«1») ：GP	Pistão master faixa grande limite sup. («0»SA«1»): GP
+ﾋﾟｽﾄﾝ大範ﾏｽﾀ 下限(«0»SA«1») ：GP	Pistão master faixa grande limite inf. («0»SA«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 規格値(«0»SA«1») ：GP	Pistão master faixa pequena valor de especificação («0»SA«1»): GP
+斜板小範ﾏｽﾀ 上限(«0»SRE«1») ：GP	Placa oscilante master faixa pequena limite sup. («0»SRE«1»): GP
+斜板小範ﾏｽﾀ 下限(«0»SRE«1») ：GP	Placa oscilante master faixa pequena limite inf. («0»SRE«1»): GP
+斜板大範ﾏｽﾀ 上限(«0»SRE«1») ：GP	Placa oscilante master faixa grande limite sup. («0»SRE«1»): GP
+斜板大範ﾏｽﾀ 下限(«0»SRE«1») ：GP	Placa oscilante master faixa grande limite inf. («0»SRE«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 上限(«0»SRE«1») ：GP	Pistão master faixa pequena limite sup. («0»SRE«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 下限(«0»SRE«1») ：GP	Pistão master faixa pequena limite inf. («0»SRE«1»): GP
+ﾋﾟｽﾄﾝ大範ﾏｽﾀ 上限(«0»SRE«1») ：GP	Pistão master faixa grande limite sup. («0»SRE«1»): GP
+ﾋﾟｽﾄﾝ大範ﾏｽﾀ 下限(«0»SRE«1») ：GP	Pistão master faixa grande limite inf. («0»SRE«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 規格値(«0»SRE«1») ：GP	Pistão master faixa pequena valor de especificação («0»SRE«1»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 上限(«0»S«1»R«2») ：GP	Pistão master faixa pequena limite sup. («0»S«1»R«2»): GP
+斜板小範ﾏｽﾀ 上限(予備«0») ：GP	Placa oscilante master faixa pequena limite sup. (reserva«0»): GP
+斜板小範ﾏｽﾀ 下限(予備«0») ：GP	Placa oscilante master faixa pequena limite inf. (reserva«0»): GP
+斜板大範ﾏｽﾀ 上限(予備«0») ：GP	Placa oscilante master faixa grande limite sup. (reserva«0»): GP
+斜板大範ﾏｽﾀ 下限(予備«0») ：GP	Placa oscilante master faixa grande limite inf. (reserva«0»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 上限(予備«0») ：GP	Pistão master faixa pequena limite sup. (reserva«0»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 下限(予備«0») ：GP	Pistão master faixa pequena limite inf. (reserva«0»): GP
+ﾋﾟｽﾄﾝ大範ﾏｽﾀ 上限(予備«0») ：GP	Pistão master faixa grande limite sup. (reserva«0»): GP
+ﾋﾟｽﾄﾝ大範ﾏｽﾀ 下限(予備«0») ：GP	Pistão master faixa grande limite inf. (reserva«0»): GP
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ 規格値(予備«0») ：GP	Pistão master faixa pequena valor de especificação (reserva«0»): GP
+斜板 小範ﾏｽﾀ 上限設定値	Placa oscilante master faixa pequena ajuste limite sup.
+斜板 小範ﾏｽﾀ 下限設定値	Placa oscilante master faixa pequena ajuste limite inf.
+斜板 大範ﾏｽﾀ 上限設定値	Placa oscilante master faixa grande ajuste limite sup.
+斜板 大範ﾏｽﾀ 下限設定値	Placa oscilante master faixa grande ajuste limite inf.
+ﾋﾟｽﾄﾝ 小範ﾏｽﾀ 上限設定値	Pistão master faixa pequena ajuste limite sup.
+ﾋﾟｽﾄﾝ 小範ﾏｽﾀ 下限設定値	Pistão master faixa pequena ajuste limite inf.
+ﾋﾟｽﾄﾝ 大範ﾏｽﾀ 上限設定値	Pistão master faixa grande ajuste limite sup.
+ﾋﾟｽﾄﾝ 大範ﾏｽﾀ 下限設定値	Pistão master faixa grande ajuste limite inf.
+ﾋﾟｽﾄﾝ 小範ﾏｽﾀ 規格(設定値)	Pistão master faixa pequena especificação (valor ajustado)
+斜板 小範ﾏｽﾀ 測定結果 ×«0».«1»μm	Placa oscilante master faixa pequena resultado de medição ×«0».«1»µm
+斜板大範ﾏｽﾀ 測定結果 ×«0».«1»μm	Placa oscilante master faixa grande resultado de medição ×«0».«1»µm
+ﾋﾟｽﾄﾝ小範ﾏｽﾀ測定 測定値 ×«0».«1»μm	Pistão medição master faixa pequena valor medido ×«0».«1»µm
+ﾋﾟｽﾄﾝ大範ﾏｽﾀ測定 測定値 ×«0».«1»μm	Pistão medição master faixa grande valor medido ×«0».«1»µm
+ｼｭｰ選択値 ﾗﾝｸ«0»[上限]	Valor de seleção de sapata rank«0» [limite sup.]
+ｼｭｰ選択値 ﾗﾝｸ«0»[下限]	Valor de seleção de sapata rank«0» [limite inf.]
+ﾎﾞｱ«0»補正量[um](BIN) ： 機種別抽出済み	Furo«0» correção [um](BIN): extraído por modelo
+ﾎﾞｱ«0»補正量[um](BIN)) ： 機種別抽出済み	Furo«0» correção [um](BIN)): extraído por modelo
+ボア«0»補正符号+:«1»h,-:«2»h) ： 機種別抽出済み	Furo«0» sinal de correção +:«1»h,-:«2»h): extraído por modelo
+ﾎﾞｱ«0» 補正量[mm](Float) ： 自動補正値	Furo«0» correção [mm](Float): valor de correção automática
+ﾎﾞｱ«0»補正量[mm](Float) ： 自動補正値	Furo«0» correção [mm](Float): valor de correção automática
+(«0»SE«1») ﾎﾞｱ«2» 補正値 ： (参照設定値)	(«0»SE«1») furo«2» valor de correção: (valor de referência)
+(«0»SE«1») ﾎﾞｱ«2»補正値 ： (参照設定値)	(«0»SE«1») furo«2» valor de correção: (valor de referência)
+(«0»SA«1») ﾎﾞｱ«2» 補正値 ： (参照設定値)	(«0»SA«1») furo«2» valor de correção: (valor de referência)
+(«0»SA«1») ﾎﾞｱ«2»補正値 ： (参照設定値)	(«0»SA«1») furo«2» valor de correção: (valor de referência)
+(«0»SRE«1») ﾎﾞｱ«2» 補正値 ： (参照設定値)	(«0»SRE«1») furo«2» valor de correção: (valor de referência)
+(«0»SRE«1») ﾎﾞｱ«2»補正値 ： (参照設定値)	(«0»SRE«1») furo«2» valor de correção: (valor de referência)
+(予備«0») ﾎﾞｱ«1» 補正値 ： (参照設定値)	(reserva«0») furo«1» valor de correção: (valor de referência)
+(予備«0») ﾎﾞｱ«1»補正値 ： (参照設定値)	(reserva«0») furo«1» valor de correção: (valor de referência)
+«0»st ﾃﾞｰﾀｼﾌﾄ用	«0»st p/ shift de dados
+ｶｳﾝﾀ«0»-«1»	Contador«0»-«1»
+ｻｲｸﾙﾀｲﾑ(現在値)	Tempo de ciclo (valor atual)
+ｻｲｸﾙﾀｲﾑ(平均値)	Tempo de ciclo (média)
+ｻｲｸﾙﾀｲﾑ(記憶«0»)	Tempo de ciclo (histórico«0»)
+ｻｲｸﾙﾀｲﾑ(記憶«0»	Tempo de ciclo (histórico«0»
+ｼｭｰﾎﾞｯｸｽ(«0»×«1») 割付ﾗﾝｸ 設定値(GP)	Caixa de sapata («0»×«1») rank atribuído valor ajustado (GP)
+ﾋﾟｽﾄﾝ«0» 測定値 (GP)	Pistão«0» valor medido (GP)
+ﾋﾟｽﾄﾝ«0» ｼｭｰﾗﾝｸ«1» (GP)	Pistão«0» rank de sapata«1» (GP)
+ﾋﾟｽﾄﾝ«0» 判定結果 (GP)	Pistão«0» resultado do julgamento (GP)
+ﾋﾟｽﾄﾝ«0» 判定結果 (GP) ： +NG	Pistão«0» resultado do julgamento (GP): +NG
+ﾋﾟｽﾄﾝ«0» 判定結果 (GP) ： OK	Pistão«0» resultado do julgamento (GP): OK
+ﾋﾟｽﾄﾝ«0» 判定結果 (GP) ： -NG	Pistão«0» resultado do julgamento (GP): -NG
+«0»st 斜板 測定値 (GP)	«0»st placa oscilante valor medido (GP)
+«0»st 斜板 判定結果 (GP)	«0»st placa oscilante resultado do julgamento (GP)
+斜板 判定結果 (GP) ： +NG	Placa oscilante resultado do julgamento (GP): +NG
+斜板 判定結果 (GP) ： OK	Placa oscilante resultado do julgamento (GP): OK
+斜板 判定結果 (GP) ： -NG	Placa oscilante resultado do julgamento (GP): -NG
+ｽﾄｯｸ部 斜板 測定値 (GP)	Estoque placa oscilante valor medido (GP)
+ﾎﾞｱ«0» 補正量[mm](Float) ： 手動補正値	Furo«0» correção [mm](Float): valor de correção manual
+ﾊﾟﾗﾒｰﾀ画面 移動用(ﾊﾟｽﾜｰﾄﾞ)	Ir p/ tela de parâmetros (senha)
+表示画面No.：GP	Nº da tela exibida: GP
+Change Screen：GP	Troca de tela: GP
+«0»st 起動可能位置 (TIM設定値)	«0»st posição que permite partida (ajuste do TIM)
+ﾊﾟﾙｺﾑ 測定ﾃﾞｰﾀ×«0».«1»μ（BCD）	PULCOM dados de medição ×«0».«1»µ (BCD)
+ﾊﾟﾙｺﾑ 測定ﾃﾞｰﾀ×«0».«1»μ（BIN）	PULCOM dados de medição ×«0».«1»µ (BIN)
+ﾊﾟﾙｺﾑ 測定ﾃﾞｰﾀ «0».«1»μm (Float) 	PULCOM dados de medição «0».«1»µm (Float)
+ﾜｰｸ選択No. (ﾊﾟﾙｺﾑ用)	Nº de seleção de peça (p/ PULCOM)
+斜板測定用 計算補助	Auxiliar de cálculo p/ medição da placa oscilante
+«0»st 斜板測定値 (×«1».«2»μm)	«0»st placa oscilante valor medido (×«1».«2»µm)
+斜板 小範ﾏｽﾀ 測定結果(×«0».«1»μm)	Placa oscilante master faixa pequena resultado (×«0».«1»µm)
+斜板 大範ﾏｽﾀ 測定結果(×«0».«1»μm)	Placa oscilante master faixa grande resultado (×«0».«1»µm)
+ｽﾄｯｸ部 斜板測定値 (×«0».«1»μm)	Estoque placa oscilante valor medido (×«0».«1»µm)
+全球間測定子 後退端(TIM)	Todos apalpadores entre esferas fim de curso recuado (TIM)
+ﾋﾟｽﾄﾝ«0» 現在値読出 (受信CH数)	Pistão«0» leitura do valor atual (nº de CH recebidos)
+ﾋﾟｽﾄﾝ«0» 現在値[mm] (ASCII) 	Pistão«0» valor atual [mm] (ASCII)
+ﾋﾟｽﾄﾝ«0» 現在値[mm] (Float)	Pistão«0» valor atual [mm] (Float)
+ﾋﾟｽﾄﾝ«0» 現在値[mm→μm] (Float)	Pistão«0» valor atual [mm→µm] (Float)
+ﾋﾟｽﾄﾝ«0» 測定値[×«1».«2»μm]	Pistão«0» valor medido [×«1».«2»µm]
+ﾋﾟｽﾄﾝ«0» 小範ﾏｽﾀｰ用 (ﾏｽﾀｰ規格値 - 実測値)	Pistão«0» p/ master faixa pequena (valor especificado - valor medido)
+異常・警報 割付ｴﾘｱ (ﾌﾞｻﾞｰ再鳴動用の補助)	Área de alocação de falhas/alarmes (auxiliar p/ buzzer tocar novamente)
+ﾋﾟｽﾄﾝ 球間測定値 (SUB«0»)	Pistão valor medido entre esferas (SUB«0»)
+ﾎﾞｱ補正量 (SUB«0»)	Correção do furo (SUB«0»)
+異常番号[«0»]：ﾌﾞｻﾞｰ再鳴動用の一時格納	Nº de falha [«0»]: armazenamento temporário p/ buzzer tocar novamente
+D«0» - 球間直径値 (SUB«1»)	D«0» - diâmetro entre esferas (SUB«1»)
+D«0» × Cosθ	D«0» × cosθ
+D«0» - 斜板測定値	D«0» - valor medido placa oscilante
+D«0» - ねらい値	D«0» - valor alvo
+D«0» - ﾎﾞｱ補正量	D«0» - correção do furo
+ｼｭｰﾗﾝｸ選択値 (SUB«0»)	Valor de seleção de rank de sapata (SUB«0»)
+ﾋﾟｽﾄﾝ«0»　(ｼｭｰ選択計算値)	Pistão«0» (valor calculado p/ seleção de sapata)
+ｼｭｰﾗﾝｸ 選択判定値 (SUB«0»・«1»)	Rank de sapata valor de julgamento de seleção (SUB«0»/«1»)
+ｼｭｰﾗﾝｸ選択値 («0»個目)	Valor de seleção de rank de sapata («0»ª peça)
+ﾋﾟｽﾄﾝ«0» ｼｭｰﾗﾝｸ («1»個目)：選定完了	Pistão«0» rank de sapata («1»ª peça): seleção concluída
+ﾋﾟｯｷﾝｸﾞｾﾝｻｰ (ON数)	Sensor de picking (nº de ON)
+ｼｭｰ取出(«0»個目) 選定値 ： ﾋﾟｯｷﾝｸﾞ用	Retirada de sapata («0»ª peça) valor selecionado: p/ picking
+ｼｭｰﾎﾞｯｸｽ(«0»×«1») 割付ﾗﾝｸ	Caixa de sapata («0»×«1») rank atribuído
+SHOE選擇完成總次數	Total de seleções de SHOE concluídas
+SHOE取出控制器	Controlador de retirada de SHOE
+STOP«0»控制器	Controlador STOP«0»
+ST«0»控制器	Controlador ST«0»
+異常個数の切替検出«0» (ﾌﾞｻﾞｰ再鳴動用)	Detecção de mudança na quantidade de falhas«0» (p/ buzzer tocar novamente)
+ｺﾒﾝﾄｾﾚｸﾄ («0»：US  «1»：JP)	Seleção de comentário («0»: US  «1»: JP)
+表示画面No (Screen Number)	Nº da tela exibida (Screen Number)
+表示画面No (Screen Number)(GP→PLC)	Nº da tela exibida (Screen Number)(GP→PLC)
+SHOE選擇暫存«0»	Armazenamento temporário de seleção de SHOE«0»
+PB画面 (ON PB of Number)	Tela de botões (nº do botão ON)
+SHOE選額暫存«0»	Armazenamento temporário de seleção de SHOE«0»
+補正ﾃﾞｰﾀ転送中 (PC→PLC)	Transferindo dados de correção (PC→PLC)
+PC通信中ﾌﾗｸﾞ	Flag PC em comunicação
+予備	Reserva
+«0»SE«1» ﾎﾞｱ«2» 補正量[um](BCD)	«0»SE«1» furo«2» correção [um](BCD)
+«0»SA«1» ﾎﾞｱ«2» 補正量[um](BCD)	«0»SA«1» furo«2» correção [um](BCD)
+«0»SRE«1» ﾎﾞｱ«2» 補正量[um](BCD)	«0»SRE«1» furo«2» correção [um](BCD)
+予備機種«0»　ﾎﾞｱ«1» 補正量[um](BCD)	Modelo reserva«0» furo«1» correção [um](BCD)
+«0»SE«1» ﾎﾞｱ«2»補正符号+:«3»h,-:«4»h	«0»SE«1» furo«2» sinal de correção +:«3»h,-:«4»h
+«0»SA«1» ﾎﾞｱ«2»補正符号+:«3»h,-:«4»h	«0»SA«1» furo«2» sinal de correção +:«3»h,-:«4»h
+«0»SRE«1» ﾎﾞｱ«2»補正符号+:«3»h,-:«4»h	«0»SRE«1» furo«2» sinal de correção +:«3»h,-:«4»h
+予備機種«0»　ボア«1» 補正符号+:«2»h,-:«3»h	Modelo reserva«0» furo«1» sinal de correção +:«2»h,-:«3»h
+«0»SE«1» ﾎﾞｱ«2» 補正量[um](BCD) ： 格納済み	«0»SE«1» furo«2» correção [um](BCD): armazenado
+«0»SA«1» ﾎﾞｱ«2» 補正量[um](BCD) ： 格納済み	«0»SA«1» furo«2» correção [um](BCD): armazenado
+«0»SRE«1» ﾎﾞｱ«2» 補正量[um](BCD) ： 格納済み	«0»SRE«1» furo«2» correção [um](BCD): armazenado
+予備機種«0»　ﾎﾞｱ«1» 補正量[um](BCD) ： 格納済み	Modelo reserva«0» furo«1» correção [um](BCD): armazenado
+«0»SE«1» ﾎﾞｱ«2» 補正符号+:«3»h,-:«4»H (格納済み)	«0»SE«1» furo«2» sinal de correção +:«3»h,-:«4»H (armazenado)
+«0»SA«1» ﾎﾞｱ«2» 補正符号+:«3»h,-:«4»H (格納済み)	«0»SA«1» furo«2» sinal de correção +:«3»h,-:«4»H (armazenado)
+«0»SRE«1» ﾎﾞｱ«2» 補正符号+:«3»h,-:«4»H (格納済み)	«0»SRE«1» furo«2» sinal de correção +:«3»h,-:«4»H (armazenado)
+予備機種«0»　ボア«1» 補正符号+:«2»h,-:«3»H (格納済み)	Modelo reserva«0» furo«1» sinal de correção +:«2»h,-:«3»H (armazenado)
+ﾗﾝｸ«0» ｼｭｰ取出数 («1»SE«2»)	Rank«0» qtd. de sapatas retiradas («1»SE«2»)
+ﾗﾝｸ«0» ｼｭｰ取出率 («1»SRE«2»)	Rank«0» taxa de retirada de sapatas («1»SRE«2»)
+ﾗﾝｸ«0»～«1» 取出数 (全加算補助) ： «2»SE«3»	Rank«0»~«1» qtd. retirada (auxiliar de soma total): «2»SE«3»
+分解化 («0»% / 個数) ：«1»SE«2»	Decomposição («0»% / quantidade): «1»SE«2»
+ﾗﾝｸ«0»～«1» 取出数 (全加算補助) ： «2»SA«3»	Rank«0»~«1» qtd. retirada (auxiliar de soma total): «2»SA«3»
+分解化 («0»% / 個数) ：«1»SA«2»	Decomposição («0»% / quantidade): «1»SA«2»
+ﾗﾝｸ«0»～«1» 取出数 (全加算補助) ： «2»SRE«3»	Rank«0»~«1» qtd. retirada (auxiliar de soma total): «2»SRE«3»
+分解化 («0»% / 個数) ：«1»SRE«2»	Decomposição («0»% / quantidade): «1»SRE«2»
+ﾗﾝｸ«0»～«1» 取出数 (全加算補助) ：　予備«2»	Rank«0»~«1» qtd. retirada (auxiliar de soma total): reserva«2»
+分解化 («0»% / 個数) ：予備«1»	Decomposição («0»% / quantidade): reserva«1»
+ﾗﾝｸ«0» ｼｭｰ取出数 («1»SRE«2»)	Rank«0» qtd. de sapatas retiradas («1»SRE«2»)
+ﾗﾝｸ«0» ｼｭｰ取出数 (予備«1»)	Rank«0» qtd. de sapatas retiradas (reserva«1»)
+ﾗﾝｸ«0» ｼｭｰ取出率 (予備«1»)	Rank«0» taxa de retirada de sapatas (reserva«1»)
+ﾗﾝｸ«0» ｼｭｰ取出率 («1»SE«2»)	Rank«0» taxa de retirada de sapatas («1»SE«2»)
+【ﾛｸﾞ】 S/P («0»回目)	[Log] S/P («0»ª vez)
+【ﾛｸﾞ】 S/P ｶｳﾝﾄ設定値	[Log] S/P contagem valor ajustado
+【ﾛｸﾞ】 S/P ｶｳﾝﾄ現在値	[Log] S/P contagem valor atual
+【ﾛｸﾞ】 S/P (Max)	[Log] S/P (Max)
+【ﾛｸﾞ】 S/P (Min)	[Log] S/P (Min)
+【ﾛｸﾞ】 S/P (Max - Min)	[Log] S/P (Max - Min)
+【ﾛｸﾞ】 Piston«0» («1»回目)	[Log] Pistão«0» («1»ª vez)
+【ﾛｸﾞ】 Piston«0» ｶｳﾝﾄ設定値	[Log] Pistão«0» contagem valor ajustado
+【ﾛｸﾞ】 Piston«0» ｶｳﾝﾄ現在値	[Log] Pistão«0» contagem valor atual
+【ﾛｸﾞ】 Piston«0» (Max)	[Log] Pistão«0» (Max)
+【ﾛｸﾞ】 Piston«0» (Min)	[Log] Pistão«0» (Min)
+【ﾛｸﾞ】 Piston«0» (Max - Min)	[Log] Pistão«0» (Max - Min)
+【ﾛｸﾞ】 CSV書込ｽﾃｰﾀｽ	[Log] status de gravação CSV
+【ﾛｸﾞ】 CSV書込ｽﾃｰﾀｽ (転送中)	[Log] status de gravação CSV (transferindo)
+【ﾛｸﾞ】 CSV書込ｽﾃｰﾀｽ (転送完了)	[Log] status de gravação CSV (transferência concluída)
+【ﾛｸﾞ】 CSV書込ｽﾃｰﾀｽ (ｺｰﾄﾞ«0»)	[Log] status de gravação CSV (código«0»)
+【ﾛｸﾞ】 CSV書込ｽﾃｰﾀｽ (GP表示)	[Log] status de gravação CSV (exibição GP)
+ﾗﾝｸ«0» ｼｭｰ取出数 («1»SA«2»)	Rank«0» qtd. de sapatas retiradas («1»SA«2»)
+ﾗﾝｸ«0» ｼｭｰ取出率 («1»SA«2»)	Rank«0» taxa de retirada de sapatas («1»SA«2»)
+«0»SE«1» 機種選択中	«0»SE«1» modelo selecionado
+«0»SA«1» 機種選択中	«0»SA«1» modelo selecionado
+«0»SRE«1» 機種選択中	«0»SRE«1» modelo selecionado
+«0»S«1»予備«2» 機種選択中	«0»S«1» reserva«2» modelo selecionado
+«0»SR«1»予備«2» 機種選択中	«0»SR«1» reserva«2» modelo selecionado
+«0»SRE«1»予備«2» 機種選択中	«0»SRE«1» reserva«2» modelo selecionado
+«0»S«1»(L/S-VDA)予備«2» 機種選択中	«0»S«1»(L/S-VDA) reserva«2» modelo selecionado
+«0»st 機種検知ﾓｰﾄﾞ (ON：切)	«0»st modo de detecção de modelo (ON: desligado)
+ﾎﾞｱ補正選択 (OFF：自動 ON：手動)	Seleção de correção do furo (OFF: auto  ON: manual)
+ならし動作(ON：無し OFF：有り)	Movimento de amaciamento (ON: sem  OFF: com)
+ｵｲﾙ塗布 (ON：未使用 OFF：使用)	Aplicação de óleo (ON: não usar  OFF: usar)
+測定のみｻｲｸﾙ (ON：測定のみ ｼｭｰ取出無し)	Ciclo só de medição (ON: só mede, sem retirar sapata)
+斜板治具確認(OK)	Confirmação de gabarito placa oscilante (OK)
+斜板測定 (+NG)	Medição placa oscilante (+NG)
+斜板測定 (OK)	Medição placa oscilante (OK)
+斜板測定 (-NG)	Medição placa oscilante (-NG)
+斜板 小範ﾏｽﾀ (+NG)	Placa oscilante master faixa pequena (+NG)
+斜板 小範ﾏｽﾀ (OK)	Placa oscilante master faixa pequena (OK)
+斜板 小範ﾏｽﾀ (-NG)	Placa oscilante master faixa pequena (-NG)
+斜板 大範ﾏｽﾀ (+NG)	Placa oscilante master faixa grande (+NG)
+斜板 大範ﾏｽﾀ (OK)	Placa oscilante master faixa grande (OK)
+斜板 大範ﾏｽﾀ (-NG)	Placa oscilante master faixa grande (-NG)
+ﾓｼﾞｭｰﾙ«0» 機種選択[«1»SBH«2»C/«3»]	Módulo«0» seleção de modelo [«1»SBH«2»C/«3»]
+DS«0» 機種選択中	DS«0» modelo selecionado
+ﾋﾟｽﾄﾝ治具確認(OK)	Confirmação de gabarito de pistão (OK)
+«0»st ﾋﾟｽﾄﾝ«1» 測定子前後動作 ならし(完了)	«0»st pistão«1» amaciamento avanço/recuo do apalpador (concluído)
+球間測定子«0» ならし動作(完了)	Apalpador entre esferas«0» amaciamento (concluído)
+ﾋﾟｽﾄﾝ«0» 測定(+NG)	Pistão«0» medição (+NG)
+ﾋﾟｽﾄﾝ«0» 測定(OK)	Pistão«0» medição (OK)
+ﾋﾟｽﾄﾝ«0» 測定(-NG)	Pistão«0» medição (-NG)
+ﾋﾟｽﾄﾝ«0» 小範ﾏｽﾀｰ(+NG)	Pistão«0» master faixa pequena (+NG)
+ﾋﾟｽﾄﾝ«0» 小範ﾏｽﾀｰ(OK)	Pistão«0» master faixa pequena (OK)
+ﾋﾟｽﾄﾝ«0» 小範ﾏｽﾀｰ(-NG)	Pistão«0» master faixa pequena (-NG)
+ﾋﾟｽﾄﾝ«0» 大範ﾏｽﾀｰ(+NG)	Pistão«0» master faixa grande (+NG)
+ﾋﾟｽﾄﾝ«0» 大範ﾏｽﾀｰ(OK)	Pistão«0» master faixa grande (OK)
+ﾋﾟｽﾄﾝ«0» 大範ﾏｽﾀｰ(-NG)	Pistão«0» master faixa grande (-NG)
+耐久ﾓｰﾄﾞON	Modo durabilidade ON
+ﾛｸﾞﾓｰﾄﾞ (ON：使用)	Modo log (ON: usar)
+ｼｭｰ取出 ﾗﾝｸ«0» (使用)	Retirada de sapata rank«0» (usar)
+ｼｭｰﾗﾝｸ選択 (ON：同 OFF：異)	Seleção de rank de sapata (ON: igual  OFF: diferente)
+運転準備条件	Condição de pronto p/ operar
+自動選択	Seleção automático
+各個選択	Seleção individual
+全原点位置	Todos na posição de origem
+全連続運転中	Todos em operação automática
+全連続運転中 (作業可PL用)	Todos em operação automática (p/ lâmpada trabalho permitido)
+連続切中	Parando automático
+ｴﾘｱｾﾝｻｰ«0» 遮断無し	Sensor de área«0» sem bloqueio
+ｴﾘｱｾﾝｻｰ«0» 遮断	Sensor de área«0» bloqueado
+NGｼｭｰﾄ 搬出確認	Calha NG confirmação de descarga
+NGｼｭｰﾄ ﾊﾟﾚｯﾄ有り (ｱﾝﾄﾞﾝ用)	Calha NG palete presente (p/ Andon)
+斜板無し	Sem placa oscilante
+斜板 機種検知«0» ON	Placa oscilante detecção de modelo«0» ON
+斜板 機種検知«0» OFF	Placa oscilante detecção de modelo«0» OFF
+斜板 機種検知«0» (High) ON	Placa oscilante detecção de modelo«0» (High) ON
+斜板 機種検知«0» (High) OFF	Placa oscilante detecção de modelo«0» (High) OFF
+斜板 機種検知«0» (Go) ON	Placa oscilante detecção de modelo«0» (Go) ON
+斜板 機種検知«0» (Go) OFF	Placa oscilante detecção de modelo«0» (Go) OFF
+斜板 姿勢検知«0» ON	Placa oscilante detecção de posição«0» ON
+斜板 姿勢検知«0» OFF	Placa oscilante detecção de posição«0» OFF
+斜板 治具確認 (A型) ON	Placa oscilante confirmação de gabarito (tipo A) ON
+斜板 治具確認 (A型) OFF	Placa oscilante confirmação de gabarito (tipo A) OFF
+斜板 治具確認 (B型) ON	Placa oscilante confirmação de gabarito (tipo B) ON
+斜板 治具確認 (B型) OFF	Placa oscilante confirmação de gabarito (tipo B) OFF
+斜板 治具確認 (C型) ON	Placa oscilante confirmação de gabarito (tipo C) ON
+斜板 治具確認 (C型) OFF	Placa oscilante confirmação de gabarito (tipo C) OFF
+斜板 小範ﾏｽﾀｰ(確認ON)：小範(OFF) 大範(ON)	Placa oscilante master faixa pequena (conf. ON): pequena(OFF) grande(ON)
+斜板 小範ﾏｽﾀｰ(確認OFF)：小範(OFF) 大範(ON)	Placa oscilante master faixa pequena (conf. OFF): pequena(OFF) grande(ON)
+斜板ﾏｽﾀｰ無し	Sem master de placa oscilante
+斜板測定子 閉端	Apalpador placa oscilante fim de curso fechado
+斜板測定子 開端	Apalpador placa oscilante fim de curso aberto
+DS«0»斜板 機種検知«1» ON	DS«0» placa oscilante detecção de modelo«1» ON
+DS«0»斜板 機種検知«1» OFF	DS«0» placa oscilante detecção de modelo«1» OFF
+DS«0»斜板 機種検知IG(GO) ON	DS«0» placa oscilante detecção de modelo IG(GO) ON
+DS«0»斜板 機種検知IG(GO) OFF	DS«0» placa oscilante detecção de modelo IG(GO) OFF
+DS«0»斜板 機種検知IG(LO) ON	DS«0» placa oscilante detecção de modelo IG(LO) ON
+DS«0»斜板 機種検知IG(LO) OFF	DS«0» placa oscilante detecção de modelo IG(LO) OFF
+起動ｽﾄﾗｲｶｰSW«0» ON (斜板用)	Chave de partida (striker) SW«0» ON (placa oscilante)
+斜板測定 計測ﾀｲﾐﾝｸﾞ	Medição placa oscilante momento da medição
+ﾊﾟﾙｺﾑ RUN確認	PULCOM confirmação RUN
+«0»st ﾊﾟﾙｺﾑ判定ﾘｾｯﾄOFF	«0»st PULCOM reset de julgamento OFF
+ﾊﾟﾙｺﾑ 判定ｽﾀｰﾄ(取消)	PULCOM início de julgamento (cancelar)
+«0»工位工件檢知DL	Detecção de peça na estação «0» DL
+C/V滿杯解除DL	Liberação C/V cheia DL
+SHOE DATA載入DL	Carga de SHOE DATA DL
+SHOE取出完成DL	Retirada de SHOE concluída DL
+SHOE再開始時間間隔	Intervalo de tempo p/ reiniciar SHOE
+ST«0» 后檢知DL	ST«0» detecção traseira DL
+ST«0» 自復位DL	ST«0» auto-reset DL
+密封圈組裝時間	Tempo de montagem do anel de vedação
+ﾋﾟｽﾄﾝ«0» 無し	Sem pistão«0»
+ﾋﾟｽﾄﾝ«0» 浮き確認 ON	Pistão«0» confirmação de flutuação ON
+ﾋﾟｽﾄﾝ«0» 浮き確認 OFF	Pistão«0» confirmação de flutuação OFF
+ﾋﾟｽﾄﾝ«0» 治具判別«1» ON	Pistão«0» identificação de gabarito«1» ON
+ﾋﾟｽﾄﾝ«0» 治具判別«1» OFF	Pistão«0» identificação de gabarito«1» OFF
+全球間測定子 前進端	Todos apalpadores entre esferas fim de curso avançado
+全球間測定子 後退端	Todos apalpadores entre esferas fim de curso recuado
+(«0»×«1») ﾋﾟｯｷﾝｸﾞ(ON)	(«0»×«1») picking (ON)
+ﾋﾟｽﾄﾝ«0»用 ｵｲﾙ塗布確認ON	Confirmação de aplicação de óleo p/ pistão«0» ON
+ﾋﾟｽﾄﾝ«0»用 ｵｲﾙ塗布確認OFF	Confirmação de aplicação de óleo p/ pistão«0» OFF
+ST«0»后檢知	ST«0» detecção traseira
+ST«0»下端	ST«0» fim de curso inferior
+ST«0»前檢知	ST«0» detecção dianteira
+ST«0» 下端	ST«0» fim de curso inferior
+STOPPER«0»前檢知	STOPPER«0» detecção dianteira
+起動ｽﾄﾗｲｶｰSW«0» ON (ﾋﾟｽﾄﾝ用)	Chave de partida (striker) SW«0» ON (pistão)
+st«0» tray有	st«0» com bandeja
+«0»st 起動予約 (取消)	«0»st reserva de partida (cancelar)
+ﾋﾟｽﾄﾝ«0» ﾌﾟﾘｾｯﾄ送信 (TIM)	Pistão«0» envio de preset (TIM)
+ﾋﾟｽﾄﾝ«0» 現在値読出 (TIM)	Pistão«0» leitura do valor atual (TIM)
+ﾋﾟｽﾄﾝ«0» 現在値読出完了 (TIM)	Pistão«0» leitura do valor atual concluída (TIM)
+ﾋﾟｽﾄﾝ«0» ｼｭｰ選択 ﾀｲﾑｱｳﾄ	Pistão«0» seleção de sapata timeout
+ﾋﾟｯｷﾝｸﾞ(最遮断検知)	Picking (detecção de nova interrupção)
+ﾗﾝｸ«0» ｼｭｰ(«1»回目) 取出確認 (ｶｳﾝﾀ用)	Rank«0» sapata («1»ª vez) confirmação de retirada (p/ contador)
+【耐久】ﾜｰｸ準備完了	[Durabilidade] peça pronta
+【耐久】ｽﾄﾗｲｶｰON	[Durabilidade] striker ON
+異常用TIM(«0»)	TIM p/ falha («0»)
+【ﾛｸﾞ】 結果自動CLR (ﾀｲﾐﾝｸﾞ)	[Log] limpeza automática de resultados (momento)
+【ﾛｸﾞ】 ｽﾄﾗｲｶｰON(記憶)	[Log] striker ON (memória)
+【ﾛｸﾞ】 «0»st ｽﾄﾗｲｶｰ自動起動	[Log] «0»st partida automática do striker
+ﾒﾆｭｰ画面(«0»×«1»PL)	Tela de menu («0»×«1»PL)
+ﾗﾝﾌﾟﾁｪｯｸPB	Botão teste de lâmpadas
+ﾗﾝﾌﾟ画面(«0»×«1»PL)	Tela de lâmpadas («0»×«1»PL)
+ﾊﾟﾗﾒｰﾀ設定許可	Permissão de ajuste de parâmetros
+自動補正 入力許可Bit	Bit de permissão de entrada da correção automática
+手動補正値 入力完了Bit (GP «0»key)	Bit entrada da correção manual concluída (GP tecla «0»)
+ﾊﾟﾗﾒｰﾀ設定許可 (ｼｭｰﾎﾞｯｸｽ配置用)	Permissão de ajuste de parâmetros (p/ layout das caixas de sapata)
+異常・警報 割付ｴﾘｱ	Área de alocação de falhas/alarmes
+«0» 異常無し	«0» sem falha
+«0» ﾏｽﾀｰ圧低下	«0» queda da pressão master
+«0» 電源異常	«0» falha de alimentação
+«0» AVR«1» 電圧低下	«0» AVR«1» queda de tensão
+«0» 非常停止中	«0» em parada de emergência
+«0» 運転準備可 ﾘﾚｰOFF ﾁｪｯｸ異常	«0» falha na verificação do relé OFF de pronto p/ operar
+«0» ﾃﾞﾊﾞｲｽﾈｯﾄ異常	«0» falha DeviceNet
+«0» ｴﾘｱｾﾝｻｰ«1» 遮断	«0» sensor de área«1» bloqueado
+«0» ｴﾘｱｾﾝｻｰ«1» ﾘﾚｰOFF ﾁｪｯｸ異常	«0» sensor de área«1» falha na verificação do relé OFF
+«0» 手直しPC 通信異常 (自動補正時)	«0» falha de comunicação com PC de retrabalho (correção auto)
+«0» ﾎﾞｱ補正値異常	«0» falha no valor de correção do furo
+«0» 機種 未選択	«0» modelo não selecionado
+«0» ｼｭｰ使用 設定異常	«0» falha no ajuste de uso de sapata
+«0» 斜板 取出異常	«0» placa oscilante falha de retirada
+«0» ﾋﾟｽﾄﾝ 取出異常	«0» pistão falha de retirada
+«0» PLC ﾊﾞｯﾃﾘｰ異常	«0» falha de bateria do PLC
+«0» 斜板 ﾏｽﾀｰﾜｰｸ違い	«0» placa oscilante peça master errada
+«0» 斜板 小範ﾏｽﾀｰ未完了	«0» placa oscilante master faixa pequena não concluído
+«0» 斜板 大範ﾏｽﾀｰ未完了	«0» placa oscilante master faixa grande não concluído
+«0» ﾋﾟｽﾄﾝ 小範ﾏｽﾀｰ未完了	«0» pistão master faixa pequena não concluído
+«0» ﾋﾟｽﾄﾝ 大範ﾏｽﾀｰ未完了	«0» pistão master faixa grande não concluído
+«0» ｼｭｰﾎﾞｯｸｽ 設定ﾚｲｱｳﾄ異常	«0» falha no layout das caixas de sapata
+«0» ｼｭｰ誤取出	«0» retirada de sapata errada
+«0» 斜板st 起動忘れ	«0» estação placa oscilante esqueceu de partir
+«0» 斜板st 起動条件 未達成	«0» estação placa oscilante condição de partida não atendida
+«0» 斜板 誤取出	«0» placa oscilante retirada indevida
+«0» ﾋﾟｽﾄﾝst 起動忘れ	«0» estação pistão esqueceu de partir
+«0» ﾋﾟｽﾄﾝst 起動条件 未達成	«0» estação pistão condição de partida não atendida
+«0» ﾋﾟｽﾄﾝst 起動位置違い	«0» estação pistão posição de partida errada
+«0» ﾋﾟｽﾄﾝ 誤取出	«0» pistão retirada indevida
+«0» 斜板 機種違い	«0» placa oscilante modelo errado
+«0» ｼｭｰ選定異常	«0» falha na seleção de sapata
+«0» 斜板検知 ｾﾝｻｰ異常	«0» falha no sensor de detecção da placa oscilante
+«0» 斜板機種検知«1» ｾﾝｻｰ異常	«0» falha no sensor de detecção de modelo«1» da placa oscilante
+«0» DS«1»斜板機種検知«2» ｾﾝｻｰ異常	«0» falha no sensor DS«1» detecção de modelo«2» da placa oscilante
+«0» DS«1»斜板機種検知IG ｾﾝｻｰ異常	«0» falha no sensor DS«1» detecção de modelo IG da placa oscilante
+«0» 斜板治具検知«1» ｾﾝｻｰ異常	«0» falha no sensor de gabarito«1» da placa oscilante
+«0» 斜板測定子 前進/後退 ｾﾝｻｰ異常	«0» apalpador placa oscilante falha de sensor avanço/recuo
+«0» 斜板測定子 前進/後退 動作異常	«0» apalpador placa oscilante falha de movimento avanço/recuo
+«0» 斜板測定子 開閉 動作異常	«0» apalpador placa oscilante falha de movimento abrir/fechar
+«0» 斜板ﾏｽﾀｰ検知 ｾﾝｻｰ異常	«0» falha no sensor de detecção do master da placa oscilante
+«0» 斜板 小範ﾏｽﾀｰ検知 ｾﾝｻｰ異常	«0» falha no sensor do master faixa pequena da placa oscilante
+«0» 斜板 機種検異常	«0» falha na detecção de modelo da placa oscilante
+«0» 斜板治具 機種違い	«0» gabarito da placa oscilante modelo errado
+«0» 斜板測定器 ｱﾝﾌﾟ異常	«0» medidor placa oscilante falha do amplificador
+«0» 斜板測定器 信号異常	«0» medidor placa oscilante falha de sinal
+«0» 斜板 姿勢検知«1» ｾﾝｻｰ異常	«0» falha no sensor de detecção de posição«1» da placa oscilante
+«0» 斜板測定 ﾀｲﾑｱｳﾄ	«0» medição placa oscilante timeout
+«0» ﾋﾟｽﾄﾝ«1» ﾜｰｸ検知 ｾﾝｻｰ異常	«0» pistão«1» falha no sensor de detecção de peça
+«0» ﾋﾟｽﾄﾝ«1» ﾜｰｸ浮き検知 ｾﾝｻｰ異常	«0» pistão«1» falha no sensor de flutuação da peça
+«0» ﾋﾟｽﾄﾝ«1» 治具判別«2» ｾﾝｻｰ異常	«0» pistão«1» falha no sensor de identificação de gabarito«2»
+«0» ﾋﾟｽﾄﾝ«1» 治具昇降 ｾﾝｻｰ異常	«0» pistão«1» falha de sensor sobe/desce gabarito
+«0» ﾋﾟｽﾄﾝ«1» 治具昇降 動作異常	«0» pistão«1» falha de movimento sobe/desce gabarito
+«0» 球間測定子«1» 開閉 ｾﾝｻｰ異常	«0» apalpador entre esferas«1» falha de sensor abrir/fechar
+«0» 球間測定子«1» 開閉 動作異常	«0» apalpador entre esferas«1» falha de movimento abrir/fechar
+«0» 球間測定子 前後動作異常	«0» apalpador entre esferas falha de movimento avanço/recuo
+«0» ｼﾘｱﾙﾕﾆｯﾄ異常	«0» falha da unidade serial
+«0» DL-RS«1»A 通信異常	«0» DL-RS«1»A falha de comunicação
+«0» 球間測定子 ｱﾝﾌﾟ異常	«0» apalpador entre esferas falha do amplificador
+«0» ﾋﾟｽﾄﾝ«1» ｵｲﾙ塗布 前後ｾﾝｻｰ異常	«0» pistão«1» aplicação de óleo falha de sensor avanço/recuo
+«0» ﾋﾟｽﾄﾝ«1» ｵｲﾙ塗布 前後動作異常	«0» pistão«1» aplicação de óleo falha de movimento avanço/recuo
+«0» ﾋﾟｽﾄﾝ«1» ｵｲﾙ塗布異常	«0» pistão«1» falha na aplicação de óleo
+«0» ﾋﾟｽﾄﾝ«1» ｵｲﾙ塗布確認 ｾﾝｻｰ異常	«0» pistão«1» falha no sensor de confirmação de óleo
+«0» ｵｲﾙ供給異常	«0» falha na alimentação de óleo
+«0» ﾋﾟｽﾄﾝ«1» 治具 機種違い	«0» pistão«1» gabarito modelo errado
+«0» ﾋﾟｽﾄﾝ«1» 数値読出 上限異常	«0» pistão«1» leitura de valor acima do limite sup.
+«0» ﾋﾟｽﾄﾝ 測定ﾀｲﾑｱｳﾄ	«0» medição de pistão timeout
+ｽｸﾛｰﾙ開始PB (異常画面)	Botão início de rolagem (tela de falhas)
+ｽｸﾛｰﾙ開始PL (異常画面)	Lâmpada início de rolagem (tela de falhas)
+ｽｸﾛｰﾙ終了PB (異常画面)	Botão fim de rolagem (tela de falhas)
+ｽｸﾛｰﾙ終了PL (異常画面)	Lâmpada fim de rolagem (tela de falhas)
+各個ﾓｰﾄﾞ(各個SS選択中)	Modo individual (chave individual selecionada)
+PB Screen (PB×«0»)	Tela de botões (PB×«0»)
+ﾎﾞﾀﾝ画面(«0»×«1»PB)	Tela de botões («0»×«1»PB)
+ﾎﾞﾀﾝ画面(«0»×«1»PL)	Tela de botões («0»×«1»PL)
+ﾀｯﾁﾊﾟﾈﾙ画面番号[«0»]	Nº da tela do painel touch [«0»]
+PB Screen (Red Frame×«0»)	Tela de botões (moldura vermelha×«0»)
+ﾎﾞﾀﾝ画面(«0»×«1»赤枠)	Tela de botões («0»×«1» moldura vermelha)
+ｶｳﾝﾀ«0» ﾘｾｯﾄPB	Botão reset contador«0»
+ｶｳﾝﾀ ﾍﾟｰｼﾞ単位 ﾘｾｯﾄPB	Botão reset de contadores por página
+ｻｲｸﾙﾀｲﾑ ﾃﾞｰﾀﾘｾｯﾄPB	Botão reset dos dados de tempo de ciclo
+【ﾛｸﾞ】 S/P ｶｳﾝﾄ+«0» (IL)	[Log] S/P contagem +«0» (IL)
+【ﾛｸﾞ】 S/P ﾛｸﾞ用 ｶｳﾝﾄUP	[Log] S/P contagem UP p/ log
+【ﾛｸﾞ】 S/P ﾛｸﾞｸﾘｱPB	[Log] S/P botão limpar log
+【ﾛｸﾞ】 ﾋﾟｽﾄﾝ«0» ｶｳﾝﾄ+«1» (IL)	[Log] pistão«0» contagem +«1» (IL)
+【ﾛｸﾞ】 ﾋﾟｽﾄﾝ«0» ﾛｸﾞ用 ｶｳﾝﾄUP	[Log] pistão«0» contagem UP p/ log
+【ﾛｸﾞ】 ﾋﾟｽﾄﾝ«0» ﾛｸﾞｸﾘｱPB	[Log] pistão«0» botão limpar log
+【ﾛｸﾞ】 ﾛｸﾞﾃﾞｰﾀ使用PB	[Log] botão usar dados de log
+【ﾛｸﾞ】 ﾏｽﾀｰ選択(自動OFFｷｬﾝｾﾙ)	[Log] seleção de master (cancelar OFF automático)
+【ﾛｸﾞ】 «0»st ｶｳﾝﾄUP(確定)	[Log] «0»st contagem UP (confirmada)
+画面番号	Nº da tela
+画面番号[«0»]	Nº da tela [«0»]
+ｼｭｰﾎﾞｯｸｽ ﾚｲｱｳﾄ(«0»×«1») 使用中PL	Layout de caixas de sapata («0»×«1») lâmpada em uso
+ﾋﾟｽﾄﾝ«0» OK品 (取出確認) PL	Pistão«0» peça OK (confirmação de retirada) lâmpada
+ﾋﾟｽﾄﾝ«0» 入替確認 (球間測定OK) PL	Pistão«0» confirmação de troca (medição entre esferas OK) lâmpada
+ﾃﾞｰﾀﾘｾｯﾄ開始(ﾓｼﾞｭｰﾙ«0»)	Início de reset de dados (módulo«0»)
+①ﾌﾟﾘｾｯﾄは各個時だけもう«0»回できる様にする?	1) Fazer o preset poder ser executado mais «0» vez só no modo individual?
+運転準備(条件) ： Mater_ON (IL)	Pronto p/ operar (condição)
+連続SS → 各個SS の切替検知 (機械停止させる為) ： Auto SS → Ind. SS Change (Stop the Machine)	Detecção de troca chave auto → individual (p/ parar a máquina)
+異常ﾘｾｯﾄPB ： Alarm Reset PB	Botão reset de falha
+各個(実行PB) ： Ind. Action PB	Individual (botão executar)
+全原点位置 ： All Home Position	Todos na posição de origem
+起動可能位置 ： Enable Running Position	Posição que permite partida
+全連続運転 ： All Auto Running	Todos em operação automática
+連続切 ： Stop Auto Running	Parada auto
+ｻｲｸﾙ運転中 ： Cycle Running	Em operação de ciclo
+装置内ﾜｰｸ無し ： No Work in Machine	Sem peça na máquina
+全ﾃﾞｰﾀﾘｾｯﾄ ： All Data Reset	Reset de todos os dados
+機種選択 ： Model Select	Seleção de modelo
+DS«0»/DS«1»機種選択_«2».«3».«4»	DS«0»/DS«1» seleção de modelo_«2».«3».«4»
+ﾓｰﾄﾞ ： Mode	Modo
+自動補正:AUTO CORRECT	Correção automática
+ならし動作 : SMOOTHING MOTION	Movimento de amaciamento
+ｵｲﾙ塗布 使用有無 : Oil Apply Using	Aplicação de óleo usar/não usar
+測定のみｻｲｸﾙ : Only Measure Cycle	Ciclo só de medição
+耐久ﾓｰﾄﾞ ： Endurance Mode	Modo durabilidade
+ｼｭｰ使用ﾓｰﾄﾞ選択:Shoe Use Mode Select	Seleção do modo de uso de sapata
+ｴﾘｱｾﾝｻｰ«0» ：　Area Sensor«1»	Sensor de área«0»
+操作盤ﾗﾝﾌﾟ ： Operation Panel Lamp	Lâmpadas do painel de operação
+あんどん ： Andon	Andon
+ﾗﾝﾌﾟﾁｪｯｸ ： Lamp Check	Teste de lâmpadas
+ｼｸﾞﾅﾙﾀﾜｰ：Signal Tower	Torre sinaleira
+YSD«0» では消去	Apagado no YSD«0»
+斜板・ﾋﾟｽﾄﾝ ﾏｽﾀｰ選択中 ： S/P and Piston Selected of Master	Placa oscilante/pistão master selecionado
+総合異常 ： TotaL Fault	Falha geral
+共通異常 ： Common Alarm	Falha comum
+ｻｲｸﾙ停止異常 ： Cycle Stop Fault	Falha de parada de ciclo
+連続切(異常) ： Auto Stop Fault	Parada auto (falha)
+運転準備遮断(異常) ： Master OFF fault	Corte de pronto p/ operar (falha)
+ｾｰﾌﾃｨ系(異常) ： Safety Fault	Sistema de segurança (falha)
+警告(発生中)：ﾌﾞｻﾞｰ有 ： Warning on Buzzer	Alarme (ativo): com buzzer
+警告(発生中)：ﾌﾞｻﾞｰ無 ： Warning only	Alarme (ativo): sem buzzer
+«0»st 異常 ： «1»st Fault	«0»st falha
+異常回路 ： Fault Circuit	Circuito de falhas
+W«0».«1» (T«2») ～ W«3».«4» (T«5»)	W«0».«1» (T«2») ~ W«3».«4» (T«5»)
+YSD«0» では 信号異常として復活させる	No YSD«0» restaurar como falha de sinal
+警告 ： Warning	Alarme
+異常が発生した時にﾌﾞｻﾞｰ停止中でも再度ﾌﾞｻﾞｰをならすための補助回路 ： Circuit for Buzzer Retry	Circuito auxiliar p/ tocar o buzzer de novo quando ocorrer falha, mesmo com buzzer parado
+ﾌﾞｻﾞｰ再鳴動用の異常Bit ON(立ち上がり)を検知する ： Confirm to the Bit Edge ON for Retry Buuzer	Detecta a borda de subida do bit de falha p/ tocar o buzzer de novo
+異常ｺﾒﾝﾄの切替 («0»：US  «1»：JP) ： Change Alarm Comment («2»:US «3»:JP)	Troca do comentário de falha («0»: US  «1»: JP)
+画面切替(確認) ： Change Screen	Troca de tela (confirmação)
+ﾒﾆｭｰ画面切替 ： Change Menu Screen	Troca p/ tela de menu
+異常・警告時 画面切替 ： Change Fault Screen	Troca de tela em falha/alarme
+治具確認 画面切替 ： Change JIG Check Screen	Troca p/ tela de confirmação de gabarito
+測定ﾓﾆﾀｰ 画面切替 ： Measuring Monitor Screen	Troca p/ tela de monitor de medição
+画面番号用のBitﾘｾｯﾄ + ｲﾝﾃﾞｯｸｽﾚｼﾞｽﾀに開始ﾋﾞｯﾄ転送 ： Bit Reste to Screen Number + Start Bit Transfer of Index_Register	Reset dos bits de nº de tela + transferência do bit inicial p/ registrador de índice
+W«0».«1»：画面番号[«2»] ～ W«3».«4»：画面番号[«5»]	W«0».«1»: tela nº[«2»] ~ W«3».«4»: tela nº[«5»]
+D«0»(数値) を W«1».«2»に順序ﾋﾞｯﾄ転送するが+«3»しているので初期ﾋﾞｯﾄｽﾞﾚがおきる為に-«4»している ： ・・・・・・・	Transfere D«0»(valor) em sequência de bits p/ W«1».«2», mas como soma +«3» ocorre deslocamento do bit inicial, por isso subtrai -«4»
+&«0»=画面番号[«1»]以降は無効：別ｱﾄﾞﾚｽと重複する	&«0» = a partir da tela nº[«1»] é inválido: sobrepõe outro endereço
+釦→釦枠(制御) ： PB→Red_Frame	Botão → moldura do botão (controle)
+釦(選択)→ﾗﾝﾌﾟ点灯 ： PB Select → Lamp ON	Botão (seleção) → acender lâmpada
+ﾒﾆｭｰ画面のﾗﾝﾌﾟ(原点時：緑) ： Lamp On Green to Meun	Lâmpada da tela de menu (na origem: verde)
+ﾗﾝﾌﾟ画面 ： Lamp Screen	Tela de lâmpadas
+ﾎﾞﾀﾝ画面(ﾗﾝﾌﾟ) ： PB Screen Lamp	Tela de botões (lâmpadas)
+ｼｭｰﾎﾞｯｸｽ ﾚｲｱｳﾄ使用表示 ： Shoe_Box Layout Using PL	Indicação do layout de caixas de sapata em uso
+ﾋﾟｽﾄﾝ取出・入替 確認ﾓﾆﾀｰ ： Piston Removing or Change Monitor	Monitor de confirmação de retirada/troca de pistão
+異常履歴(GP操作) ： Fault History Control	Histórico de falhas (operação no GP)
+ﾊﾟﾗﾒｰﾀ ﾊﾟｽﾜｰﾄﾞ : Parameter Password	Senha de parâmetros
+自動補正 入力許可	Permissão de entrada da correção automática
+ﾊﾟﾗﾒｰﾀ ﾊﾟｽﾜｰﾄﾞ (ｼｭｰﾎﾞｯｸｽ配置用) : Parameter Password for Shoe_Box Style Setting	Senha de parâmetros (p/ layout das caixas de sapata)
+ｶｳﾝﾀ«0» ： Counter «1»-«2»～«3»	Contador«0»: contador «1»-«2»~«3»
+ｶｳﾝﾀ«0» ： Counter «1»-«2»～«3» («4»S«5»)	Contador«0»: contador «1»-«2»~«3» («4»S«5»)
+ｶｳﾝﾀ«0» ： Counter «1»-«2»～«3» («4»SR«5»)	Contador«0»: contador «1»-«2»~«3» («4»SR«5»)
+ｶｳﾝﾀ«0» ： Counter «1»-«2»～«3» («4»SRE«5»)	Contador«0»: contador «1»-«2»~«3» («4»SRE«5»)
+ｶｳﾝﾀ«0» ： Counter «1»-«2»～«3» (Spare«4»)	Contador«0»: contador «1»-«2»~«3» (reserva«4»)
+ｼｭｰ取出数 ・ 取出率  ：  Shoe Removal Counter and %	Qtd. e taxa de retirada de sapatas
+予備«0» ： Spare«1»	Reserva«0»
+ｼｭｰ選択用 (ﾗﾝｸ別 範囲値) ： Rank Range for Shoe Selection 	P/ seleção de sapata (faixa por rank)
+手直しPC  ： Modify PC	PC de retrabalho
+機種別 自動補正値(転送) ： Auto Correct Value for Model	Valor de correção automática por modelo (transferência)
+自動補正値 (mm → μm) & ±符号判定 ： Auto Correct Value (mm → μm) and Sign Check	Valor de correção automática (mm → µm) e julgamento do sinal ±
+機種別 手動補正値(転送) ： Manual Correct Value for Model	Valor de correção manual por modelo (transferência)
+ﾓﾆﾀ画面 (測定) ﾗﾝﾌﾟ結果表示 ： Result Lamp in Masuring Monitor Screen	Tela de monitor (medição) exibição das lâmpadas de resultado
+斜板ﾓﾆﾀｰ ： S/P Monitor	Monitor da placa oscilante
+斜板ｽﾄｯｸ部 ﾓﾆﾀｰ ： S/P Stock_st Monitor	Monitor do estoque de placa oscilante
+ﾋﾟｽﾄﾝ«0» ﾓﾆﾀｰ ： Piston«1» Monitor	Monitor do pistão«0»
+斜板・ﾋﾟｽﾄﾝ誤取出時 ： Misstake Removal S/P or Piston	Na retirada indevida de placa oscilante/pistão
+ｼｭｰﾗﾝｸ表示 ： Display of Shoe Rank	Exibição do rank de sapata
+斜板・ﾋﾟｽﾄﾝ ﾏｽﾀｰ時の測定をGPに転送 ： Transfer of Mesuring Data Master to GP Display	Transfere p/ o GP a medição da placa oscilante/pistão no modo master
+GP設定ﾊﾟﾗﾒｰﾀ(転送) ： GP Setting Parameter (Transfer)	Parâmetros ajustados no GP (transferência)
+手直しPC 通信中(確認) ： Confirm of PC for Communication	PC de retrabalho em comunicação (confirmação)
+① PCは D«0»に常にﾃﾞｰﾀを書き込んでくる  ：  Always Send data to D«1»	1) O PC escreve dados continuamente em D«0»
+②PLCは定期的に D«0»=«1» に強制的にﾘｾｯﾄする  ： D«2» to Force Reset «3» by PLC	2) O PLC reseta periodicamente D«0»=«1» de forma forçada
+ｼｭｰﾎﾞｯｸｽ配置 ： Shoe Box Style	Layout das caixas de sapata
+ｼｭｰﾎﾞｯｸｽのﾚｲｱｳﾄ番号が«0»～«1»に正確に設定されているかを確認 ： Ensure that you have correctly set the layout of the numbers «2» through «3» shoe box	Verifica se os nº de layout das caixas de sapata estão corretamente ajustados de «0» a «1»
+ﾛｸﾞﾃﾞｰﾀ (S/P) ： Log_Data (S/P)	Dados de log (S/P)
+MAX計算 (S/P) ： Max (S/P)	Cálculo MAX (S/P)
+MIN計算[«0»] (S/P) ： Min (S/P)	Cálculo MIN[«0»] (S/P)
+MAX-MIN計算 (S/P) ： Max-Min (S/P)	Cálculo MAX-MIN (S/P)
+ﾛｸﾞﾃﾞｰﾀ (ﾋﾟｽﾄﾝ«0») ： Log_Data (Piston«1»)	Dados de log (pistão«0»)
+MAX計算 (ﾋﾟｽﾄﾝ«0») ： Max (Piston«1»)	Cálculo MAX (pistão«0»)
+MIN計算[«0»] (ﾋﾟｽﾄﾝ«1») ： Min (Piston«2»)	Cálculo MIN[«0»] (pistão«1»)
+MAX-MIN計算 (ﾋﾟｽﾄﾝ«0») ： Max-Min (Piston«1»)	Cálculo MAX-MIN (pistão«0»)
+【ﾛｸﾞ】 ﾏｽﾀｰ選択の自動OFFをｷｬﾝｾﾙ ： 【Log】 auto Off for Master Select	[Log] cancelar o OFF automático da seleção de master
+【ﾛｸﾞ】 検査結果の自動ｸﾘｱ ： 【Log】 Auto Clear for Measurement Data	[Log] limpeza automática dos resultados de inspeção
+【ﾛｸﾞ】 ｶｳﾝﾄUPまでｽﾄﾗｲｶｰ自動起動 ： 【Log】 Auto Running for Countup to Striker	[Log] partida automática do striker até a contagem UP
+【ﾛｸﾞ】 CSV書込ｽﾃｰﾀｽ(GP表示) ： 【Log】 GP_Display (CSV Writing Status)	[Log] status de gravação CSV (exibição GP)
+YSD«0»ではｱﾄﾞﾚｽ変わるかも;	No YSD«0» o endereço pode mudar
+YSD«0»では不要	Desnecessário no YSD«0»
+YSD«0»では «1».«2» → «3».«4»になる	No YSD«0» «1».«2» → passa a ser «3».«4»
+«0»st ｻｲｸﾙﾀｲﾑ計測開始 ： «1»st Start Cycle_Time	«0»st início da medição do tempo de ciclo
+※MCT選択時は «0»st 治具«1» 上昇端まで	* Com MCT selecionado: até o fim de curso superior do gabarito«1» da «0»st
+D«0» ～D«1» (×«2»)の中から &«3» が何個かを探す ： Search D«4» ～D«5» out of «6»	Procura quantos &«3» existem entre D«0» ~ D«1» (×«2»)
+平均値(算出) ： Avarage	Média (cálculo)
+履歴ﾘｾｯﾄ ： Memory Reset	Reset do histórico
+動作無し ： «0»st No Moving	Sem movimento
+ﾜｰｸ無し ： No Work	Sem peça
+原点位置 ： Home Position	Posição de origem
+起動可能位置 ： Running Enable Position	Posição que permite partida
+自動運転中 ： Auto Running	Em operação automática
+YSD«0»では消去	Apagado no YSD«0»
+【強制】連続切 ： Force Auto Stop	[Forçado] parada auto
+ﾃﾞｰﾀﾘｾｯﾄ ： Data Reset	Reset de dados
+NG品 ﾘｾｯﾄ ： NG Reset	Reset de peça NG
+ｻｲｸﾙ・ﾏｽﾀｰ時 特殊NGﾘｾｯﾄ ： NG_Reset for Cycle or Master Mode	Reset NG especial no modo ciclo/master
+ﾃﾞｰﾀｼﾌﾄ領域(ﾃﾞｰﾀ有無)：«0»個 ： Data Shift Area (Serach Data)	Área de shift de dados (com/sem dados): «0» unid.
+«0»st 原点戻り ： «1»st ReturnHome Position	«0»st retorno à origem
+治具確認 ： Jig Check	Confirmação de gabarito
+YSD«0» 条件見直し・機種復元	YSD«0» revisar condições / restaurar modelo
+通常自動中 ： Normal Auto Running	Em automático normal
+ﾏｽﾀｰ選択中 ： Master Selecting	Master selecionado
+斜板ｾｯﾄ位置OKﾗﾝﾌﾟ ： S/P Position Check OK PL	Lâmpada placa oscilante posição OK
+OK/NGﾗﾝﾌﾟ ： OK/NG Lamp	Lâmpada OK/NG
+斜板 機種検知 ： S/P Model Check	Detecção de modelo da placa oscilante
+YSD«0»では条件を復元　また 機種ｺﾒﾝﾄも復旧	No YSD«0» restaurar as condições e também os comentários de modelo
+斜板測定子 開閉 ： S/P Meas. Gauge Open/Close	Apalpador placa oscilante abrir/fechar
+斜板測定子 前進/後退 ： S/P Meas. Gauge Forward/Retuen	Apalpador placa oscilante avançar/recuar
+斜板測定 ： S/P Measuring	Medição da placa oscilante
+斜板測定結果 ： Result of S/P Measuring	Resultado da medição da placa oscilante
+斜板 小範ｵｰﾄﾏｽﾀｰ	Placa oscilante auto master faixa pequena
+斜板 大範ﾏｽﾀ«0» ： S/P Large Master	Placa oscilante master faixa grande«0»
+ﾊﾟﾙｺﾑ / PULCOM	PULCOM
+測定&ﾃﾞｰﾀ読出 ： Measuring & Data Read Out	Medição e leitura de dados
+ﾊﾟﾙｺﾑ 判定ﾘｾｯﾄ / PULCOM Judgment Data Reset	PULCOM reset de julgamento
+ﾊﾟﾙｺﾑ出力 ： Output PULCOM	Saídas PULCOM
+YSD«0» ﾌﾟﾛｸﾞﾗﾑ選択番号を復旧させる事	YSD«0»: restaurar o nº de seleção de programa
+«0».«1».«2» add «3».«4» SIZE SELECT BCD ｻｲｽﾞ選択BCD «5»   c«6»:«7»->«8»	«0».«1».«2» add «3».«4» SIZE SELECT BCD seleção de tamanho BCD «5»   c«6»:«7»->«8»
+«0»st 斜板取出確認 ： «1»st S/P Removal Conf.	«0»st confirmação de retirada da placa oscilante
+«0»st 斜板ﾃﾞｰﾀ → ｽﾄｯｸ部 ： «1»st S/P Data → Stock_st	«0»st dados da placa oscilante → estoque
+ｽﾄｯｸ部 ﾃﾞｰﾀﾘｾｯﾄ ： Data Reset in Stock_st	Reset de dados do estoque
+各個 ： Individual	Individual
+ﾋﾟｽﾄﾝ«0» 治具確認 ： Piston«1» Jig Check	Pistão«0» confirmação de gabarito
+YSD«0» 機種ｺﾒﾝﾄ・確認条件を復旧	YSD«0» restaurar comentários de modelo / condições de confirmação
+ﾋﾟｽﾄﾝ治具確認 ： Jig Confirm for Piston	Confirmação de gabarito de pistão
+ｵｲﾙ塗布«0» ﾕﾆｯﾄ前進/後退 ： Oil Apply Unit«1» FWD/RTN	Aplicação de óleo«0» unidade avançar/recuar
+ｵｲﾙ塗布«0»～«1»  ： Oil Apply«2»～«3»	Aplicação de óleo«0»~«1»
+ﾊﾞﾙﾌﾞON(加圧)→OFF(吸入)で吐出 ： Valve (ON→OFF) to Oil Apply ON	Descarga com válvula ON (pressuriza) → OFF (aspira)
+ｵｲﾙ供給 ： Oil Suuply	Alimentação de óleo
+ﾋﾟｽﾄﾝ«0» 治具昇降 ： Piston«1» Jig Down/Up	Pistão«0» sobe/desce gabarito
+ﾋﾟｽﾄﾝ«0» 球間測定子 開閉 ： Piston«1» Dia.Measure Open/Close	Pistão«0» apalpador entre esferas abrir/fechar
+球間測定子 前進/後退 ： Dia.Measure FWD/RTN	Apalpador entre esferas avançar/recuar
+球間測定子 ならし動作 ： Sphere Dia.Measure Smoothing	Apalpador entre esferas movimento de amaciamento
+ﾋﾟｽﾄﾝ 測定回路  ：  Piston Measuring Circuit	Circuito de medição do pistão
+ **********  ﾋﾟｽﾄﾝ«0» ： Piston«1» **********	 **********  Pistão«0» **********
+ﾋﾟｽﾄﾝ«0» ﾏｽﾀｰ選択 ： Piston«1» Select of Master	Pistão«0» seleção de master
+ﾋﾟｽﾄﾝ«0» 測定値読出用 ﾌﾟﾛﾄｺﾙﾏｸﾛ設定 ： Piston«1» Seeting Protocol Macro (Read Measuring Data)	Pistão«0» ajuste da macro de protocolo p/ leitura do valor medido
+ﾋﾟｽﾄﾝ«0» 測定 ： Piston«1» Measuring	Pistão«0» medição
+ﾋﾟｽﾄﾝ«0» ﾌﾟﾘｾｯﾄ(«1»ｾｯﾄ) ： Piston«2» Preset («3»-Reset)	Pistão«0» preset («1» set)
+SW ,«0»,«1»,«2» CR+LF → SW ,«3»,«4» CR+LF          SW ,«5»,«6»,«7» CR+LF → SW ,«8»,«9» CR+LF	SW ,«0»,«1»,«2» CR+LF → SW ,«3»,«4» CR+LF          SW ,«5»,«6»,«7» CR+LF → SW ,«8»,«9» CR+LF
+通信ﾎﾟｰﾄ ： Communication Port 【«0»】           ｼﾘｱﾙﾎﾟｰﾄ ： Serial Port 【«1»】          号機ｱﾄﾞﾚｽ ： Unit No. 【«2» +«3»】	Porta de comunicação [«0»]           Porta serial [«1»]          Endereço da unidade [«2» +«3»]
+送受信ｼｰｹﾝｽ番号 ： Sequence No. 【«0»】	Nº da sequência de envio/recepção [«0»]
+送信ﾃﾞｰﾀ 先頭CH ： Send Data Address 【Non】	CH inicial dos dados de envio [nenhum]
+受信ﾃﾞｰﾀ 先頭CH ： Recive Data Address 【Non】	CH inicial dos dados de recepção [nenhum]
+ﾋﾟｽﾄﾝ«0» 現在値読取 ： Piston«1» Read Present value	Pistão«0» leitura do valor atual
+ﾋﾟｽﾄﾝ«0» 現在値読出 ： Piston«1» Read Present Value	Pistão«0» leitura do valor atual
+SR ,«0»,«1», CR+LF → SR .«2».«3». + (Data «4»ch) + CRLF	SR ,«0»,«1», CR+LF → SR .«2».«3». + (dados «4»ch) + CRLF
+受信ﾃﾞｰﾀ 先頭CH ： Recive Data Address 【D«0» ～ D«1»】	CH inicial dos dados de recepção [D«0» ~ D«1»]
+小範ﾏｽﾀｰ時にB係数を自動で計算する : Auto Calculating of the B-Correct Value for Small Master	Calcula automaticamente o coeficiente B no master faixa pequena
+(小範ﾏｽﾀｰ規格値 - 実測値) + (現在のB係数) = (変更後のB係数) ： (Small Master Standard Value - Measuring Value ) + (B-Coreect Value Now) = (New B-Correct Value)	(valor especificado do master faixa pequena - valor medido) + (coeficiente B atual) = (novo coeficiente B)
+ﾋﾟｽﾄﾝ«0» 測定結果 (+NG・OK・-NG) ： Result of Piston«1» Measuring (+NG・OK・-NG)	Pistão«0» resultado da medição (+NG / OK / -NG)
+通信ﾎﾟｰﾄ ： Communication Port 【«0»】          ｼﾘｱﾙﾎﾟｰﾄ ： Serial Port 【«1»】          号機ｱﾄﾞﾚｽ ： Unit No. 【«2» +«3»】	Porta de comunicação [«0»]          Porta serial [«1»]          Endereço da unidade [«2» +«3»]
+総合結果 ： Total Result	Resultado geral
+ﾋﾟｽﾄﾝ«0»～«1» 測定結果有り ： Piston«2»～«3» In Measurment	Pistão«0»~«1» com resultado de medição
+ﾋﾟｽﾄﾝ«0»～«1» 測定OK ： Piston«2»～«3» In Measurment OK	Pistão«0»~«1» medição OK
+ﾋﾟｽﾄﾝ«0»～«1» ﾌﾟﾘｾｯﾄ完了 ： Piston«2»～«3» Preset Completed	Pistão«0»~«1» preset concluído
+ﾋﾟｽﾄﾝ«0»～«1» 入替完了 ： Piston«2»～«3» Change Completed	Pistão«0»~«1» troca concluída
+ﾋﾟｽﾄﾝ«0» 入替確認 ： Piston«1» Change Conf.	Pistão«0» confirmação de troca
+ﾋﾟｽﾄﾝ«0»～«1» ﾏｽﾀｰ結果 (まとめ) ： Piston «2»～«3» Master Result	Pistão«0»~«1» resultado do master (resumo)
+ﾋﾟｽﾄﾝ«0» ｼｭｰﾗﾝｸ選択 ： Piston«1» Selection of Shoe Rank	Pistão«0» seleção de rank de sapata
+SUB«0» (同ﾗﾝｸ) (Same Rank)	SUB«0» (mesmo rank)
+SUB«0» (異ﾗﾝｸ) (Different Rank)	SUB«0» (rank diferente)
+ﾋﾟｽﾄﾝ«0»～«1» ｼｭｰ選定完了 ： Shoe Select Complete for Piston«2»～«3»	Pistão«0»~«1» seleção de sapata concluída
+ｼｭｰﾎﾞｯｸｽの配置によりﾋﾟｯｷﾝｸﾞPHの割付を変更 ： Change the arrangement of position sensors allocation Box	Muda a atribuição dos sensores de picking conforme o layout das caixas de sapata
+ｼｭｰ取出開始 ： Start Removal Shoe	Início da retirada de sapata
+起動開始時の正常位置確認 ： Normal Position Confirm of Retry Starting	Confirmação de posição normal no início da partida
+ﾋﾟｯｷﾝｸﾞ 誤遮断用 (ﾋﾟｯｷﾝｸﾞｾﾝｻｰは«0»個だけONしているかを検出) ： Misstake Removal to Picking PH (Picking Sensor is ON or only one?)	P/ interrupção indevida do picking (detecta se só «0» sensor de picking está ON)
+ｼｭｰ取出 正常位置確認 (指示通りの場所に手を入れているか?) ： Removal Shoe of the Verify normal position	Retirada de sapata confirmação de posição normal (a mão está no local indicado?)
+ｼｭｰ取出確認 («0»個目) ： Removal Shoe Confirm («1»st)	Confirmação de retirada de sapata («0»ª peça)
+ｼｭｰ取出確認 («0»個目) ： Removal Shoe Confirm («1»nd)	Confirmação de retirada de sapata («0»ª peça)
+ｼｭｰ取出 («0»回目) ： Removal Shoe («1»st)	Retirada de sapata («0»ª vez)
+ｼｭｰ取出 («0»回目) ： Removal Shoe («1»nd)	Retirada de sapata («0»ª vez)
+ｼｭｰ取出 («0»回目) ： Removal Shoe («1»rd)	Retirada de sapata («0»ª vez)
+ｼｭｰ取出 («0»回目) ： Removal Shoe («1»th)	Retirada de sapata («0»ª vez)
+ﾋﾟｯｷﾝｸﾞ全取出完了 ： Removal Completed of Picking PH	Retirada completa por picking concluída
+ﾗﾝｸ別 点灯指示 ： Lamp ON of By Rank 	Indicação de acendimento por rank
+ｼｭｰﾎﾞｯｸｽ割付別 ﾋﾟｯｷﾝｸﾞ点灯指示 ： Picking Lamp ON of Shoe Box By Style	Indicação de acendimento do picking por atribuição das caixas de sapata
+ﾋﾟｯｷﾝｸﾞﾗﾝﾌﾟ(出力) ： Picking Lamp (Output)	Lâmpada de picking (saída)
+ｼｭｰ取出 丸型ﾗﾝﾌﾟ(出力) ： Shoe Removal Lamp (Output)	Retirada de sapata lâmpada redonda (saída)
+ﾗﾝｸ別 ｼｭｰ取出ｶｳﾝﾄ ： Shoe Rank Counter	Contagem de retirada de sapata por rank
+SHOE選擇完成，data存儲	Seleção de SHOE concluída, armazenando dados
+加載SHOE數據到SHOE取出工程	Carregar dados de SHOE no processo de retirada de SHOE
+清除已載入SHOE取出工程數據	Limpar dados de SHOE carregados no processo de retirada
+«0»st急停按鈕按下	«0»st botão de emergência pressionado
+統一監視用	P/ monitoração unificada
+从流向看STOP«0»	STOP«0» visto no sentido do fluxo
+密封圈提示	Aviso do anel de vedação
+密封圈拿取	Retirada do anel de vedação
+ST«0»通過	ST«0» passagem
+∟Sub«0»	∟Sub«0»
+ｻﾌﾞﾙｰﾁﾝ«0» ｼｭｰ選択用基準値計算 ： Sub«1» Shoe Selection Stanard Value Calcurate	Sub-rotina«0» cálculo do valor de referência p/ seleção de sapata
+ｼｭｰ選択 (同ﾗﾝｸ) ： Shoe Selection(Same RANK)	Seleção de sapata (mesmo rank)
++«0».«1»四舍五入_xie	+«0».«1» arredondamento_xie
+ﾗﾝｸ«0» ： Rank«1»	Rank«0»
+ｻﾌﾞﾙｰﾁﾝ«0» ｼｭｰ選択(異ﾗﾝｸ) ： Sub«1» Shoe Selection(Diff. RANK)	Sub-rotina«0» seleção de sapata (rank diferente)
+Picking Lamp for «0»×«1»	Picking Lamp for «0»×«1»
+«0»×«1» Shoe Loading Lamp	«0»×«1» Shoe Loading Lamp
+S/P JIG Confirm (Type：A)	S/P JIG Confirm (Type：A)
+S/P JIG Confirm (Type：B)	S/P JIG Confirm (Type：B)
+S/P JIG Confirm (Type：C)	S/P JIG Confirm (Type：C)
+OIL Tank Upper Limit (Full：ON)	OIL Tank Upper Limit (Full：ON)
+OIL Tank Lower Limit (Empty：ON)	OIL Tank Lower Limit (Empty：ON)
+PULCOM Meas. Data ×«0».«1»μm (BCD)	PULCOM Meas. Data ×«0».«1»μm (BCD)
+Always ON 常時ON	Always ON
+Always OFF 常時OFF	Always OFF
+Change switches (Auto・Ind. SS)	Change switches (Auto・Ind. SS)
+Data Edit Enable：GP	Data Edit Enable：GP
+Change Screen(PLS)：GP	Change Screen(PLS)：GP
+【Endurance】 Auto Running Completed	【Endurance】 Auto Running Completed
+Data Shift Complete («0»st → Stock_st)	Data Shift Complete («0»st → Stock_st)
+Piston«0»～«1» Oil_Apply ON (IL«2»)	Piston«0»～«1» Oil_Apply ON (IL«2»)
+Piston«0»～«1» Oil_Apply ON (Order)	Piston«0»～«1» Oil_Apply ON (Order)
+Piston«0»～«1» Oil_Apply ON (Memory)	Piston«0»～«1» Oil_Apply ON (Memory)
+Shoe_Box(«0»×«1») Piching PH ON (Confirm)	Shoe_Box(«0»×«1») Piching PH ON (Confirm)
+Removal Confirm («0») ： By Picking Sensor	Removal Confirm («0») ： By Picking Sensor
+Removal Shoe (Order) ： «0»st-«1»th	Removal Shoe (Order) ： «0»st-«1»th
+Removal Shoe (Completed) ： «0»st-«1»th	Removal Shoe (Completed) ： «0»st-«1»th
+Removal Shoe (Order) ： «0»nd-«1»th	Removal Shoe (Order) ： «0»nd-«1»th
+Removal Shoe (Completed) ： «0»nd-«1»th	Removal Shoe (Completed) ： «0»nd-«1»th
+Removal Shoe (Order) ： «0»rd-«1»th	Removal Shoe (Order) ： «0»rd-«1»th
+Removal Shoe (Completed) ： «0»rd-«1»th	Removal Shoe (Completed) ： «0»rd-«1»th
+Removal Shoe (Order) ： «0»th-«1»th	Removal Shoe (Order) ： «0»th-«1»th
+Removal Shoe (Completed) ： «0»th-«1»th	Removal Shoe (Completed) ： «0»th-«1»th
+Order of Picking Lamp ON («0»×«1»)	Order of Picking Lamp ON («0»×«1»)
+【Signal Tower】 (Light)：Fault･(Flash)：Ind.	【Signal Tower】 (Light)：Fault･(Flash)：Ind.
+【Signal Tower】 (Light)：Call･(Flash)：NG_Work Present	【Signal Tower】 (Light)：Call･(Flash)：NG_Work Present
+【Signal Tower】 (Light)：Home･(Flash)：No Fuction	【Signal Tower】 (Light)：Home･(Flash)：No Fuction
+【Signal Tower】 Buzzer (Total Fault)	【Signal Tower】 Buzzer (Total Fault)
+【Andon】：Falut	【Andon】：Falut
+【Andon】：Individual	【Andon】：Individual
+【Andon】：Call	【Andon】：Call
+【Andon】：NG Work Present	【Andon】：NG Work Present
+【Andon】：Spare	【Andon】：Spare
+Cycle Time(For Average)：Number other than «0»	Cycle Time(For Average)：Number other than «0»
+S/P Upper Limit ×«0».«1»μm	S/P Upper Limit ×«0».«1»μm
+S/P Lower Limit ×«0».«1»μm	S/P Lower Limit ×«0».«1»μm
+Piston Upper Limit ×«0».«1»μm	Piston Upper Limit ×«0».«1»μm
+Piston Lower Limit ×«0».«1»μm	Piston Lower Limit ×«0».«1»μm
+cosθ	cosθ
+Cycle Time («0»～«1»：All additional)	Cycle Time («0»～«1»：All additional)
+ S/P Master Value 【PV：«0»SE«1»】	 S/P Master Value 【PV：«0»SE«1»】
+ S/P Upper Limit ×«0».«1»μm 【PV：«2»SE«3»】	 S/P Upper Limit ×«0».«1»μm 【PV：«2»SE«3»】
+ S/P Lower Limit ×«0».«1»μm 【PV：«2»SE«3»】	 S/P Lower Limit ×«0».«1»μm 【PV：«2»SE«3»】
+ S/P Coefficient A 【PV：«0»SE«1»】	 S/P Coefficient A 【PV：«0»SE«1»】
+ S/P Coefficient B 【PV：«0»SE«1»】	 S/P Coefficient B 【PV：«0»SE«1»】
+Spare 【PV：«0»SE«1»】	Spare 【PV：«0»SE«1»】
+ Piston Upper Limit ×«0».«1»μm 【PV：«2»SE«3»】	 Piston Upper Limit ×«0».«1»μm 【PV：«2»SE«3»】
+ Piston Lower Limit ×«0».«1»μm 【PV：«2»SE«3»】	 Piston Lower Limit ×«0».«1»μm 【PV：«2»SE«3»】
+ Clearance Target Value 【PV：«0»SE«1»】	 Clearance Target Value 【PV：«0»SE«1»】
+ cosθ 【PV：«0»SE«1»】	 cosθ 【PV：«0»SE«1»】
+ Diameter of Shoe 【PV：«0»SE«1»】	 Diameter of Shoe 【PV：«0»SE«1»】
+ Piston«0» Standard Value 【PV：«1»SE«2»】	 Piston«0» Standard Value 【PV：«1»SE«2»】
+Piston«0» Standard Value 【PV：«1»SE«2»】	Piston«0» Standard Value 【PV：«1»SE«2»】
+Piston«0» Coefficient A 【PV：«1»SE«2»】	Piston«0» Coefficient A 【PV：«1»SE«2»】
+Piston«0» Coefficient B 【PV：«1»SE«2»】	Piston«0» Coefficient B 【PV：«1»SE«2»】
+ S/P Master Value 【PV：«0»SA«1»】	 S/P Master Value 【PV：«0»SA«1»】
+ S/P Upper Limit ×«0».«1»μm 【PV：«2»SA«3»】	 S/P Upper Limit ×«0».«1»μm 【PV：«2»SA«3»】
+ S/P Lower Limit ×«0».«1»μm 【PV：«2»SA«3»】	 S/P Lower Limit ×«0».«1»μm 【PV：«2»SA«3»】
+ S/P Coefficient A 【PV：«0»SA«1»】	 S/P Coefficient A 【PV：«0»SA«1»】
+ S/P Coefficient B 【PV：«0»SA«1»】	 S/P Coefficient B 【PV：«0»SA«1»】
+Spare 【PV：«0»SA«1»】	Spare 【PV：«0»SA«1»】
+ Piston Upper Limit ×«0».«1»μm 【PV：«2»SA«3»】	 Piston Upper Limit ×«0».«1»μm 【PV：«2»SA«3»】
+ Piston Lower Limit ×«0».«1»μm 【PV：«2»SA«3»】	 Piston Lower Limit ×«0».«1»μm 【PV：«2»SA«3»】
+ Clearance Target Value 【PV：«0»SA«1»】	 Clearance Target Value 【PV：«0»SA«1»】
+ cosθ 【PV：«0»SA«1»】	 cosθ 【PV：«0»SA«1»】
+ Diameter of Shoe 【PV：«0»SA«1»】	 Diameter of Shoe 【PV：«0»SA«1»】
+ Piston«0» Standard Value 【PV：«1»SA«2»】	 Piston«0» Standard Value 【PV：«1»SA«2»】
+Piston«0» Standard Value 【PV：«1»SA«2»】	Piston«0» Standard Value 【PV：«1»SA«2»】
+Piston«0» Coefficient A 【PV：«1»SA«2»】	Piston«0» Coefficient A 【PV：«1»SA«2»】
+Piston«0» Coefficient B 【PV：«1»SA«2»】	Piston«0» Coefficient B 【PV：«1»SA«2»】
+ S/P Master Value 【PV：«0»SRE«1»】	 S/P Master Value 【PV：«0»SRE«1»】
+ S/P Upper Limit ×«0».«1»μm 【PV：«2»SRE«3»】	 S/P Upper Limit ×«0».«1»μm 【PV：«2»SRE«3»】
+ S/P Lower Limit ×«0».«1»μm 【PV：«2»SRE«3»】	 S/P Lower Limit ×«0».«1»μm 【PV：«2»SRE«3»】
+ S/P Coefficient A 【PV：«0»SRE«1»】	 S/P Coefficient A 【PV：«0»SRE«1»】
+ S/P Coefficient B 【PV：«0»SRE«1»】	 S/P Coefficient B 【PV：«0»SRE«1»】
+Spare 【PV：«0»SRE«1»】	Spare 【PV：«0»SRE«1»】
+ Piston Upper Limit ×«0».«1»μm 【PV：«2»SRE«3»】	 Piston Upper Limit ×«0».«1»μm 【PV：«2»SRE«3»】
+ Piston Lower Limit ×«0».«1»μm 【PV：«2»SRE«3»】	 Piston Lower Limit ×«0».«1»μm 【PV：«2»SRE«3»】
+ Clearance Target Value 【PV：«0»SRE«1»】	 Clearance Target Value 【PV：«0»SRE«1»】
+ cosθ 【PV：«0»SRE«1»】	 cosθ 【PV：«0»SRE«1»】
+ Diameter of Shoe 【PV：«0»SRE«1»】	 Diameter of Shoe 【PV：«0»SRE«1»】
+ Piston«0» Standard Value 【PV：«1»SRE«2»】	 Piston«0» Standard Value 【PV：«1»SRE«2»】
+Piston«0» Standard Value 【PV：«1»SRE«2»】	Piston«0» Standard Value 【PV：«1»SRE«2»】
+Piston«0» Coefficient A 【PV：«1»SRE«2»】	Piston«0» Coefficient A 【PV：«1»SRE«2»】
+Piston«0» Coefficient B 【PV：«1»SRE«2»】	Piston«0» Coefficient B 【PV：«1»SRE«2»】
+ S/P Master Value 【PV：Spare«0»】	 S/P Master Value 【PV：Spare«0»】
+ S/P Upper Limit ×«0».«1»μm 【PV：Spare«2»】	 S/P Upper Limit ×«0».«1»μm 【PV：Spare«2»】
+ S/P Lower Limit ×«0».«1»μm 【PV：Spare«2»】	 S/P Lower Limit ×«0».«1»μm 【PV：Spare«2»】
+ S/P Coefficient A 【PV：Spare«0»】	 S/P Coefficient A 【PV：Spare«0»】
+ S/P Coefficient B 【PV：Spare«0»】	 S/P Coefficient B 【PV：Spare«0»】
+Spare 【PV：Spare«0»】	Spare 【PV：Spare«0»】
+ Piston Upper Limit ×«0».«1»μm 【PV：Spare«2»】	 Piston Upper Limit ×«0».«1»μm 【PV：Spare«2»】
+ Piston Lower Limit ×«0».«1»μm 【PV：Spare«2»】	 Piston Lower Limit ×«0».«1»μm 【PV：Spare«2»】
+ Clearance Target Value 【PV：Spare«0»】	 Clearance Target Value 【PV：Spare«0»】
+ cosθ 【PV：Spare«0»】	 cosθ 【PV：Spare«0»】
+ Diameter of Shoe 【PV：Spare«0»】	 Diameter of Shoe 【PV：Spare«0»】
+ Piston«0» Standard Value 【PV：Spare«1»】	 Piston«0» Standard Value 【PV：Spare«1»】
+Piston«0» Standard Value 【PV：Spare«1»】	Piston«0» Standard Value 【PV：Spare«1»】
+Piston«0» Coefficient A 【PV：Spare«1»】	Piston«0» Coefficient A 【PV：Spare«1»】
+Piston«0» Coefficient B 【PV：Spare«1»】	Piston«0» Coefficient B 【PV：Spare«1»】
+Swash Plate Small Master Upper Limit(«0»SE«1») ：GP	Swash Plate Small Master Upper Limit(«0»SE«1») ：GP
+Swash Plate Small Master Lower Limit(«0»SE«1») ：GP	Swash Plate Small Master Lower Limit(«0»SE«1») ：GP
+Swash Plate Large Master Upper Limit(«0»SE«1») ：GP	Swash Plate Large Master Upper Limit(«0»SE«1») ：GP
+Swash Plate Large Master Lower Limit(«0»SE«1») ：GP	Swash Plate Large Master Lower Limit(«0»SE«1») ：GP
+Piston Small Master Upper Limit(«0»SE«1») ：GP	Piston Small Master Upper Limit(«0»SE«1») ：GP
+Piston Small Master Lower Limit(«0»SE«1») ：GP	Piston Small Master Lower Limit(«0»SE«1») ：GP
+Piston Large Master Upper Limit(«0»SE«1») ：GP	Piston Large Master Upper Limit(«0»SE«1») ：GP
+Piston Large Master Lower Limit(«0»SE«1») ：GP	Piston Large Master Lower Limit(«0»SE«1») ：GP
+Piston Small Master Standard Value(«0»SE«1») ：GP	Piston Small Master Standard Value(«0»SE«1») ：GP
+Swash Plate Small Master Upper Limit(«0»SA«1») ：GP	Swash Plate Small Master Upper Limit(«0»SA«1») ：GP
+Swash Plate Small Master Lower Limit(«0»SA«1») ：GP	Swash Plate Small Master Lower Limit(«0»SA«1») ：GP
+Swash Plate Large Master Upper Limit(«0»SA«1») ：GP	Swash Plate Large Master Upper Limit(«0»SA«1») ：GP
+Swash Plate Large Master Lower Limit(«0»SA«1») ：GP	Swash Plate Large Master Lower Limit(«0»SA«1») ：GP
+Piston Small Master Upper Limit(«0»SA«1») ：GP	Piston Small Master Upper Limit(«0»SA«1») ：GP
+Piston Small Master Lower Limit(«0»SA«1») ：GP	Piston Small Master Lower Limit(«0»SA«1») ：GP
+Piston Large Master Upper Limit(«0»SA«1») ：GP	Piston Large Master Upper Limit(«0»SA«1») ：GP
+Piston Large Master Lower Limit(«0»SA«1») ：GP	Piston Large Master Lower Limit(«0»SA«1») ：GP
+Piston Small Master Standard Value(«0»SA«1») ：GP	Piston Small Master Standard Value(«0»SA«1») ：GP
+Swash Plate Small Master Upper Limit(«0»SRE«1») ：GP	Swash Plate Small Master Upper Limit(«0»SRE«1») ：GP
+Swash Plate Small Master Lower Limit(«0»SRE«1») ：GP	Swash Plate Small Master Lower Limit(«0»SRE«1») ：GP
+Swash Plate Large Master Upper Limit(«0»SRE«1») ：GP	Swash Plate Large Master Upper Limit(«0»SRE«1») ：GP
+Swash Plate Large Master Lower Limit(«0»SRE«1») ：GP	Swash Plate Large Master Lower Limit(«0»SRE«1») ：GP
+Piston Small Master Upper Limit(«0»SRE«1») ：GP	Piston Small Master Upper Limit(«0»SRE«1») ：GP
+Piston Small Master Lower Limit(«0»SRE«1») ：GP	Piston Small Master Lower Limit(«0»SRE«1») ：GP
+Piston Large Master Upper Limit(«0»SRE«1») ：GP	Piston Large Master Upper Limit(«0»SRE«1») ：GP
+Piston Large Master Lower Limit(«0»SRE«1») ：GP	Piston Large Master Lower Limit(«0»SRE«1») ：GP
+Piston Small Master Standard Value(«0»SRE«1») ：GP	Piston Small Master Standard Value(«0»SRE«1») ：GP
+Swash Plate Small Master Upper Limit(Spare«0») ：GP	Swash Plate Small Master Upper Limit(Spare«0») ：GP
+Swash Plate Small Master Lower Limit(Spare«0») ：GP	Swash Plate Small Master Lower Limit(Spare«0») ：GP
+Swash Plate Large Master Upper Limit(Spare«0») ：GP	Swash Plate Large Master Upper Limit(Spare«0») ：GP
+Swash Plate Large Master Lower Limit(Spare«0») ：GP	Swash Plate Large Master Lower Limit(Spare«0») ：GP
+Piston Small Master Upper Limit(Spare«0») ：GP	Piston Small Master Upper Limit(Spare«0») ：GP
+Piston Small Master Lower Limit(Spare«0») ：GP	Piston Small Master Lower Limit(Spare«0») ：GP
+Piston Large Master Upper Limit(Spare«0») ：GP	Piston Large Master Upper Limit(Spare«0») ：GP
+Piston Large Master Lower Limit(Spare«0») ：GP	Piston Large Master Lower Limit(Spare«0») ：GP
+Piston Small Master Standard Value(Spare«0») ：GP	Piston Small Master Standard Value(Spare«0») ：GP
+S/P Small Range Master Meas. Data ×«0».«1»μm	S/P Small Range Master Meas. Data ×«0».«1»μm
+S/P Large Range Master Meas. Data ×«0».«1»μm	S/P Large Range Master Meas. Data ×«0».«1»μm
+Piston Measuring Small Master Meas. Value ×«0».«1»μm	Piston Measuring Small Master Meas. Value ×«0».«1»μm
+Piston Measuring Large Master Meas. Value ×«0».«1»μm	Piston Measuring Large Master Meas. Value ×«0».«1»μm
+BORE«0» Correction Value ： Model in Extracted	BORE«0» Correction Value ： Model in Extracted
+Bore«0» Correction Sign ： Model in Extracted	Bore«0» Correction Sign ： Model in Extracted
+Bore«0» Correct Value («1»SE«2») ： Reference by PLC	Bore«0» Correct Value («1»SE«2») ： Reference by PLC
+Bore«0» Correct Value («1»SA«2») ： Reference by PLC	Bore«0» Correct Value («1»SA«2») ： Reference by PLC
+Bore«0» Correct Value («1»SRE«2») ： Reference by PLC	Bore«0» Correct Value («1»SRE«2») ： Reference by PLC
+Bore«0» Correct Value (Spare«1») ： Reference by PLC	Bore«0» Correct Value (Spare«1») ： Reference by PLC
+Shoe_Box («0»×«1») Setting Rank Layout Data (GP)	Shoe_Box («0»×«1») Setting Rank Layout Data (GP)
+Piston«0» Measuring Reuslt (GP) ： +NG	Piston«0» Measuring Reuslt (GP) ： +NG
+Piston«0» Measuring Reuslt (GP) ： OK	Piston«0» Measuring Reuslt (GP) ： OK
+Piston«0» Measuring Reuslt (GP) ： -NG	Piston«0» Measuring Reuslt (GP) ： -NG
+S/P Measuring Reuslt (GP) ： +NG	S/P Measuring Reuslt (GP) ： +NG
+S/P Measuring Reuslt (GP) ： OK	S/P Measuring Reuslt (GP) ： OK
+S/P Measuring Reuslt (GP) ： -NG	S/P Measuring Reuslt (GP) ： -NG
+Showing Screen Number：GP	Showing Screen Number：GP
+«0»ST PULCOM Meas.Data x«1».«2»μm (BCD)	«0»ST PULCOM Meas.Data x«1».«2»μm (BCD)
+«0»ST PULCOM Meas.Data ×«1».«2»μm （BIN)	«0»ST PULCOM Meas.Data ×«1».«2»μm （BIN)
+«0»ST PULCOM Meas.Data x«1».«2»μm (Float)	«0»ST PULCOM Meas.Data x«1».«2»μm (Float)
+«0»ST S/P Meas. Value (×«1».«2»μm)	«0»ST S/P Meas. Value (×«1».«2»μm)
+S/P Small Range Master«0» Meas. Data ×«1».«2»μm	S/P Small Range Master«0» Meas. Data ×«1».«2»μm
+S/P Large Range Master«0» Meas. Data ×«1».«2»μm	S/P Large Range Master«0» Meas. Data ×«1».«2»μm
+Stock_st S/P Meas. Value (×«0».«1»μm)	Stock_st S/P Meas. Value (×«0».«1»μm)
+Piston«0» Present Value [mm→μm] (Float)	Piston«0» Present Value [mm→μm] (Float)
+Piston«0» Measuring Value (×«1».«2»μm)	Piston«0» Measuring Value (×«1».«2»μm)
+Shoe Selected Value (Sub«0»・«1»)	Shoe Selected Value (Sub«0»・«1»)
+Piston«0» Shoe Rank(«1») ： Selected	Piston«0» Shoe Rank(«1») ： Selected
+Shoe_Box («0»×«1») Rank Layout	Shoe_Box («0»×«1») Rank Layout
+Change Comment («0»：US  «1»：JP)	Change Comment («0»：US  «1»：JP)
+Showing (Screen Number)(GP→PLC)	Showing (Screen Number)(GP→PLC)
+Correct Data Sending Flag (PC→PLC)	Correct Data Sending Flag (PC→PLC)
+Rank«0»-«1» Removal Count (Sum Support) ： «2»SE«3»	Rank«0»-«1» Removal Count (Sum Support) ： «2»SE«3»
+Separate («0»% / Count) ： «1»SE«2»	Separate («0»% / Count) ： «1»SE«2»
+Rank«0»-«1» Removal Count (Sum Support) ： «2»SA«3»	Rank«0»-«1» Removal Count (Sum Support) ： «2»SA«3»
+Separate («0»% / Count) ： «1»SA«2»	Separate («0»% / Count) ： «1»SA«2»
+Rank«0»-«1» Removal Count (Sum Support) ： «2»SRE«3»	Rank«0»-«1» Removal Count (Sum Support) ： «2»SRE«3»
+Separate («0»% / Count) ： «1»SRE«2»	Separate («0»% / Count) ： «1»SRE«2»
+Rank«0»-«1» Removal Count (Sum Support) ： Spare«2»	Rank«0»-«1» Removal Count (Sum Support) ： Spare«2»
+Separate («0»% / Count) ： Spare«1»	Separate («0»% / Count) ： Spare«1»
+【Log_Data】S/P («0»)	【Log_Data】S/P («0»)
+【Log_Data】 S/P Count Setting Value	【Log_Data】 S/P Count Setting Value
+【Log_Data】 S/P Count Present Value	【Log_Data】 S/P Count Present Value
+【Log_Data】 S/P (Max)	【Log_Data】 S/P (Max)
+【Log_Data】 S/P (Min)	【Log_Data】 S/P (Min)
+【Log_Data】 S/P (Max - Min)	【Log_Data】 S/P (Max - Min)
+【Log_Data】Piston«0» («1»)	【Log_Data】Piston«0» («1»)
+【Log_Data】 Piston«0» Count Setting Value	【Log_Data】 Piston«0» Count Setting Value
+【Log_Data】 Piston«0» Count Present Value	【Log_Data】 Piston«0» Count Present Value
+【Log_Data】 Piston«0» (Max)	【Log_Data】 Piston«0» (Max)
+【Log_Data】 Piston«0» (Min)	【Log_Data】 Piston«0» (Min)
+【Log_Data】 Piston«0» (Max - Min)	【Log_Data】 Piston«0» (Max - Min)
+【Log_Data】 CSV Writing Status	【Log_Data】 CSV Writing Status
+【Log_Data】 CSV Writing Status (Transfer)	【Log_Data】 CSV Writing Status (Transfer)
+【Log_Data】 CSV Writing Status (Complete)	【Log_Data】 CSV Writing Status (Complete)
+【Log_Data】 CSV Writing Status (Code«0»)	【Log_Data】 CSV Writing Status (Code«0»)
+【Log_Data】 GP_Display (CSV Writing Status)	【Log_Data】 GP_Display (CSV Writing Status)
+Model Check USE/NO USE (ON：NO USE)	Model Check USE/NO USE (ON：NO USE)
+Correct Select (OFF：Auto ON：Manual)	Correct Select (OFF：Auto ON：Manual)
+Smooth Actopn (ON：Non OFF：Have)	Smooth Actopn (ON：Non OFF：Have)
+Oil Aplly (ON：No Use OFF：Use)	Oil Aplly (ON：No Use OFF：Use)
+Only Measure Cycle (ON：Only Measure)	Only Measure Cycle (ON：Only Measure)
+Log Mode (ON：Use)	Log Mode (ON：Use)
+Shoe Rank Selected (ON：Same OFF：Difference)	Shoe Rank Selected (ON：Same OFF：Difference)
+S/P JIG Confirm (Type：A) ON	S/P JIG Confirm (Type：A) ON
+S/P JIG Confirm (Type：A) OFF	S/P JIG Confirm (Type：A) OFF
+Picking PH ON («0»×«1»)	Picking PH ON («0»×«1»)
+【Endurance】 Work Present	【Endurance】 Work Present
+【Endurance】 Striker Switch ON	【Endurance】 Striker Switch ON
+【Log】 Result Clear (Timing)	【Log】 Result Clear (Timing)
+【Log】 History of Striker ON	【Log】 History of Striker ON
+【Log】 «0»st Auto Running (Striker Auto ON)	【Log】 «0»st Auto Running (Striker Auto ON)
+Menu Screen («0»×«1»PL)	Menu Screen («0»×«1»PL)
+Lamp Screen («0»×«1»PL)	Lamp Screen («0»×«1»PL)
+PB Screen («0»×«1»PB)	PB Screen («0»×«1»PB)
+PB Screen («0»×«1»PL)	PB Screen («0»×«1»PL)
+PB Screen («0»×«1»Red Frame)	PB Screen («0»×«1»Red Frame)
+【Log】 S/P Count+«0» (IL)	【Log】 S/P Count+«0» (IL)
+【Log】 S/P CountUp	【Log】 S/P CountUp
+【Log】 S/P Log CLR PB	【Log】 S/P Log CLR PB
+【Log】 Piston«0» Count+«1» (IL)	【Log】 Piston«0» Count+«1» (IL)
+【Log】 Piston«0» CountUp	【Log】 Piston«0» CountUp
+【Log】 Piston«0» Log CLR PB	【Log】 Piston«0» Log CLR PB
+【Log】 Use Log Data PB	【Log】 Use Log Data PB
+【Log】 Master Select (Cancel Auto Off)	【Log】 Master Select (Cancel Auto Off)
+【Log】 «0»st Countup (Confirm)	【Log】 «0»st Countup (Confirm)
+Shoe_Box Layout («0»×«1») Using PL	Shoe_Box Layout («0»×«1») Using PL
+CIOｴﾘｱ指定	Especificação da área CIO
+ｻｲｸﾙﾀｲﾑｵｰﾊﾞｰﾌﾗｸﾞ	Flag de tempo de ciclo excedido
+ｻｲｸﾙﾀｲﾑ現在値	Tempo de ciclo valor atual
+DMｴﾘｱ指定	Especificação da área DM
+EM«0»ｴﾘｱ指定	Especificação da área EM«0»
+EMAｴﾘｱ指定	Especificação da área EMA
+EMBｴﾘｱ指定	Especificação da área EMB
+EMCｴﾘｱ指定	Especificação da área EMC
+＝ Flag	= Flag
+運転開始時«0»ｻｲｸﾙONﾌﾗｸﾞ	Flag ON por «0» ciclo no início da operação
+ﾀｽｸ初回起動ﾌﾗｸﾞ	Flag de primeira execução da tarefa
+≧Flag	>= Flag
+＞ Flag	> Flag
+HRｴﾘｱ指定	Especificação da área HR
+I/O照合異常	Falha de verificação de I/O
+≦Flag	<= Flag
+＜ Flag	< Flag
+電池異常	Falha de bateria
+ｻｲｸﾙﾀｲﾑ最大値	Tempo de ciclo valor máximo
+≠Flag	<> Flag
+負荷遮断ﾌﾗｸﾞ	Flag de corte de carga (saídas OFF)
+WRｴﾘｱ指定	Especificação da área WR

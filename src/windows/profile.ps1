@@ -29,7 +29,7 @@ if (Test-Connection "api.github.com" -Count 1 -Quiet) {
 }
 Else {
   # Initialize a random Oh My Posh theme for the PowerShell session
-  $themeFiles = Get-ChildItem -Path "C:\Users\emers\.config\oh-my-posh" | Select-Object -ExpandProperty FullName
+  $themeFiles = Get-ChildItem -Path "$env:USERPROFILE\.config\oh-my-posh" | Select-Object -ExpandProperty FullName
 }
 # Get a random index for the available Oh My Posh themes
 $randomThemeIndex = Get-Random -Minimum 0 -Maximum $themeFiles.Count
@@ -78,36 +78,36 @@ function Help {
   )
 
   if ($upall) {
-    Write-Status "upall -Autoreboot" -Type "INFO" 
-    Write-Status "upall -Verbose" -Type "INFO"
+    Write-Status -Message "upall -Autoreboot" -Type "INFO" 
+    Write-Status -Message "upall -Verbose" -Type "INFO"
   }
   elseif ($vmohdd) {
-    Write-Status "vmohdd - Compact VHDs of all turned-off Hyper-V VMs" -Type "INFO"
+    Write-Status -Message "vmohdd - Compact VHDs of all turned-off Hyper-V VMs" -Type "INFO"
   }
   elseif ($vmc) {
-    Write-Status "vmc <Tab>, <Tab>, <Tab>, ... VM -> connect to the VM using vmconnect.exe" -Type "INFO"
+    Write-Status -Message "vmc <Tab>, <Tab>, <Tab>, ... VM -> connect to the VM using vmconnect.exe" -Type "INFO"
   }
   elseif ($vmst) {
-    Write-Status "vmst <Tab>, <Tab>, <Tab>, ....  VM -> start the VM and connect to it" -Type "INFO"
+    Write-Status -Message "vmst <Tab>, <Tab>, <Tab>, ....  VM -> start the VM and connect to it" -Type "INFO"
   }
   elseif ($vmsp) {
-    Write-Status "vmsp <Tab>  VM -> stop the VM (with options to force stop or stop all running VMs)" -Type "INFO"
+    Write-Status -Message "vmsp <Tab>  VM -> stop the VM (with options to force stop or stop all running VMs)" -Type "INFO"
   }
   elseif ($vmca) {
-    Write-Status "vmca <Tab> <Tab> <Tab> VM -> adapter of that VM -> switch" -Type "INFO"
+    Write-Status -Message "vmca <Tab> <Tab> <Tab> VM -> adapter of that VM -> switch" -Type "INFO"
   }
   elseif ($clearPc) {
-    Write-Status "clear-pc - Clears temporary files on the local machine, including $env:TEMP and C:\Windows\Temp." -Type "INFO"
+    Write-Status -Message "clear-pc - Clears temporary files on the local machine, including $env:TEMP and C:\Windows\Temp." -Type "INFO"
   }
   else {
-    Write-Status "upall - Updates all system components including winget packages, Microsoft Store apps, and Windows updates." -Type "INFO"
-    Write-Status "vmohdd - Compacts the virtual hard disks (VHDs) of all turned-off Hyper-V VMs." -Type "INFO"
-    Write-Status "vmc - Connects a Hyper-V VM using vmconnect." -Type "INFO"
-    Write-Status "vmst - Starts a Hyper-V VM and connects to it using vmconnect." -Type "INFO"
-    Write-Status "vmsp - Stops a running Hyper-V VM, with options to force stop or stop all running VMs." -Type "INFO"
-    Write-Status "vmca - Connects a Hyper-V VM network adapter to a virtual switch." -Type "INFO"
-    Write-Status "clear-pc - Clears temporary files on the local machine, including $env:TEMP and C:\Windows\Temp." -Type "INFO"
-    Write-Status "help - Displays this help information." -Type "INFO"
+    Write-Status -Message "upall - Updates all system components including winget packages, Microsoft Store apps, and Windows updates." -Type "INFO"
+    Write-Status -Message "vmohdd - Compacts the virtual hard disks (VHDs) of all turned-off Hyper-V VMs." -Type "INFO"
+    Write-Status -Message "vmc - Connects a Hyper-V VM using vmconnect." -Type "INFO"
+    Write-Status -Message "vmst - Starts a Hyper-V VM and connects to it using vmconnect." -Type "INFO"
+    Write-Status -Message "vmsp - Stops a running Hyper-V VM, with options to force stop or stop all running VMs." -Type "INFO"
+    Write-Status -Message "vmca - Connects a Hyper-V VM network adapter to a virtual switch." -Type "INFO"
+    Write-Status -Message "clear-pc - Clears temporary files on the local machine, including $env:TEMP and C:\Windows\Temp." -Type "INFO"
+    Write-Status -Message "help - Displays this help information." -Type "INFO"
   }
 }
 
@@ -134,19 +134,19 @@ function upall {
     winget source update @params
 
     if ($LASTEXITCODE -ne 0) {
-      Write-Status "Error updating winget sources: $LASTEXITCODE" -Type "ERROR"
+      Write-Status -Message "Error updating winget sources: $LASTEXITCODE" -Type "ERROR"
     }
     else {
-      Write-Status "Winget sources updated successfully." -Type "INFO"
+      Write-Status -Message "Winget sources updated successfully." -Type "INFO"
     }
 
     winget upgrade --all --accept-package-agreements --accept-source-agreements --include-unknown @params
 
     if ($LASTEXITCODE -ne 0) {
-      Write-Status "Error updating winget packages: $LASTEXITCODE" -Type "ERROR"
+      Write-Status -Message "Error updating winget packages: $LASTEXITCODE" -Type "ERROR"
     }
     else {
-      Write-Status "Winget packages updated successfully. " -Type "INFO"
+      Write-Status -Message "Winget packages updated successfully. " -Type "INFO"
     }
   }
   
@@ -155,10 +155,10 @@ function upall {
     microsoftstore updates --apply
 
     if ($LASTEXITCODE -ne 0) {
-      Write-Status "Error updating Microsoft Store apps: $LASTEXITCODE" -Type "ERROR"
+      Write-Status -Message "Error updating Microsoft Store apps: $LASTEXITCODE" -Type "ERROR"
     }
     else {
-      Write-Status "Microsoft Store apps updated successfully." -Type "INFO"
+      Write-Status -Message "Microsoft Store apps updated successfully." -Type "INFO"
     }
   }
 
@@ -166,15 +166,15 @@ function upall {
     Get-WindowsUpdate -ComputerName localhost -Install -AcceptAll -ForceInstall -Autoreboot:$Autoreboot -Verbose:$Verbose
 
     if ($LASTEXITCODE -ne 0) {
-      Write-Status "Error updating Windows updates: $LASTEXITCODE" -Type "ERROR"
+      Write-Status -Message "Error updating Windows updates: $LASTEXITCODE" -Type "ERROR"
     }
     else {
-      Write-Status "Windows updates installed successfully." -Type "INFO"
+      Write-Status -Message "Windows updates installed successfully." -Type "INFO"
     }
   }
 
   if (-not $WingetUpdate -and -not $MicrosoftStoreUpdates -and -not $WindowsUpdates) {
-    Write-Status "No update options specified." -Type "WARNING"
+    Write-Status -Message "No update options specified." -Type "WARNING"
   }
 
 }
@@ -193,15 +193,30 @@ function vmohdd {
     ForEach-Object {
       try {
         $vhdBefore = Get-VHD -Path $_.Path | Select-Object Path, FileSize, Size
-        Write-Status "Before: $($vhdBefore.FileSize) bytes" -Type "INFO"
-        Write-Status "Compacting $($_.Path)" -Type "INFO"
+        if ($vhdBefore.Size -ne 0) {
+          Write-Status -Message "Before: $([math]::Round($vhdBefore.FileSize / 1GB, 4)) GB" -Type "INFO"
+        }
+        else {
+          Write-Status -Message "Before: $vhdBefore.FileSize" -Type "INFO"
+        }
+        Write-Status -Message "Compacting $($_.Path)" -Type "INFO"
         Optimize-VHD -Path $_.Path -Mode Full
         $vhdAfter = Get-VHD -Path $_.Path | Select-Object Path, FileSize, Size
-        Write-Status "After: $($vhdAfter.FileSize) bytes" -Type "INFO"
-        Write-Status "Saved: $($vhdBefore.FileSize - $vhdAfter.FileSize) bytes" -Type "INFO"
+        if ($vhdAfter.Size -ne 0) {
+          Write-Status -Message "After: $([math]::Round($vhdAfter.FileSize / 1GB, 4)) GB" -Type "INFO"
+        }
+        else {
+          Write-Status -Message "After: $vhdAfter.FileSize" -Type "INFO"
+        }
+        if ($vhdBefore.Size -ne 0 -and $vhdAfter.Size -ne 0) {
+          Write-Status -Message "Saved: $([math]::Round(($vhdBefore.FileSize - $vhdAfter.FileSize) / 1GB, 4)) GB" -Type "INFO"
+        }
+        else {
+          Write-Status -Message "Saved: $([math]::Round(($vhdBefore.FileSize - $vhdAfter.FileSize) , 4)) GB" -Type "INFO"
+        }
       }
       catch {
-        Write-Status "Error compacting VHD $($_.Path): $($_.Exception.Message)" -Type "ERROR"
+        Write-Status -Message "Error compacting VHD $($_.Path): $($_.Exception.Message)" -Type "ERROR"
       }
     }
   }
@@ -227,7 +242,7 @@ function vmc {
           }
         }
         catch {
-          Write-Status "Error completing VM name: $($_.Exception.Message)" -Type "ERROR"
+          Write-Status -Message "Error completing VM name: $($_.Exception.Message)" -Type "ERROR"
         }
       })]
     [string[]]$Name
@@ -235,12 +250,12 @@ function vmc {
   if ($Name) {
     foreach ($n in $Name) {
       Start-Process vmconnect.exe -ArgumentList "localhost `"$n`"" -Verb RunAs
-      Write-Status "Connecting to $n..." -Type "INFO"
+      Write-Status -Message "Connecting to $n..." -Type "INFO"
     }
   }
   else {
     Start-Process vmconnect.exe -Verb RunAs
-    Write-Status "Connecting to VM..." -Type "INFO"
+    Write-Status -Message "Connecting to VM..." -Type "INFO"
   }
 }
 
@@ -265,7 +280,7 @@ function vmst {
           }
         }
         catch {
-          Write-Status "Error completing VM name: $($_.Exception.Message)" -Type "ERROR"
+          Write-Status -Message "Error completing VM name: $($_.Exception.Message)" -Type "ERROR"
         }
       })]
     [string[]]$Name
@@ -274,16 +289,16 @@ function vmst {
     try {
       $vm = Get-VM -Name $n -ErrorAction Stop
       if ($vm.State -ne 'Running') {
-        Write-Status "Starting $($vm.Name)..." -Type "INFO"
+        Write-Status -Message "Starting $($vm.Name)..." -Type "INFO"
         Start-VM -VM $vm -ErrorAction Stop
       }
       else {
-        Write-Status "$($vm.Name) is already running." -Type "OK"
+        Write-Status -Message "$($vm.Name) is already running." -Type "OK"
       }
       vmc $vm.Name
     }
     catch {
-      Write-Warning "${n}: $($_.Exception.Message)"
+      Write-Status -Message "${n}: $($_.Exception.Message)" -Type "ERROR"
     }
   }
 }
@@ -309,7 +324,7 @@ function vmsp {
           }
         }
         catch {
-          Write-Status "Error completing VM name: $($_.Exception.Message)" -Type "ERROR"
+          Write-Status -Message "Error completing VM name: $($_.Exception.Message)" -Type "ERROR"
         }
       })]
     [string[]]$Name,
@@ -318,29 +333,29 @@ function vmsp {
   )
   if ($All) {
     $Name = (Get-VM | Where-Object State -ne 'Off').Name
-    if (-not $Name) { Write-Host 'No VMs are running.' -ForegroundColor DarkGray; return }
+    if (-not $Name) { Write-Status -Message 'No VMs are running.' -Type "INFO"; return }
   }
   elseif (-not $Name) {
-    Write-Warning 'Provide the name of the VM(s) or use -All.'; return
+    Write-Status -Message 'Provide the name of the VM(s) or use -All.' -Type "WARNING"; return
   }
   foreach ($n in $Name) {
     try {
       $vm = Get-VM -Name $n -ErrorAction Stop
       if ($vm.State -eq 'Off') {
-        Write-Status "$($vm.Name) is already off." -Type "OK"
+        Write-Status -Message "$($vm.Name) is already off." -Type "OK"
         continue
       }
       if ($Force) {
-        Write-Status "Cutting power to $($vm.Name)..." -Type "WARNING"
+        Write-Status -Message "Cutting power to $($vm.Name)..." -Type "WARNING"
         Stop-VM -VM $vm -TurnOff -Force -ErrorAction Stop
       }
       else {
-        Write-Status "Shutting down $($vm.Name)..." -Type "INFO"
+        Write-Status -Message "Shutting down $($vm.Name)..." -Type "INFO"
         Stop-VM -VM $vm -Force -ErrorAction Stop
       }
     }
     catch {
-      Write-Warning "${n}: $($_.Exception.Message)"
+      Write-Status -Message "${n}: $($_.Exception.Message)" -Type "ERROR"
     }
   }
 }
@@ -419,26 +434,26 @@ function vmca {
       }
       foreach ($adapter in $adapters) {
         if ($adapter.SwitchName -eq $SwitchName) {
-          Write-Status "[$($vm.Name)] '$AdapterName' already connected to '$SwitchName'." -Type "OK"
+          Write-Status -Message "[$($vm.Name)] '$AdapterName' already connected to '$SwitchName'." -Type "OK"
           continue
         }
         $from = if ($adapter.SwitchName) { $adapter.SwitchName } else { '<disconnected>' }
-        Write-Status "[$($vm.Name)] '$AdapterName': $from -> $SwitchName" -Type "INFO"
+        Write-Status -Message "[$($vm.Name)] '$AdapterName': $from -> $SwitchName" -Type "INFO"
         $adapter | Connect-VMNetworkAdapter -SwitchName $SwitchName -ErrorAction Stop
-        Write-Status "[$($vm.Name)] Connected successfully." -Type "OK"
+        Write-Status -Message "[$($vm.Name)] Connected successfully." -Type "OK"
       }
       if ($ConnectConsole) {
-        Write-Status "[$($vm.Name)] Launching VM console..." -Type "INFO"
+        Write-Status -Message "[$($vm.Name)] Launching VM console..." -Type "INFO"
         vmc $vm.Name
       }
     }
     catch {
       $msg = $_.Exception.Message
       if ($msg -like "*access denied*" -or $msg -like "*permission*") {
-        Write-Status "[$vmName] Access denied - run PowerShell as Administrator." -Type "ERROR"
+        Write-Status -Message "[$vmName] Access denied - run PowerShell as Administrator." -Type "ERROR"
       }
       else {
-        Write-Warning "[$vmName] $msg"
+        Write-Status -Message "[$vmName] $msg" -Type "WARNING"
       }
     }
   }
@@ -464,7 +479,7 @@ function Home {
   #>
   & powercfg /SETACTIVE 196c5dd9-3699-47e9-a81c-b75f5631d40e
   $actualScheme = (powercfg /GETACTIVESCHEME)
-  Write-Status "Current power scheme: $actualScheme" -Type "INFO"
+  Write-Status -Message "Current power scheme: $actualScheme" -Type "INFO"
 }
 
 
@@ -477,6 +492,6 @@ function Industry {
   #>
   & powercfg /SETACTIVE 565cb0d5-0a34-4903-9e13-e8c38c4bab4b
   $actualScheme = (powercfg /GETACTIVESCHEME)
-  Write-Status "Current power scheme: $actualScheme" -Type "INFO"
+  Write-Status -Message "Current power scheme: $actualScheme" -Type "INFO"
 }
 
